@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2014, Wizardofos.nl
+ */
+
+This is the Protozoa framework and utilizes the following components:
+
+- Apache Karaf
+- Apache CXF
+- Apache Commons (Lang)
+
+- SLF4J logging wrapper
+- Quartz scheduler
+- Datanucleus JPA
