@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz</groupId>
-        <artifactId>Protozoa</artifactId>
+        <groupId>org.woz.protozoa</groupId>
+        <artifactId>protozoa</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
