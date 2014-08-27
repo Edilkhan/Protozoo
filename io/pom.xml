@@ -4,12 +4,12 @@
 
     <parent>
         <groupId>org.woz</groupId>
-        <artifactId>Protozoa</artifactId>
+        <artifactId>protozoa</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.woz</groupId>
+    <groupId>org.woz.protozoa</groupId>
     <artifactId>protozoa.io</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -20,6 +20,7 @@
     <description>The Protozoa IO package delivers the necessary I/O services to run the system.</description>
     
     <modules>
+        <module>cxf</module>
     </modules>
 
 </project>

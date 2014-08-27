@@ -1,3 +1,6 @@
 /system/core/target/
 /system/branding/target/
 /assemblies/features/framework/target/
+/io/cxf/rest/target/
+/io/cxf/service/target/
+/io/cxf/kar/target/
