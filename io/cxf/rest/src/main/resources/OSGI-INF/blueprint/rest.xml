@@ -10,29 +10,12 @@
   http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
   http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd">
 
-    <cxf:bus id="cxfBus1">
-        <cxf:features>
-            <cxf:logging/>
-        </cxf:features>
-    </cxf:bus>
-
-
-    <jaxrs:server address="/protosimple" id="someRestService">
+   <jaxrs:server address="/proto" id="someRestService">
         <jaxrs:serviceBeans>
             <ref component-id="restServiceImpl"/>
         </jaxrs:serviceBeans>
     </jaxrs:server>
 
-
-    <!-- Implementation of the rest service -->
-    <bean id="restServiceImpl" class="org.woz.protozoa.io.cxf.rest.HelloRestServiceImpl">
-        <property name="helloService" ref="helloServiceBean"/>  <!--Points to the reference below -->
-    </bean>
-
-    <!-- This has to point to the service registered through serviceimpl.xml in the service.impl project -->
-
-    <reference id="helloServiceBean"
-               interface="org.woz.protozoa.io.cxf.service.HelloService">
-    </reference>
+    <bean id="restServiceImpl" class="org.woz.protozoa.io.cxf.rest.RestServiceImpl" />
 
 </blueprint>
