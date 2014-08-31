@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa.io</groupId>
-        <artifactId>protozoa.io.cxf</artifactId>
+        <groupId>org.woz</groupId>
+        <artifactId>protozoa.services</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    
-    <groupId>org.woz.protozoa.io.cxf</groupId>
-    <artifactId>protozoa.io.cxf.rest</artifactId>
+
+    <groupId>org.woz.protozoa.services</groupId>
+    <artifactId>model</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>Protozoa :: IO :: Cxf :: Rest</name>
+    <name>Protozoa :: Services :: Model</name>
 
     <dependencies>
         <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-core</artifactId>
-            <version>3.0.1</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.ws.rs</groupId>
-            <artifactId>javax.ws.rs-api</artifactId>
-            <version>2.0.1</version>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.ipojo.annotations</artifactId>
+            <version>1.12.0</version>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
             <version>5.0.0</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.woz.protozoa.services</groupId>
-            <artifactId>model</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
         </dependency>
     </dependencies>
-    
+
     <build>
         <plugins>
             <plugin>
@@ -54,12 +40,13 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>org.woz.protozoa.services.model.internal.Activator</Bundle-Activator>
-                        <Export-Package>org.woz.protozoa.services.mode*;version=${project.version}</Export-Package>
+                        <Export-Package>org.woz.protozoa.io.cxf.rest*;version=${project.version}</Export-Package>
                         <Import-Package>*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 
 </project>

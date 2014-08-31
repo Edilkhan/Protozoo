@@ -56,7 +56,7 @@
 
     </dependencies>
 
-    <build>
+    <!--build>
         <resources>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
@@ -93,7 +93,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin-->
             <!--plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -138,15 +138,15 @@
                     </execution>
                 </executions>
             </plugin-->
-            <plugin>
+            <!--plugin>
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
                 <configuration>
-                    <startLevel>30</startLevel>
+                    <startLevel>30</startLevel-->
                     <!--<checkDependencyChange>true</checkDependencyChange>-->
                     <!--<overwriteChangedDependencies>true</overwriteChangedDependencies>-->
                     <!--<failOnDependencyChange>false</failOnDependencyChange>-->
-                </configuration>
+                <!--/configuration>
                 <executions>
                     <execution>
                         <id>compile</id>
@@ -193,6 +193,6 @@
                 </executions>
             </plugin>
         </plugins>
-    </build>
+    </build-->
 
 </project>

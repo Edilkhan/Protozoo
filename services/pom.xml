@@ -20,6 +20,7 @@
     <description>The Protozoa Services package delivers the optional services to run the system.</description>
     
     <modules>
+        <module>model</module>
     </modules>
 
 </project>
