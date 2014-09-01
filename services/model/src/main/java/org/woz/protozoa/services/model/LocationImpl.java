@@ -22,7 +22,7 @@ public class LocationImpl implements Location {
     public LocationImpl(String name) {
         this.name = name;
     }
-    
+        
     @Override
     public String getName() {
         return name;

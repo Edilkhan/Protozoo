@@ -11,5 +11,5 @@ package org.woz.protozoa.services.model;
  * @author wolfgang
  */
 public enum Type {
-    MATERIAL, VIRTUAL
+    PHYSICAL, VIRTUAL
 }

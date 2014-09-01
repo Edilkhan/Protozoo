@@ -1,9 +1,9 @@
-package org.woz.protozoa.io.cxf.rest;
+package org.woz.protozoa.io.cxf.rest.internal;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
-public class RestActivator implements BundleActivator {
+public class Activator implements BundleActivator {
 
     @Override
     public void start(BundleContext context) {
