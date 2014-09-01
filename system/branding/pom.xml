@@ -13,10 +13,10 @@
         <resources>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
-                <filtering>true</filtering>
+                <!--filtering>true</filtering>
                 <includes>
                     <include>**/*</include>
-                </includes>
+                </includes-->
             </resource>
         </resources>
         <plugins>
@@ -30,7 +30,6 @@
                         <Bundle-SymbolicName>org.woz.protozoa.branding</Bundle-SymbolicName>
                         <Import-Package>*</Import-Package>
                         <Export-Package>org.apache.karaf.branding</Export-Package>
-                        <Private-Package>!*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
