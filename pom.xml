@@ -111,4 +111,12 @@
             </modules>
         </profile>
     </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.ipojo.features</artifactId>
+            <version>1.12.0</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
 </project>

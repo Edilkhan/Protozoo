@@ -40,7 +40,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>org.woz.protozoa.services.model.internal.Activator</Bundle-Activator>
-                        <Export-Package>org.woz.protozoa.io.cxf.rest*;version=${project.version}</Export-Package>
+                        <Export-Package>org.woz.protozoa.services.model*;version=${project.version}</Export-Package>
                         <Import-Package>*</Import-Package>
                     </instructions>
                 </configuration>

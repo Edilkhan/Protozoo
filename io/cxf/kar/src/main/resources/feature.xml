@@ -7,7 +7,7 @@
         <feature>cxf</feature>
         <!--feature>this-project-dependants</feature-->
 
-        <bundle>mvn:org.woz.protozoa.io.cxf/protozoa.io.cxf.service/1.0.0-SNAPSHOT</bundle>
+        <!--bundle>mvn:org.woz.protozoa.io.cxf/protozoa.io.cxf.service/1.0.0-SNAPSHOT</bundle-->
         <bundle>mvn:org.woz.protozoa.io.cxf/protozoa.io.cxf.rest/1.0.0-SNAPSHOT</bundle>
     </feature>
 

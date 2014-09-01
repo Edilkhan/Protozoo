@@ -22,13 +22,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.woz</groupId>
         <artifactId>protozoa</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.woz.protozoa.assemblies</groupId>
+    <groupId>org.woz.protozoa</groupId>
     <artifactId>assemblies</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>

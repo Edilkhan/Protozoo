@@ -7,12 +7,12 @@ public class RestActivator implements BundleActivator {
 
     @Override
     public void start(BundleContext context) {
-        System.out.println("Starting the bundle");
+        System.out.println("Starting the REST bundle");
     }
 
     @Override
     public void stop(BundleContext context) {
-        System.out.println("Stopping the bundle");
+        System.out.println("Stopping the REST bundle");
     }
 
 }

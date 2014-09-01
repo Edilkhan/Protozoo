@@ -1,0 +1,25 @@
+Object model
+============
+Location
+--------
+* GUID
+* Name
+* Description
+* Active (yes/no)
+* Type (physical/virtual)
+
+Devices (many-to-one towards Location)
+-------
+* GUID
+* Name
+* Description
+* Active (yes/no)
+* Type (physical/virtual)
+
+Parameters (many-to-one towards Device)
+----------
+* GUID
+* Name
+* Description
+* Active (yes/no)
+

@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>org.woz</groupId>
-        <artifactId>Protozoa</artifactId>
+        <artifactId>protozoa</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
