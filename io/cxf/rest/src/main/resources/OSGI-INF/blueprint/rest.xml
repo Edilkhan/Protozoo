@@ -19,9 +19,17 @@
             <ref component-id="restServiceImpl"/>
             <ref component-id="locationServiceImpl"/>
         </jaxrs:serviceBeans>
+        <jaxrs:providers>
+            <bean class="org.woz.protozoa.io.cxf.rest.LocationMessageBodyWriter"/>
+        </jaxrs:providers>
     </jaxrs:server>
 
-    <bean id="restServiceImpl" class="org.woz.protozoa.io.cxf.rest.RestServiceImpl" />
-    <bean id="locationServiceImpl" class="org.woz.protozoa.io.cxf.rest.LocationServiceImpl" />
+    <reference id="locationservice" interface="org.woz.protozoa.services.model.LocationService"/>
 
+    <bean id="restServiceImpl" class="org.woz.protozoa.io.cxf.rest.RestServiceImpl" />
+    <bean id="locationServiceImpl" class="org.woz.protozoa.io.cxf.rest.LocationServiceImpl">
+        <property name="ls" ref="locationservice"/>
+    </bean>
+    <bean id="locationProvider" class="org.woz.protozoa.io.cxf.rest.LocationMessageBodyWriter"/>
+    
 </blueprint>

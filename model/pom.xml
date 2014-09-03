@@ -5,21 +5,35 @@
 
     <parent>
         <groupId>org.woz</groupId>
-        <artifactId>protozoa.services</artifactId>
+        <artifactId>protozoa</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.woz.protozoa.services</groupId>
+    <groupId>org.woz.protozoa</groupId>
     <artifactId>model</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>Protozoa :: Services :: Model</name>
+    <name>Protozoa :: Model</name>
 
     <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>
             <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.woz</groupId>
+            <artifactId>protozoa.system.core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -32,15 +46,11 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Version>${project.version}</Bundle-Version>
-                        <Bundle-Activator>org.woz.protozoa.services.model.internal.Activator</Bundle-Activator>
-                        <Import-Package>*</Import-Package>
-                        <Export-Package>org.woz.protozoa.services.model</Export-Package>
-                        <Private-Package>org.woz.protozoa.services.model.*</Private-Package>
+                        <Bundle-Activator>org.woz.protozoa.core.internal.Activator</Bundle-Activator>
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 </project>

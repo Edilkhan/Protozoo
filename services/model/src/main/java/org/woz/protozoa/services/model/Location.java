@@ -21,4 +21,7 @@ public interface Location {
     public State getState();
     public void setType(Type type);
     public Type getType();
+    
+    @Override
+    public String toString();
 }

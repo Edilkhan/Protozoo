@@ -17,19 +17,24 @@ import org.woz.protozoa.services.model.Location;
  */
 public class LocationServiceImpl implements LocationService {
     protected final Logger logger = LoggerFactory.getLogger(LocationServiceImpl.class);
-    private org.woz.protozoa.services.model.LocationService ls;
+    
+    private org.woz.protozoa.services.model.LocationService ls = null;
     
     @Override
-    public Location getLocation(String name) {
-        if (ls == null) {
-            System.out.println("Service has not been set");
-            return null;
-        }
-        return ls.getLocation(name);
+    public String getLocation(String name) {
+        return ls.getLocation(name).toString();
     }
 
     @Override
-    public List<Location> getLocations() {
-        return null;
-    }    
+    public String getLocations() {
+        return "Not implemented yet";
+    }
+
+    public org.woz.protozoa.services.model.LocationService getLs() {
+        return ls;
+    }
+
+    public void setLs(org.woz.protozoa.services.model.LocationService ls) {
+        this.ls = ls;
+    }
 }

@@ -35,6 +35,11 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.7</version>
         </dependency>
+        <dependency>
+            <groupId>org.woz.protozoa.services</groupId>
+            <artifactId>model</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     
     <build>
@@ -49,6 +54,8 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>org.woz.protozoa.io.cxf.rest.internal.Activator</Bundle-Activator>
+                        <Export-Package>org.woz.protozoa.io.cxf.rest</Export-Package>
+                        <Private-Package>org.woz.protozoa.io.cxf.rest.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

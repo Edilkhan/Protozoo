@@ -7,8 +7,6 @@
 package org.woz.protozoa.services.model;
 
 import java.util.HashMap;
-import org.apache.felix.ipojo.annotations.Component;
-import org.apache.felix.ipojo.annotations.Provides;
 import static org.woz.protozoa.services.model.State.ACTIVE;
 import static org.woz.protozoa.services.model.Type.PHYSICAL;
 
@@ -16,21 +14,20 @@ import static org.woz.protozoa.services.model.Type.PHYSICAL;
  *
  * @author wos
  */
-@Component
-@Provides
 public class HashDB {
     
     HashMap<String, Object> db = new HashMap<>();
     
-    public HashDB() {
-        Location home = new LocationImpl("@Home");
-        home.setDescription("Home sweet home");
-        home.setState(ACTIVE);
-        home.setType(PHYSICAL);
-        db.put(home.getName(), home);
+    public HashDB() {        
+        System.out.println("HashDB constructor");
+        initDB();
     }
     
     public Location getLocation(String name) {
+        if (db.isEmpty()) {
+            initDB();
+        }
+        
         Object o = db.get(name);
         if (o != null) {
             if (o instanceof Location) {
@@ -41,5 +38,15 @@ public class HashDB {
         } else {
             return null;
         }
+    }
+
+    private void initDB() {
+        Location home = new LocationImpl("Home");
+        home.setDescription("Home sweet home");
+        home.setState(ACTIVE);
+        home.setType(PHYSICAL);
+        db.put(home.getName(), home);
+
+        System.out.println("HashDB initialized");
     }
 }

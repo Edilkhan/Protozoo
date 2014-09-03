@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.woz.protozoa.core;
+package org.woz.protozoa.core.item;
 
 /**
  * This is the base of all classes of the Protozoa framework
@@ -37,5 +37,8 @@ public interface Item {
      * @return the description of the item
      */
     public String getDescription();
+    
+    @Override
+    public String toString();
     
 }

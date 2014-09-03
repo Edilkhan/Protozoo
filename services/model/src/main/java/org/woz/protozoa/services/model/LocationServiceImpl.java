@@ -6,17 +6,22 @@
 
 package org.woz.protozoa.services.model;
 
-import org.apache.felix.ipojo.annotations.Component;
-import org.apache.felix.ipojo.annotations.Provides;
-
 /**
  * Component implementing the Location service
  * 
  * @author wolfgang
  */
-@Component
-@Provides
 public class LocationServiceImpl implements LocationService {
+    
+    HashDB database = new HashDB();
+
+    @Override
+    public Location getLocation(String name) {
+        if (database != null) {
+            return database.getLocation(name);
+        }
+        return null;
+    }
 
     @Override
     public Location createLocation(String name) {
@@ -26,5 +31,9 @@ public class LocationServiceImpl implements LocationService {
     @Override
     public Location updateLocation(Location location, String name, String description, State state, Type type) {
         return null;
+    }
+    
+    public void startUp() {
+        System.out.println("====>>>> Starting Location server");
     }
 }

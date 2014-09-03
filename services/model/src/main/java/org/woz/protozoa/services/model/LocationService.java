@@ -11,6 +11,7 @@ package org.woz.protozoa.services.model;
  * @author wolfgang
  */
 public interface LocationService {
+    public Location getLocation(String name);
     public Location createLocation(String name);
     public Location updateLocation(Location location, String name, String description, State state, Type type);
 }

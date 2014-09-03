@@ -21,11 +21,11 @@ import org.woz.protozoa.services.model.Location;
 public interface LocationService {
     @GET
     @Path("{name}")
-    @Produces({"application/xml","application/json"})
-    public Location getLocation(@PathParam("name") String name);
+    // @Produces("application/xml")
+    public String getLocation(@PathParam("name") String name);
     
     @GET
     @Path("All")
-    @Produces({"application/xml","application/json"})
-    public List<Location> getLocations();
+    // @Produces({"application/xml","application/json"})
+    public String getLocations();
 }
