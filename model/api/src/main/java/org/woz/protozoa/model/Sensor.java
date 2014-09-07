@@ -3,7 +3,7 @@
  */
 package org.woz.protozoa.model;
 
-import org.woz.protozoa.model.spi.Measurement;
+import org.woz.protozoa.model.api.Measurement;
 import org.woz.protozoa.core.item.Item;
 
 /**

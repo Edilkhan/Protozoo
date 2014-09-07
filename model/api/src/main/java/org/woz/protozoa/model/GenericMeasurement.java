@@ -6,8 +6,8 @@ package org.woz.protozoa.model;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import org.woz.protozoa.core.item.AbstractItem;
-import org.woz.protozoa.model.spi.Measurement;
-import org.woz.protozoa.model.spi.Parameter;
+import org.woz.protozoa.model.api.Measurement;
+import org.woz.protozoa.model.api.Parameter;
 
 /**
  *

@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.woz.protozoa.model.spi;
+package org.woz.protozoa.model.api;
 
 import java.util.Set;
 import org.woz.protozoa.core.item.Item;

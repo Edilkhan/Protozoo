@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 
-package org.woz.protozoa.services.model;
+package org.woz.protozoa.model.api;
 
 /**
  *
  * @author wolfgang
  */
-public enum State {
-    ACTIVE, INACTIVE
+public interface LocationFactory {
+    
+    public Location createLocation(String name);
+    public boolean destroyLocation(Location location);
+    
 }

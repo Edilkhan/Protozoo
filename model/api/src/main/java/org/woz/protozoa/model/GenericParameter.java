@@ -9,9 +9,9 @@ import java.util.Set;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
-import org.woz.protozoa.model.spi.Device;
-import org.woz.protozoa.model.spi.Measurement;
-import org.woz.protozoa.model.spi.Parameter;
+import org.woz.protozoa.model.api.Device;
+import org.woz.protozoa.model.api.Measurement;
+import org.woz.protozoa.model.api.Parameter;
 
 /**
  *

@@ -8,8 +8,8 @@ import java.util.Set;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
-import org.woz.protozoa.model.spi.Device;
-import org.woz.protozoa.model.spi.Location;
+import org.woz.protozoa.model.api.Device;
+import org.woz.protozoa.model.api.Location;
 
 /**
  * 
@@ -20,6 +20,8 @@ import org.woz.protozoa.model.spi.Location;
 public class GenericLocation extends AbstractItem implements Location {
   
     private final Set<Device> devices = new HashSet<>();
+    private State state;
+    private Type type;
 
     public GenericLocation(String name) {
         this(name, null);
@@ -45,31 +47,37 @@ public class GenericLocation extends AbstractItem implements Location {
 
     @Override
     public Set<Device> getDevices() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.devices;
     }
 
     @Override
     public void setState(State state) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.state = state;
     }
 
     @Override
     public State getState() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.state;
     }
 
     @Override
     public void setType(Type type) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.type = type;
     }
 
     @Override
     public Type getType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.type;
     }
 
     @Override
     public Device getDevice(String deviceName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (Device d : devices) {
+            if (d.getName().equals(deviceName)) {
+                return d;
+            }
+        }
+        
+        return null;
     }
 }

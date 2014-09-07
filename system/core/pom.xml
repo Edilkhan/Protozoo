@@ -31,6 +31,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.woz.protozoa.core.internal.Activator</Bundle-Activator>
+                        <Export-Package>org.woz.protozoa.core.item,org.woz.protozoa.core.type</Export-Package>
+                        <Private-Package>org.woz.protozoa.core.internal.*,org.woz.protozoa.core.item.*,org.woz.protozoa.core.type.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

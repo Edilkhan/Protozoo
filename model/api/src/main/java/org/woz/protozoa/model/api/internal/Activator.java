@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.woz.protozoa.model.internal;
+package org.woz.protozoa.model.api.internal;
 
 import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;

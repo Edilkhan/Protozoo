@@ -6,3 +6,5 @@
 /io/cxf/kar/target/
 /services/model/target/
 /model/target/
+/model/api/target/
+/model/hashdb/target/

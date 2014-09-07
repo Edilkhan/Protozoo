@@ -4,11 +4,12 @@
  * and open the template in the editor.
  */
 
-package org.woz.protozoa.services.model;
+package org.woz.protozoa.model;
 
 import java.util.HashMap;
-import static org.woz.protozoa.services.model.State.ACTIVE;
-import static org.woz.protozoa.services.model.Type.PHYSICAL;
+import static org.woz.protozoa.core.type.State.ACTIVE;
+import static org.woz.protozoa.core.type.Type.PHYSICAL;
+import org.woz.protozoa.model.api.Location;
 
 /**
  *
@@ -16,7 +17,13 @@ import static org.woz.protozoa.services.model.Type.PHYSICAL;
  */
 public class HashDB {
     
-    HashMap<String, Object> db = new HashMap<>();
+    private final HashMap<String, Object> internaldb = new HashMap<>();
+    
+    private static final HashDB database = new HashDB();
+    
+    public static HashDB getDatabase() {
+        return database;
+    }
     
     public HashDB() {        
         System.out.println("HashDB constructor");
@@ -24,11 +31,11 @@ public class HashDB {
     }
     
     public Location getLocation(String name) {
-        if (db.isEmpty()) {
+        if (internaldb.isEmpty()) {
             initDB();
         }
         
-        Object o = db.get(name);
+        Object o = internaldb.get(name);
         if (o != null) {
             if (o instanceof Location) {
                 return (Location)o;
@@ -41,12 +48,16 @@ public class HashDB {
     }
 
     private void initDB() {
-        Location home = new LocationImpl("Home");
+        Location home = new GenericLocation("Home");
         home.setDescription("Home sweet home");
         home.setState(ACTIVE);
         home.setType(PHYSICAL);
-        db.put(home.getName(), home);
+        internaldb.put(home.getName(), home);
 
         System.out.println("HashDB initialized");
+    }
+    
+    public Location addLocation(Location location) {
+        return (Location)internaldb.put(location.getName(), location);
     }
 }

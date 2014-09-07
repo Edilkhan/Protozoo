@@ -10,9 +10,9 @@ import org.woz.protozoa.core.type.State;
 import static org.woz.protozoa.core.type.State.ACTIVE;
 import org.woz.protozoa.core.type.Type;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
-import org.woz.protozoa.model.spi.Device;
-import org.woz.protozoa.model.spi.Location;
-import org.woz.protozoa.model.spi.Parameter;
+import org.woz.protozoa.model.api.Device;
+import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.Parameter;
 
 /**
  *

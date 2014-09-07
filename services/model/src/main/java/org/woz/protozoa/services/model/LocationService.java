@@ -6,6 +6,10 @@
 
 package org.woz.protozoa.services.model;
 
+import org.woz.protozoa.core.type.State;
+import org.woz.protozoa.core.type.Type;
+import org.woz.protozoa.model.spi.Location;
+
 /**
  *
  * @author wolfgang
