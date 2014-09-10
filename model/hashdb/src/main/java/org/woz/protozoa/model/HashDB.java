@@ -7,6 +7,7 @@
 package org.woz.protozoa.model;
 
 import java.util.HashMap;
+import org.woz.protozoa.core.item.Item;
 import static org.woz.protozoa.core.type.State.ACTIVE;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
 import org.woz.protozoa.model.api.Location;
@@ -15,10 +16,8 @@ import org.woz.protozoa.model.api.Location;
  *
  * @author wos
  */
-public class HashDB {
-    
-    private final HashMap<String, Object> internaldb = new HashMap<>();
-    
+public class HashDB extends HashMap<String, Item> {
+       
     private static final HashDB database = new HashDB();
     
     public static HashDB getDatabase() {
@@ -31,11 +30,11 @@ public class HashDB {
     }
     
     public Location getLocation(String name) {
-        if (internaldb.isEmpty()) {
+        if (database.isEmpty()) {
             initDB();
         }
         
-        Object o = internaldb.get(name);
+        Object o = database.get(name);
         if (o != null) {
             if (o instanceof Location) {
                 return (Location)o;
@@ -52,12 +51,12 @@ public class HashDB {
         home.setDescription("Home sweet home");
         home.setState(ACTIVE);
         home.setType(PHYSICAL);
-        internaldb.put(home.getName(), home);
+        database.put(home.getName(), home);
 
         System.out.println("HashDB initialized");
     }
     
     public Location addLocation(Location location) {
-        return (Location)internaldb.put(location.getName(), location);
+        return (Location)database.put(location.getName(), location);
     }
 }

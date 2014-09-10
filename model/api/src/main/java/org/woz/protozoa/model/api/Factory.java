@@ -10,7 +10,7 @@ package org.woz.protozoa.model.api;
  *
  * @author wolfgang
  */
-public interface LocationFactory {
+public interface Factory {
     
     public Location createLocation(String name);
     public boolean destroyLocation(Location location);

@@ -7,13 +7,13 @@
 package org.woz.protozoa.model;
 
 import org.woz.protozoa.model.api.Location;
-import org.woz.protozoa.model.api.LocationFactory;
+import org.woz.protozoa.model.api.Factory;
 
 /**
  *
  * @author wolfgang
  */
-public class LocationFactoryImpl implements LocationFactory {
+public class FactoryImpl implements Factory {
 
     @Override
     public Location createLocation(String name) {

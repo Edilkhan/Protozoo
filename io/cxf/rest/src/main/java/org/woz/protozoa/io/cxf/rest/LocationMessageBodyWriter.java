@@ -17,7 +17,7 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import org.woz.protozoa.model.spi.Location;
+import org.woz.protozoa.model.api.Location;
 
 /**
  *

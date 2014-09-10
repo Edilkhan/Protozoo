@@ -6,10 +6,10 @@
 
 package org.woz.protozoa.services.model;
 
-import org.woz.protozoa.model.HashDB;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
-import org.woz.protozoa.model.spi.Location;
+import org.woz.protozoa.model.api.Factory;
+import org.woz.protozoa.model.api.Location;
 
 /**
  * Component implementing the Location service
@@ -18,19 +18,16 @@ import org.woz.protozoa.model.spi.Location;
  */
 public class LocationServiceImpl implements LocationService {
     
-    HashDB database = new HashDB();
-
+    private final Factory factory = null;
+    
     @Override
     public Location getLocation(String name) {
-        if (database != null) {
-            return database.getLocation(name);
-        }
         return null;
     }
 
     @Override
     public Location createLocation(String name) {
-        return null;
+        return factory.createLocation(name);
     }
     
     @Override
@@ -39,6 +36,6 @@ public class LocationServiceImpl implements LocationService {
     }
     
     public void startUp() {
-        System.out.println("====>>>> Starting Location server");
+        System.out.println("====>>>> Starting Location service");
     }
 }

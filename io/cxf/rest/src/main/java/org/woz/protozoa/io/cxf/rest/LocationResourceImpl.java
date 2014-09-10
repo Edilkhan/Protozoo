@@ -13,8 +13,8 @@ import org.slf4j.LoggerFactory;
  *
  * @author wolfgang
  */
-public class LocationServiceImpl implements LocationService {
-    protected final Logger logger = LoggerFactory.getLogger(LocationServiceImpl.class);
+public class LocationResourceImpl implements LocationResource {
+    protected final Logger logger = LoggerFactory.getLogger(LocationResourceImpl.class);
     
     private org.woz.protozoa.services.model.LocationService ls = null;
     

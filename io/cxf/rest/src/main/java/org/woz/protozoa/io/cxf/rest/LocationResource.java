@@ -15,7 +15,7 @@ import javax.ws.rs.PathParam;
  * @author wolfgang
  */
 @Path("/location/")
-public interface LocationService {
+public interface LocationResource {
     @GET
     @Path("{name}")
     // @Produces("application/xml")
