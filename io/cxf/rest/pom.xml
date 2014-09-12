@@ -4,21 +4,16 @@
 
     <parent>
         <groupId>org.woz.protozoa.io</groupId>
-        <artifactId>protozoa.io.cxf</artifactId>
+        <artifactId>cxf</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     
     <groupId>org.woz.protozoa.io.cxf</groupId>
-    <artifactId>protozoa.io.cxf.rest</artifactId>
+    <artifactId>rest</artifactId>
     <packaging>bundle</packaging>
     <name>Protozoa :: IO :: Cxf :: Rest</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-core</artifactId>
-            <version>3.0.1</version>
-        </dependency>
         <dependency>
             <groupId>javax.ws.rs</groupId>
             <artifactId>javax.ws.rs-api</artifactId>
@@ -38,11 +33,6 @@
         <dependency>
             <groupId>org.woz.protozoa.services</groupId>
             <artifactId>model</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.woz.protozoa</groupId>
-            <artifactId>model.api</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

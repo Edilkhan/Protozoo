@@ -6,8 +6,9 @@
 
 package org.woz.protozoa.model;
 
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.Database;
 import org.woz.protozoa.model.api.Factory;
+import org.woz.protozoa.model.api.Location;
 
 /**
  *
@@ -15,22 +16,21 @@ import org.woz.protozoa.model.api.Factory;
  */
 public class FactoryImpl implements Factory {
 
+    public static final Database database = new HashDB();
+    
     @Override
-    public Location createLocation(String name) {
-        Location testloc = new GenericLocation(name);
-        
-        HashDB.addLocation(testloc);
-        
-        return testloc;
-    }
-
-    @Override
-    public boolean destroyLocation(Location location) {
-        return HashDB.removeLocation(location.getName());
+    public Database getDatabase() {
+        return database;
     }
     
     @Override
-    public Location retrieveLocation(String name) {
-        return HashDB.retrieveLocation(name);
+    public Location createLocation(String name) {
+        return createLocation(name, null);
     }
+    
+    @Override
+    public Location createLocation(String name, String description) {
+        return new GenericLocation(name, description);
+    }
+        
 }

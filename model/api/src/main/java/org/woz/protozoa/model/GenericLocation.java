@@ -80,4 +80,9 @@ public class GenericLocation extends AbstractItem implements Location {
         
         return null;
     }
+    
+    @Override
+    public String toString() {
+        return "{ " + getName() + ", " + getDescription() + ", " + getState() + ", " + getType() + " }";
+    }
 }

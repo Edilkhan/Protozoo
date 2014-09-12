@@ -5,26 +5,27 @@
 
     <parent>
         <groupId>org.woz.protozoa</groupId>
-        <artifactId>protozoa.model</artifactId>
+        <artifactId>model</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>protozoa.model.hashdb</artifactId>
+    <groupId>org.woz.protozoa.model</groupId>
+    <artifactId>hashdb</artifactId>
     <packaging>bundle</packaging>
     <name>Protozoa :: Model :: HashDB</name>
 
     <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>model.api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
             <scope>test</scope>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>api</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

@@ -19,23 +19,35 @@ import org.woz.protozoa.model.api.Location;
 public class LocationServiceImpl implements LocationService {
     
     private final Factory factory = null;
-    
-    @Override
-    public Location getLocation(String name) {
-        return null;
-    }
 
     @Override
     public Location createLocation(String name) {
         return factory.createLocation(name);
     }
-    
+
     @Override
-    public Location updateLocation(Location location, String name, String description, State state, Type type) {
-        return null;
+    public Location getLocation(String name) {
+        return factory.getDatabase().getLocation(name);
+    }
+
+    @Override
+    public Location updateLocation(String name, String description, State state, Type type) {
+        Location location = getLocation(name);
+
+        if (location != null) {
+            location.setDescription(description);
+            location.setState(state);
+            location.setType(type);
+            
+            return location;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public boolean removeLocation(String name) {
+        return factory.getDatabase().removeLocation(name);
     }
     
-    public void startUp() {
-        System.out.println("====>>>> Starting Location service");
-    }
 }

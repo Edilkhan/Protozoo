@@ -9,8 +9,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.woz</groupId>
-    <artifactId>protozoa.services</artifactId>
+    <groupId>org.woz.protozoa</groupId>
+    <artifactId>services</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>

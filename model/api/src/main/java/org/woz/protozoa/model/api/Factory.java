@@ -12,8 +12,8 @@ package org.woz.protozoa.model.api;
  */
 public interface Factory {
     
+    public Database getDatabase();
     public Location createLocation(String name);
-    public boolean destroyLocation(Location location);
-    public Location retrieveLocation(String name);
-    
+    public Location createLocation(String name, String description);
+
 }

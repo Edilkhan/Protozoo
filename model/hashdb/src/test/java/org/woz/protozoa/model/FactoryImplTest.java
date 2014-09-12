@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.woz.protozoa.model.api.Database;
 import org.woz.protozoa.model.api.Factory;
 import org.woz.protozoa.model.api.Location;
 
@@ -22,6 +23,7 @@ import org.woz.protozoa.model.api.Location;
 public class FactoryImplTest {
     
     private Factory factory;
+    private Database db;
     
     public FactoryImplTest() {
     }
@@ -37,18 +39,36 @@ public class FactoryImplTest {
     @Before
     public void setUp() {
         factory = new FactoryImpl();
+        db = factory.getDatabase();
     }
     
     @After
     public void tearDown() {
+        db = null;
         factory = null;
     }
 
     @Test
-    public void testCreateLocation() {
-        System.out.println(factory);
+    public void testAddAndRemoval() {
         
-        Location testLoc = factory.createLocation("Test");
-        assertEquals(testLoc.getName(), "Test");
+        int oldsize = db.size();
+        
+        Location testloc = new GenericLocation("Test", "Test location");
+        assertNull(db.addLocation(testloc));
+        assertSame(db.size(), oldsize + 1);
+        
+        assertTrue(db.removeLocation("Test"));
+        assertSame(db.size(), oldsize);
+        
+    }
+    
+    @Test
+    public void testGetLocation() {
+        
+        Location home = new GenericLocation("Home", "No place like it...");
+        
+        assertNull(db.addLocation(home));        
+        assertEquals(db.getLocation("Home").getName(),"Home");
+        
     }
 }
