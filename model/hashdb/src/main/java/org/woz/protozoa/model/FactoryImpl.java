@@ -17,12 +17,20 @@ public class FactoryImpl implements Factory {
 
     @Override
     public Location createLocation(String name) {
-        return HashDB.getDatabase().addLocation(new GenericLocation(name));
+        Location testloc = new GenericLocation(name);
+        
+        HashDB.addLocation(testloc);
+        
+        return testloc;
     }
 
     @Override
     public boolean destroyLocation(Location location) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return HashDB.removeLocation(location.getName());
     }
     
+    @Override
+    public Location retrieveLocation(String name) {
+        return HashDB.retrieveLocation(name);
+    }
 }

@@ -14,5 +14,6 @@ public interface Factory {
     
     public Location createLocation(String name);
     public boolean destroyLocation(Location location);
+    public Location retrieveLocation(String name);
     
 }

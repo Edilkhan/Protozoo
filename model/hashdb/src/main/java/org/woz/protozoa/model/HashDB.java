@@ -19,20 +19,16 @@ import org.woz.protozoa.model.api.Location;
 public class HashDB extends HashMap<String, Item> {
        
     private static final HashDB database = new HashDB();
+    private static boolean initialized = false;
     
     public static HashDB getDatabase() {
-        return database;
-    }
-    
-    public HashDB() {        
-        System.out.println("HashDB constructor");
-        initDB();
-    }
-    
-    public Location getLocation(String name) {
-        if (database.isEmpty()) {
+        if (!initialized) {
             initDB();
         }
+        return database;
+    }
+        
+    public Location getLocation(String name) {
         
         Object o = database.get(name);
         if (o != null) {
@@ -46,17 +42,24 @@ public class HashDB extends HashMap<String, Item> {
         }
     }
 
-    private void initDB() {
+    private static void initDB() {
         Location home = new GenericLocation("Home");
         home.setDescription("Home sweet home");
         home.setState(ACTIVE);
         home.setType(PHYSICAL);
         database.put(home.getName(), home);
-
-        System.out.println("HashDB initialized");
+        initialized = true;
     }
     
-    public Location addLocation(Location location) {
+    public static Location addLocation(Location location) {
         return (Location)database.put(location.getName(), location);
+    }
+
+    public static boolean removeLocation(String name) {
+        return database.remove(name) != null;
+    }
+    
+    public static Location retrieveLocation(String name) {
+        return (Location)database.get(name);
     }
 }
