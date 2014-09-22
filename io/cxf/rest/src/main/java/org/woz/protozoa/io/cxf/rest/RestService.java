@@ -14,11 +14,10 @@ import javax.ws.rs.PathParam;
  *
  * @author wos
  */
-//@Path("rest")
 public interface RestService {
 
     @GET
-    @Path("hello/{name}")
-    public String handleGet(@PathParam("name") String name);
+    @Path("hello")
+    public String sayHello();
 
 }

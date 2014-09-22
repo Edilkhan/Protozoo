@@ -14,10 +14,16 @@ import org.woz.protozoa.core.item.Item;
  */
 public interface Database {
     
+    public int size();
+
     public Location addLocation(Location newloc);
     public boolean removeLocation(String name);
     public Location getLocation(String name);
     public Collection<Item> getLocations();
-    public int size();
+    
+    public Device addDevice(Device newdev);
+    public boolean removeDevice(String name);
+    public Device getDevice(String name);
+    public Collection<Item> getDevices();
     
 }

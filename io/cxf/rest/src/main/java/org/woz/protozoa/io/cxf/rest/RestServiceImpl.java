@@ -13,7 +13,7 @@ package org.woz.protozoa.io.cxf.rest;
 public class RestServiceImpl implements RestService {
 
         @Override
-	public String handleGet(String name) {
-		return String.format("Hi %s, Karaf and CXF is cool.", name);
+	public String sayHello() {
+		return "Protozoa REST services says hello!";
 	}
 }

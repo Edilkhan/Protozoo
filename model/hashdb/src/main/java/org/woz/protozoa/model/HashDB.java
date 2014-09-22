@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import org.woz.protozoa.core.item.Item;
 import org.woz.protozoa.model.api.Database;
+import org.woz.protozoa.model.api.Device;
 import org.woz.protozoa.model.api.Location;
 
 /**
@@ -52,5 +53,38 @@ public class HashDB extends HashMap<String, Item> implements Database {
         
     }
     
+    @Override
+    public Device getDevice(String name) {
+        
+        return (Device)get(name);
+    }
+
+    @Override
+    public Device addDevice(Device newdev) {
+
+        if (newdev != null) {
+            if (newdev.getName() != null && !newdev.getName().isEmpty()) {
+                return (Device)put(newdev.getName(), newdev);
+            } else {
+                throw new IllegalArgumentException("Add device with empty name or null");
+            }
+        } else {
+            throw new IllegalArgumentException("Add device with null parameter");
+        }
+    }
+
+    @Override
+    public boolean removeDevice(String name) {
+        
+        return (remove(name) != null);
+        
+    }
+
+    @Override
+    public Collection<Item> getDevices() {
+        
+        return (Collection<Item>)this.values();
+        
+    }
     
 }
