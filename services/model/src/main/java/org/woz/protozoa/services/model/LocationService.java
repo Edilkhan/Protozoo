@@ -8,15 +8,15 @@ package org.woz.protozoa.services.model;
 
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
  * @author wolfgang
  */
 public interface LocationService {
-    public Location createLocation(String name);
-    public Location getLocation(String name);
-    public Location updateLocation(String name, String description, State state, Type type);
+    public ILocation createLocation(String name);
+    public ILocation getLocation(String name);
+    public ILocation updateLocation(String name, String description, State state, Type type);
     public boolean removeLocation(String name);
 }

@@ -14,10 +14,10 @@ import org.woz.protozoa.core.type.Typeful;
  * @author Wolfgang van Os
  * @since 0.0.1
  */
-public interface Device extends Item, Stateful, Typeful {
+public interface IDevice extends Item, Stateful, Typeful {
 
-    public void setLocation(Location location);
-    public Location getLocation();
+    public void setLocation(ILocation location);
+    public ILocation getLocation();
 
     public boolean addParameter(Parameter parameter);
     public boolean removeParameter(Parameter parameter);

@@ -8,7 +8,6 @@ package org.woz.protozoa.io.cxf.rest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 
 /**
  *

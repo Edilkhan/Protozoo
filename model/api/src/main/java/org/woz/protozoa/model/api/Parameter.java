@@ -14,8 +14,8 @@ import org.woz.protozoa.core.type.Typeful;
  */
 public interface Parameter extends Item, Stateful, Typeful {
     
-    public void setDevice(Device device);
-    public Device getDevice();
+    public void setDevice(IDevice device);
+    public IDevice getDevice();
     
     public boolean addMeasurement(Measurement measurement);
     public boolean removeMeasurement(Measurement measurement);

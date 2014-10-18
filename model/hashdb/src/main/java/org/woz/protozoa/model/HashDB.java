@@ -10,8 +10,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import org.woz.protozoa.core.item.Item;
 import org.woz.protozoa.model.api.Database;
-import org.woz.protozoa.model.api.Device;
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.IDevice;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
@@ -20,17 +20,17 @@ import org.woz.protozoa.model.api.Location;
 public class HashDB extends HashMap<String, Item> implements Database {
                    
     @Override
-    public Location getLocation(String name) {
+    public ILocation getLocation(String name) {
         
-        return (Location)get(name);
+        return (ILocation)get(name);
     }
 
     @Override
-    public Location addLocation(Location newloc) {
+    public ILocation addLocation(ILocation newloc) {
 
         if (newloc != null) {
             if (newloc.getName() != null && !newloc.getName().isEmpty()) {
-                return (Location)put(newloc.getName(), newloc);
+                return (ILocation)put(newloc.getName(), newloc);
             } else {
                 throw new IllegalArgumentException("Add location with empty name or null");
             }
@@ -54,17 +54,17 @@ public class HashDB extends HashMap<String, Item> implements Database {
     }
     
     @Override
-    public Device getDevice(String name) {
+    public IDevice getDevice(String name) {
         
-        return (Device)get(name);
+        return (IDevice)get(name);
     }
 
     @Override
-    public Device addDevice(Device newdev) {
+    public IDevice addDevice(IDevice newdev) {
 
         if (newdev != null) {
             if (newdev.getName() != null && !newdev.getName().isEmpty()) {
-                return (Device)put(newdev.getName(), newdev);
+                return (IDevice)put(newdev.getName(), newdev);
             } else {
                 throw new IllegalArgumentException("Add device with empty name or null");
             }

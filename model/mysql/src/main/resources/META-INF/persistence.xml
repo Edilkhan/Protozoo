@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <!-- Tutorial "unit" -->
+  <persistence-unit name="Protozoa">
+    <!--exclude-unlisted-classes>true</exclude-unlisted-classes-->
+    <properties>
+      <property name="javax.jdo.option.ConnectionURL" value="jdbc:mysql://127.0.0.1:3306/nucleus"/>
+      <property name="javax.jdo.option.ConnectionDriverName" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.jdo.option.ConnectionUserName" value="nucleoid"/>
+      <property name="javax.jdo.option.ConnectionPassword" value=""/>
+      <property name="javax.jdo.option.Mapping" value="mysql"/>
+      <property name="datanucleus.schema.autoCreateAll" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>

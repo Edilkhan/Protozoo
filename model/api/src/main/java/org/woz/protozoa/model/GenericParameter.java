@@ -9,7 +9,7 @@ import java.util.Set;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
-import org.woz.protozoa.model.api.Device;
+import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.Measurement;
 import org.woz.protozoa.model.api.Parameter;
 
@@ -19,7 +19,7 @@ import org.woz.protozoa.model.api.Parameter;
  */
 public class GenericParameter extends AbstractItem implements Parameter {
 
-    private Device device;
+    private IDevice device;
     private final Set<Measurement> measurements = new HashSet<>();
 
     public GenericParameter(String name) {
@@ -39,12 +39,12 @@ public class GenericParameter extends AbstractItem implements Parameter {
     }
 
     @Override
-    public void setDevice(Device device) {
+    public void setDevice(IDevice device) {
         this.device = device;
     }
 
     @Override
-    public Device getDevice() {
+    public IDevice getDevice() {
         return this.device;
     }
 

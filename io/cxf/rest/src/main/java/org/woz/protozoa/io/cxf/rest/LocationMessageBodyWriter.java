@@ -17,30 +17,30 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.ext.MessageBodyWriter;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
  * @author wos
  */
 @Produces("application/xml")
-public class LocationMessageBodyWriter implements MessageBodyWriter<Location> {
+public class LocationMessageBodyWriter implements MessageBodyWriter<ILocation> {
 
     @Override
     public boolean isWriteable(Class<?> type, Type genericType, Annotation[] annotations, MediaType mediatype) {
-        return type == Location.class;
+        return type == ILocation.class;
     }
 
     @Override
-    public long getSize(Location bean, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
+    public long getSize(ILocation bean, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType) {
         // Deprecated in JAX-RS 2.0
         return 0;
     }
 
     @Override
-    public void writeTo(Location bean, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType, MultivaluedMap<String, Object> httpHeaders, OutputStream entityStream) throws IOException, WebApplicationException {
+    public void writeTo(ILocation bean, Class<?> type, Type genericType, Annotation[] annotations, MediaType mediaType, MultivaluedMap<String, Object> httpHeaders, OutputStream entityStream) throws IOException, WebApplicationException {
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(Location.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(ILocation.class);
 
             // serialize the entity myBean to the entity output stream
             jaxbContext.createMarshaller().marshal(bean, entityStream);

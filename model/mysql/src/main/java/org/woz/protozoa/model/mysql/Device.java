@@ -1,51 +1,55 @@
 /*
- * Copyright (C) 2014, Wizardofos.nl
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package org.woz.protozoa.model;
+package org.woz.protozoa.model.mysql;
 
 import java.util.HashSet;
 import java.util.Set;
-import org.woz.protozoa.core.item.AbstractItem;
+import javax.jdo.annotations.PersistenceCapable;
 import org.woz.protozoa.core.type.State;
 import static org.woz.protozoa.core.type.State.ACTIVE;
 import org.woz.protozoa.core.type.Type;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
-import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.ILocation;
 import org.woz.protozoa.model.api.Parameter;
 
 /**
  *
- * @author Wolfgang van Os
+ * @author wos
  */
-public class GenericDevice extends AbstractItem implements IDevice {
+@PersistenceCapable(table = "Device")
+public class Device {
 
+    String name;
+    String description;
     private State state;
     private Type type;
 
     private ILocation location;
     private final Set<Parameter> parameters = new HashSet<>();
 
-    public GenericDevice(ILocation location, String name) {
+    public Device(ILocation location, String name) {
         this(location, name, null);
     }
 
     /**
-     * Creates a new IDevice, attached to the specified {@link ILocation} with the
+     * Creates a new Device, attached to the specified {@link ILocation} with the
      * given name and description
      *
      * @param location to which this device is attached
      * @param name is the identifier of the device
      * @param description of the new device
      */
-    public GenericDevice(ILocation location, String name, String description) {
-        super(name, description);
+    public Device(ILocation location, String name, String description) {
+        this.name = name;
+        this.description = description;
         this.location = location;
         this.state = ACTIVE;
         this.type = PHYSICAL;
     }
 
-    @Override
     public void setLocation(ILocation location) {
         this.location = location;
 
@@ -54,43 +58,51 @@ public class GenericDevice extends AbstractItem implements IDevice {
         }
     }
 
-    @Override
     public ILocation getLocation() {
         return this.location;
     }
 
-    @Override
     public Set<Parameter> getParameters() {
         return this.parameters;
     }
 
-    @Override
     public boolean addParameter(Parameter parameter) {
         return parameters.add(parameter);
     }
 
-    @Override
     public boolean removeParameter(Parameter parameter) {
         return parameters.remove(parameter);
     }
 
-    @Override
     public void setState(State state) {
         this.state = state;
     }
 
-    @Override
     public State getState() {
         return this.state;
     }
 
-    @Override
     public void setType(Type type) {
         this.type = type;
     }
 
-    @Override
     public Type getType() {
         return this.type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

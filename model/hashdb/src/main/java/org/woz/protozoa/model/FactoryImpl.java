@@ -8,7 +8,7 @@ package org.woz.protozoa.model;
 
 import org.woz.protozoa.model.api.Database;
 import org.woz.protozoa.model.api.Factory;
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
@@ -24,12 +24,12 @@ public class FactoryImpl implements Factory {
     }
     
     @Override
-    public Location createLocation(String name) {
+    public ILocation createLocation(String name) {
         return createLocation(name, null);
     }
     
     @Override
-    public Location createLocation(String name, String description) {
+    public ILocation createLocation(String name, String description) {
         return new GenericLocation(name, description);
     }
         

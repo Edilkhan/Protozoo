@@ -10,7 +10,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import org.woz.protozoa.core.item.Item;
-import org.woz.protozoa.model.api.Device;
+import org.woz.protozoa.model.api.IDevice;
 
 /**
  *
@@ -24,5 +24,5 @@ public interface DeviceResource {
     
     @GET
     @Path("{id}")
-    Device getDevice(@PathParam("id") String id);
+    IDevice getDevice(@PathParam("id") String id);
 }

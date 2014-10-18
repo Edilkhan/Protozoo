@@ -9,10 +9,10 @@ package org.woz.protozoa.services.model;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
 import org.woz.protozoa.model.api.Factory;
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
- * Component implementing the Location service
+ * Component implementing the ILocation service
  * 
  * @author wolfgang
  */
@@ -21,18 +21,18 @@ public class LocationServiceImpl implements LocationService {
     private final Factory factory = null;
 
     @Override
-    public Location createLocation(String name) {
+    public ILocation createLocation(String name) {
         return factory.createLocation(name);
     }
 
     @Override
-    public Location getLocation(String name) {
+    public ILocation getLocation(String name) {
         return factory.getDatabase().getLocation(name);
     }
 
     @Override
-    public Location updateLocation(String name, String description, State state, Type type) {
-        Location location = getLocation(name);
+    public ILocation updateLocation(String name, String description, State state, Type type) {
+        ILocation location = getLocation(name);
 
         if (location != null) {
             location.setDescription(description);

@@ -16,11 +16,11 @@ import org.woz.protozoa.core.type.Typeful;
  * @author Wolfgang van Os
  * @since 1.0.0
  */
-public interface Location extends Item, Stateful, Typeful {
+public interface ILocation extends Item, Stateful, Typeful {
 
-    public boolean addDevice(Device device);
-    public boolean removeDevice(Device device);
-    public Device getDevice(String deviceName);
-    public Set<Device> getDevices();
+    public boolean addDevice(IDevice device);
+    public boolean removeDevice(IDevice device);
+    public IDevice getDevice(String deviceName);
+    public Set<IDevice> getDevices();
     
 }

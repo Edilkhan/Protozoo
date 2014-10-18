@@ -7,7 +7,7 @@ package org.woz.protozoa.io.cxf.rest;
 
 import java.util.Collection;
 import org.woz.protozoa.core.item.Item;
-import org.woz.protozoa.model.api.Device;
+import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.Factory;
 
 /**
@@ -24,7 +24,7 @@ public class DeviceResourceImpl implements DeviceResource {
     }
 
     @Override
-    public Device getDevice(String id) {
+    public IDevice getDevice(String id) {
         return factory.getDatabase().getDevice(id);
     }
         

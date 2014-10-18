@@ -4,6 +4,7 @@
 package org.woz.protozoa.core.item;
 
 import java.util.Observable;
+import javax.jdo.annotations.PersistenceCapable;
 
 /**
  * An abstract implementation of the Item interface, which includes the
@@ -11,11 +12,16 @@ import java.util.Observable;
  *
  * @author Wolfgang van Os
  */
+@PersistenceCapable
 public abstract class AbstractItem extends Observable implements Item {
 
     protected String name;
     protected String description;
 
+    protected AbstractItem() {
+        
+    }
+    
     public AbstractItem(String name) {
         this.name = name;
     }

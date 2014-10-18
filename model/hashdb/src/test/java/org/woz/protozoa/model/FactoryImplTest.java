@@ -14,7 +14,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.woz.protozoa.model.api.Database;
 import org.woz.protozoa.model.api.Factory;
-import org.woz.protozoa.model.api.Location;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
@@ -53,7 +53,7 @@ public class FactoryImplTest {
         
         int oldsize = db.size();
         
-        Location testloc = new GenericLocation("Test", "Test location");
+        ILocation testloc = new GenericLocation("Test", "Test location");
         assertNull(db.addLocation(testloc));
         assertSame(db.size(), oldsize + 1);
         
@@ -65,7 +65,7 @@ public class FactoryImplTest {
     @Test
     public void testGetLocation() {
         
-        Location home = new GenericLocation("Home", "No place like it...");
+        ILocation home = new GenericLocation("Home", "No place like it...");
         
         assertNull(db.addLocation(home));        
         assertEquals(db.getLocation("Home").getName(),"Home");

@@ -1,10 +1,14 @@
 /*
- * Copyright (C) 2014, Wizardofos.nl
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package org.woz.protozoa.model;
+package org.woz.protozoa.model.mysql;
 
 import java.util.HashSet;
 import java.util.Set;
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
@@ -12,27 +16,23 @@ import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.ILocation;
 
 /**
- * 
- * 
- * @author Wolfgang van Os
- * @since 0.0.1
+ *
+ * @author wos
  */
-public class GenericLocation extends AbstractItem implements ILocation {
-  
-    private final Set<IDevice> devices = new HashSet<>();
+@PersistenceCapable(table = "Location")
+public class Location extends AbstractItem implements ILocation {
+
+    @Join private final Set<IDevice> devices = new HashSet<>();
     private State state;
     private Type type;
 
-    protected GenericLocation() {
-        
-    }
-    
-    public GenericLocation(String name) {
+    public Location(String name) {
         this(name, null);
     }
     
-    public GenericLocation(String name, String description) {
-        super(name, description);
+    public Location(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
     
     @Override

@@ -16,14 +16,14 @@ public interface Database {
     
     public int size();
 
-    public Location addLocation(Location newloc);
+    public ILocation addLocation(ILocation newloc);
     public boolean removeLocation(String name);
-    public Location getLocation(String name);
+    public ILocation getLocation(String name);
     public Collection<Item> getLocations();
     
-    public Device addDevice(Device newdev);
+    public IDevice addDevice(IDevice newdev);
     public boolean removeDevice(String name);
-    public Device getDevice(String name);
+    public IDevice getDevice(String name);
     public Collection<Item> getDevices();
     
 }

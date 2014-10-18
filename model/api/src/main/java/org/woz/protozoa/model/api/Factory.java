@@ -13,7 +13,7 @@ package org.woz.protozoa.model.api;
 public interface Factory {
     
     public Database getDatabase();
-    public Location createLocation(String name);
-    public Location createLocation(String name, String description);
+    public ILocation createLocation(String name);
+    public ILocation createLocation(String name, String description);
 
 }
