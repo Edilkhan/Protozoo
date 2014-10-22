@@ -11,34 +11,17 @@ package org.woz.protozoa.core.item;
 public interface Item {
 
     /**
-     * Sets the name of the item
+     * Sets the identifier of the item
      *
-     * @param name of the item
+     * @param id of the item
      */
-    public void setName(String name);
+    public void setId(String id);
 
     /**
-     * Retrieves the name of the item
+     * Retrieves the id of the item
      *
-     * @return the name of the item
+     * @return the id of the item
      */
-    public String getName();
-
-    /**
-     * Sets the description of the item
-     *
-     * @param description of the item
-     */
-    public void setDescription(String description);
-
-    /**
-     * Retrieves the description of the item
-     *
-     * @return the description of the item
-     */
-    public String getDescription();
-    
-    @Override
-    public String toString();
+    public String getId();
     
 }

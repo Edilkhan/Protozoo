@@ -7,7 +7,9 @@ import java.util.HashSet;
 import java.util.Set;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
+import static org.woz.protozoa.core.type.State.ACTIVE;
 import org.woz.protozoa.core.type.Type;
+import static org.woz.protozoa.core.type.Type.PHYSICAL;
 import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.ILocation;
 
@@ -19,9 +21,13 @@ import org.woz.protozoa.model.api.ILocation;
  */
 public class GenericLocation extends AbstractItem implements ILocation {
   
-    private final Set<IDevice> devices = new HashSet<>();
+    private String name;
+    private String description;
+    
     private State state;
     private Type type;
+
+    private final Set<IDevice> devices = new HashSet<>();
 
     protected GenericLocation() {
         
@@ -32,7 +38,14 @@ public class GenericLocation extends AbstractItem implements ILocation {
     }
     
     public GenericLocation(String name, String description) {
-        super(name, description);
+
+        super(name);
+        
+        this.name = name;
+        this.description = description;
+        this.state = ACTIVE;
+        this.type = PHYSICAL;
+
     }
     
     @Override
@@ -72,6 +85,26 @@ public class GenericLocation extends AbstractItem implements ILocation {
     @Override
     public Type getType() {
         return this.type;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override

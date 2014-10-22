@@ -15,7 +15,6 @@
     <name>Protozoa :: Model</name>
     
     <modules>
-        <module>hashdb</module>
         <module>api</module>
         <module>mysql</module>
     </modules>

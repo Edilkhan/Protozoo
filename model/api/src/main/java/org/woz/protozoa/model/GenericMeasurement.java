@@ -15,6 +15,9 @@ import org.woz.protozoa.model.api.Parameter;
  */
 public class GenericMeasurement extends AbstractItem implements Measurement {
     
+    private String name;
+    private String description;
+    
     private Object value;
     private Calendar timestamp;
     private Parameter parameter;
@@ -24,7 +27,9 @@ public class GenericMeasurement extends AbstractItem implements Measurement {
     }
 
     public GenericMeasurement(String name, String description) {
-        super(name, description);
+        super(name);
+        
+        this.description = description;
     }
 
     public GenericMeasurement(String name, Object value) {

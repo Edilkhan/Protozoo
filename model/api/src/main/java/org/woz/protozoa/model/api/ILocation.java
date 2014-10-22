@@ -4,6 +4,9 @@
 package org.woz.protozoa.model.api;
 
 import java.util.Set;
+import javax.jdo.annotations.Inheritance;
+import javax.jdo.annotations.InheritanceStrategy;
+import javax.jdo.annotations.PersistenceCapable;
 import org.woz.protozoa.core.item.Item;
 import org.woz.protozoa.core.type.Stateful;
 import org.woz.protozoa.core.type.Typeful;
@@ -16,11 +19,18 @@ import org.woz.protozoa.core.type.Typeful;
  * @author Wolfgang van Os
  * @since 1.0.0
  */
+@PersistenceCapable
+@Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
 public interface ILocation extends Item, Stateful, Typeful {
 
+    public String getName();
+    public void setName(String name);
+    public String getDescription();
+    public void setDescription(String name);
+    
     public boolean addDevice(IDevice device);
     public boolean removeDevice(IDevice device);
     public IDevice getDevice(String deviceName);
-    public Set<IDevice> getDevices();
+    public Set<?> getDevices();
     
 }

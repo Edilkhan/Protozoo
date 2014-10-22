@@ -17,7 +17,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
-import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
@@ -58,6 +57,7 @@ public class PersistencyTest {
 
     @Test
     public void createLocationTest() {
+        System.out.println("===================================");
         System.out.println("DataNucleus AccessPlatform with JDO");
         System.out.println("===================================");
 
@@ -67,20 +67,24 @@ public class PersistencyTest {
         Object locationId = null;
         try {
             tx.begin();
-            System.out.println("Persisting a new location");
 
-            ILocation tloc = new ILocation("Testloc", "Second test location");
-            Device tdev = new Device(tloc, "Testdev", "First test device");
+            Location tloc = new Location("Testloc", "First test location");
+            Device tdev = new Device("Testdev", "First test device");
+            tdev.setLocation(tloc);
+            tloc.getDevices().add(tdev);
             
             tloc.setType(Type.PHYSICAL);
             tloc.setState(State.ACTIVE);
             
+            System.out.println("Persisting a new location");
             pm.makePersistent(tloc);
+
+            System.out.println("Persisting a new device");
             pm.makePersistent(tdev);
  
             tx.commit();
             
-            System.out.println("Location has been persisted");
+            System.out.println("Completed!");
         }
         catch (Exception e)
         {

@@ -20,6 +20,9 @@ import org.woz.protozoa.model.api.Parameter;
  */
 public class GenericDevice extends AbstractItem implements IDevice {
 
+    private String name;
+    private String description;
+    
     private State state;
     private Type type;
 
@@ -39,10 +42,15 @@ public class GenericDevice extends AbstractItem implements IDevice {
      * @param description of the new device
      */
     public GenericDevice(ILocation location, String name, String description) {
-        super(name, description);
+
+        super(name);
+        
+        this.name = name;
+        this.description = description;
         this.location = location;
         this.state = ACTIVE;
         this.type = PHYSICAL;
+        
     }
 
     @Override
@@ -93,4 +101,25 @@ public class GenericDevice extends AbstractItem implements IDevice {
     public Type getType() {
         return this.type;
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 }

@@ -37,6 +37,25 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.datanucleus</groupId>
+                <artifactId>datanucleus-maven-plugin</artifactId>
+                <version>4.0.0-m2</version>
+                <configuration>
+                    <api>JDO</api>
+                    <!--persistenceUnitName>Tutorial</persistenceUnitName>
+                    <log4jConfiguration>src/main/resources/log4j.properties</log4jConfiguration-->
+                    <verbose>false</verbose>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>enhance</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.karaf.tooling</groupId>
                 <artifactId>karaf-maven-plugin</artifactId>
                 <extensions>true</extensions>
@@ -70,6 +89,16 @@
             <groupId>javax.jdo</groupId>
             <artifactId>jdo-api</artifactId>
             <version>3.1-rc1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-core</artifactId>
+            <version>4.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-api-jdo</artifactId>
+            <version>4.0.3</version>
         </dependency>
     </dependencies>
 </project>
