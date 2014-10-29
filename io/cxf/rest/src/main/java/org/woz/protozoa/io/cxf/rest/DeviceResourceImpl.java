@@ -15,17 +15,15 @@ import org.woz.protozoa.model.api.Factory;
  * @author wolfgang
  */
 public class DeviceResourceImpl implements DeviceResource {
-
-    private final Factory factory = null;
     
     @Override
-    public Collection<Item> getAllDevices() {
-        return factory.getDatabase().getDevices();
+    public String getAllDevices() {
+        return "";
     }
 
     @Override
-    public IDevice getDevice(String id) {
-        return factory.getDatabase().getDevice(id);
+    public String getDevice(String id) {
+        return "";
     }
         
 }

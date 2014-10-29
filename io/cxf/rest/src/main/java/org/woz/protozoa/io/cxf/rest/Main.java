@@ -29,7 +29,12 @@ public class Main {
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
         // in this package
-        final ResourceConfig rc = new ResourceConfig().packages("org.woz.protozoa.io.cxf.rest");
+        
+        // final ResourceConfig rc = new ResourceConfig().packages("org.woz.protozoa.io.cxf.rest");
+        final ResourceConfig rc = new ResourceConfig()
+                .registerClasses(DeviceResourceImpl.class)
+                .registerClasses(LocationResourceImpl.class)
+                .registerClasses(MyResource.class);
         
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
@@ -45,6 +50,6 @@ public class Main {
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at " + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));
         System.in.read();
-        server.stop();
+        server.shutdown();
     }
 }

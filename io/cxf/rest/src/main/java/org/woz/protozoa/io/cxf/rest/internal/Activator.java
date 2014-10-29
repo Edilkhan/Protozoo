@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
-    private static final String bundleTitle = "Protozoa REST (CXF)";
+    private static final String bundleTitle = "Protozoa REST";
     
     @Override
     public void start(BundleContext context) {

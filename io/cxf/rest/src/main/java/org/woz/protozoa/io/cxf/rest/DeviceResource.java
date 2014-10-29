@@ -5,12 +5,11 @@
  */
 package org.woz.protozoa.io.cxf.rest;
 
-import java.util.Collection;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
-import org.woz.protozoa.core.item.Item;
-import org.woz.protozoa.model.api.IDevice;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 /**
  *
@@ -20,9 +19,11 @@ import org.woz.protozoa.model.api.IDevice;
 public interface DeviceResource {
     
     @GET
-    Collection<Item> getAllDevices();
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getAllDevices();
     
     @GET
+    @Produces(MediaType.TEXT_PLAIN)
     @Path("{id}")
-    IDevice getDevice(@PathParam("id") String id);
+    public String getDevice(@PathParam("id") String id);
 }

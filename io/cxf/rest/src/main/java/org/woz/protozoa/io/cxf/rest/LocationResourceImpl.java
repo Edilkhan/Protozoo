@@ -6,6 +6,7 @@
 
 package org.woz.protozoa.io.cxf.rest;
 
+import javax.jdo.PersistenceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,13 +15,15 @@ import org.slf4j.LoggerFactory;
  * @author wolfgang
  */
 public class LocationResourceImpl implements LocationResource {
-    protected final Logger logger = LoggerFactory.getLogger(LocationResourceImpl.class);
+
+    protected final Logger log = LoggerFactory.getLogger(LocationResourceImpl.class);
     
-    private org.woz.protozoa.services.model.LocationService ls = null;
+    PersistenceManager pm;
     
     @Override
     public String getLocation(String name) {
-        return ls.getLocation(name).toString();
+        pm.getObjectById("Location", name);
+        pm.get
     }
 
     @Override

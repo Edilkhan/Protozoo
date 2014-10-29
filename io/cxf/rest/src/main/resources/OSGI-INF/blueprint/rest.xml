@@ -11,22 +11,19 @@
   http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
   http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd">
 
-   <jaxrs:server address="/proto" id="someRestService">
+   <jaxrs:server address="/proto" id="restServices">
        <jaxrs:features>
            <cxf:logging/>
        </jaxrs:features>
         <jaxrs:serviceBeans>
-            <ref component-id="restServiceImpl"/>
-            <ref component-id="locationServiceImpl"/>
+            <ref component-id="locationResource"/>
+            <ref component-id="deviceResource"/>
         </jaxrs:serviceBeans>
-        <jaxrs:providers>
+        <!--jaxrs:providers>
             <bean class="org.woz.protozoa.io.cxf.rest.LocationMessageBodyWriter"/>
-        </jaxrs:providers>
+        </jaxrs:providers-->
     </jaxrs:server>
 
-    <reference id="locationservice" interface="org.woz.protozoa.services.model.LocationService"/>
-
-    <bean id="restServiceImpl" class="org.woz.protozoa.io.cxf.rest.RestServiceImpl" />
     <bean id="locationServiceImpl" class="org.woz.protozoa.io.cxf.rest.LocationServiceImpl">
         <property name="ls" ref="locationservice"/>
     </bean>

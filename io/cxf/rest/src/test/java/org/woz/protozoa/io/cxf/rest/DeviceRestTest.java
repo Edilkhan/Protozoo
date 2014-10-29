@@ -51,14 +51,20 @@ public class DeviceRestTest {
     }
 
     @Test
-    public void queryDevices() {
+    public void queryBasics() {
         String responseMsg = target.path("myresource").request().get(String.class);
         assertEquals("Got it!", responseMsg);
         
         target.path("myresource").request().put(Entity.text("Hello World!"));
-        //target.path("myresource").request().buildPut();
 
         responseMsg = target.path("myresource").request().get(String.class);
         assertEquals("Hello World!", responseMsg);
+    }
+    
+    @Test
+    public void queryDevices() {
+        String devices = target.path("devices").request().get(String.class);
+        assertEquals("", devices);
+        
     }
 }

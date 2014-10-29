@@ -6,6 +6,7 @@
 
 package org.woz.protozoa.services.model;
 
+import org.osgi.service.component.annotations.Component;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
 import org.woz.protozoa.model.api.Factory;
@@ -16,6 +17,7 @@ import org.woz.protozoa.model.api.ILocation;
  * 
  * @author wolfgang
  */
+@Component
 public class LocationServiceImpl implements LocationService {
     
     private final Factory factory = null;
