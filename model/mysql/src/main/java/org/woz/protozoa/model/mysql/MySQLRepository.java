@@ -9,17 +9,20 @@ import java.util.Properties;
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
+import org.osgi.service.component.annotations.Component;
+import org.woz.protozoa.model.api.Repository;
 
 /**
  *
  * @author wos
  */
-public class Repository {
+@Component
+public class MySQLRepository implements Repository {
 
     Properties properties = new Properties();
     PersistenceManagerFactory pmf;
 
-    public Repository() {
+    public MySQLRepository() {
         // Create a PersistenceManagerFactory for this datastore
 
         properties.setProperty("javax.jdo.PersistenceManagerFactoryClass", "org.datanucleus.api.jdo.JDOPersistenceManagerFactory");

@@ -12,7 +12,7 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.woz.protozoa.model.mysql.Repository;
+import org.woz.protozoa.model.mysql.MySQLRepository;
 
 /**
  *
@@ -20,7 +20,7 @@ import org.woz.protozoa.model.mysql.Repository;
  */
 public class LocationRestTest {
     
-    Repository repo = new Repository();
+    MySQLRepository repo = new MySQLRepository();
     PersistenceManager pm;
     HttpServer server;
     

@@ -12,7 +12,7 @@ import org.woz.protozoa.core.item.Item;
  *
  * @author wolfgang
  */
-public interface Database {
+public interface Repository {
     
     public int size();
 
