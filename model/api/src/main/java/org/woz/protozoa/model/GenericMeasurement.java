@@ -6,21 +6,21 @@ package org.woz.protozoa.model;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import org.woz.protozoa.core.item.AbstractItem;
-import org.woz.protozoa.model.api.Measurement;
-import org.woz.protozoa.model.api.Parameter;
+import org.woz.protozoa.model.api.IMeasurement;
+import org.woz.protozoa.model.api.IParameter;
 
 /**
  *
  * @author Wolfgang van Os
  */
-public class GenericMeasurement extends AbstractItem implements Measurement {
+public class GenericMeasurement extends AbstractItem implements IMeasurement {
     
     private String name;
     private String description;
     
     private Object value;
     private Calendar timestamp;
-    private Parameter parameter;
+    private IParameter parameter;
     
     public GenericMeasurement(String name) {
         this(name, null);
@@ -66,12 +66,12 @@ public class GenericMeasurement extends AbstractItem implements Measurement {
     }
     
     @Override
-    public void setParameter(Parameter parameter) {
+    public void setParameter(IParameter parameter) {
         this.parameter = parameter;
     }
     
     @Override
-    public Parameter getParameter() {
+    public IParameter getParameter() {
         return this.parameter;
     }
 }

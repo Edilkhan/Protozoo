@@ -17,7 +17,7 @@ import org.woz.protozoa.core.type.Type;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
 import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.ILocation;
-import org.woz.protozoa.model.api.Parameter;
+import org.woz.protozoa.model.api.IParameter;
 
 /**
  *
@@ -34,7 +34,7 @@ public class Device extends AbstractItem implements IDevice{
     private Type type;
 
     private Location location;
-    private final Set<Parameter> parameters = new HashSet<>();
+    private final Set<IParameter> parameters = new HashSet<>();
 
     public Device(String name) {
         this(name, null);
@@ -68,17 +68,17 @@ public class Device extends AbstractItem implements IDevice{
     }
 
     @Override
-    public Set<Parameter> getParameters() {
+    public Set<IParameter> getParameters() {
         return this.parameters;
     }
 
     @Override
-    public boolean addParameter(Parameter parameter) {
+    public boolean addParameter(IParameter parameter) {
         return parameters.add(parameter);
     }
 
     @Override
-    public boolean removeParameter(Parameter parameter) {
+    public boolean removeParameter(IParameter parameter) {
         return parameters.remove(parameter);
     }
 

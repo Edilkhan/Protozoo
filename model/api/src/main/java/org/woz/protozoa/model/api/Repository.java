@@ -14,8 +14,6 @@ import org.woz.protozoa.core.item.Item;
  */
 public interface Repository {
     
-    public int size();
-
     public ILocation addLocation(ILocation newloc);
     public boolean removeLocation(String name);
     public ILocation getLocation(String name);

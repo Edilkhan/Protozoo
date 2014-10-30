@@ -19,8 +19,6 @@ import org.woz.protozoa.model.api.ILocation;
 @Component
 public class LocationServiceImpl implements LocationService {
     
-    private final Factory factory = null;
-
     @Override
     public ILocation createLocation(String name) {
         return factory.createLocation(name);

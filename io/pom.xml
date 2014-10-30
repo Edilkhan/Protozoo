@@ -20,7 +20,8 @@
     <description>The Protozoa IO package delivers the necessary I/O services to run the system.</description>
     
     <modules>
-        <module>cxf</module>
+        <module>rest</module>
+        <module>kar</module>
     </modules>
 
 </project>

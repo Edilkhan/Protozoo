@@ -10,17 +10,17 @@ import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import org.woz.protozoa.core.type.Type;
 import org.woz.protozoa.model.api.IDevice;
-import org.woz.protozoa.model.api.Measurement;
-import org.woz.protozoa.model.api.Parameter;
+import org.woz.protozoa.model.api.IMeasurement;
+import org.woz.protozoa.model.api.IParameter;
 
 /**
  *
  * @author Wolfgang van Os
  */
-public class GenericParameter extends AbstractItem implements Parameter {
+public class GenericParameter extends AbstractItem implements IParameter {
 
     private IDevice device;
-    private final Set<Measurement> measurements = new HashSet<>();
+    private final Set<IMeasurement> measurements = new HashSet<>();
 
     public GenericParameter(String name) {
         super(name);
@@ -49,17 +49,17 @@ public class GenericParameter extends AbstractItem implements Parameter {
     }
 
     @Override
-    public boolean addMeasurement(Measurement measurement) {
+    public boolean addMeasurement(IMeasurement measurement) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean removeMeasurement(Measurement measurement) {
+    public boolean removeMeasurement(IMeasurement measurement) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Set<Measurement> getMeasurements() {
+    public Set<IMeasurement> getMeasurements() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

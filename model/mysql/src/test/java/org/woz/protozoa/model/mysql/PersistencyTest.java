@@ -24,8 +24,7 @@ import org.woz.protozoa.core.type.Type;
  */
 public class PersistencyTest {
 
-    Properties properties = new Properties();
-    PersistenceManagerFactory pmf;
+    MySQLRepository repo;
     
     public PersistencyTest() {
     }
@@ -40,15 +39,7 @@ public class PersistencyTest {
     
     @Before
     public void setUp() {
-        // Create a PersistenceManagerFactory for this datastore
-        properties.setProperty("javax.jdo.PersistenceManagerFactoryClass", "org.datanucleus.api.jdo.JDOPersistenceManagerFactory");
-        properties.setProperty("javax.jdo.option.ConnectionURL","jdbc:mysql://localhost/nucleus");
-        properties.setProperty("javax.jdo.option.ConnectionDriverName","com.mysql.jdbc.Driver");
-        properties.setProperty("javax.jdo.option.ConnectionUserName","atomic");
-        properties.setProperty("javax.jdo.option.ConnectionPassword","test");
-        properties.setProperty("datanucleus.schema.autoCreateAll", "true");
-
-        pmf = JDOHelper.getPersistenceManagerFactory(properties);
+        repo = new MySQLRepository();
     }
     
     @After
@@ -61,10 +52,8 @@ public class PersistencyTest {
         System.out.println("DataNucleus AccessPlatform with JDO");
         System.out.println("===================================");
 
-        // Persistence of a Product and a Book.
-        PersistenceManager pm = pmf.getPersistenceManager();
-        Transaction tx = pm.currentTransaction();
-        Object locationId = null;
+        Transaction tx = repo.getPersistenceManager().currentTransaction();
+
         try {
             tx.begin();
 
@@ -77,10 +66,10 @@ public class PersistencyTest {
             tloc.setState(State.ACTIVE);
             
             System.out.println("Persisting a new location");
-            pm.makePersistent(tloc);
+            repo.addLocation(tloc);
 
             System.out.println("Persisting a new device");
-            pm.makePersistent(tdev);
+            repo.addDevice(tdev);
  
             tx.commit();
             
@@ -96,7 +85,7 @@ public class PersistencyTest {
             {
                 tx.rollback();
             }
-            pm.close();
+            repo.getPersistenceManager().close();
         }
         System.out.println("");        
     }

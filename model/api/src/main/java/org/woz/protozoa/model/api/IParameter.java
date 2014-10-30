@@ -12,24 +12,18 @@ import org.woz.protozoa.core.type.Stateful;
 import org.woz.protozoa.core.type.Typeful;
 
 /**
- * Representing a device 
- * 
+ *
  * @author Wolfgang van Os
- * @since 0.0.1
  */
 @PersistenceCapable
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
-public interface IDevice extends Item, Stateful, Typeful {
-
-    public String getName();
-    public void setName(String name);
-    public String getDescription();
-    public void setDescription(String name);
+public interface IParameter extends Item, Stateful, Typeful {
     
-    public void setLocation(ILocation location);
-    public ILocation getLocation();
-
-    public boolean addParameter(IParameter parameter);
-    public boolean removeParameter(IParameter parameter);
-    public Set<IParameter> getParameters();
+    public void setDevice(IDevice device);
+    public IDevice getDevice();
+    
+    public boolean addMeasurement(IMeasurement measurement);
+    public boolean removeMeasurement(IMeasurement measurement);
+    // public Measurement getMeasurement();
+    public Set<IMeasurement> getMeasurements();
 }
