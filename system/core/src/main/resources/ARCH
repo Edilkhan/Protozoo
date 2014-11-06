@@ -5,9 +5,10 @@
 This is the Protozoa framework and utilizes the following components:
 
 - Apache Karaf
-- Apache CXF
+- Datanucleus JDO persistency container
+- Glassfish Grizzly HTTP container
+- Apache Jersey REST services
 - Apache Commons (Lang)
 
 - SLF4J logging wrapper
 - Quartz scheduler
-- Datanucleus JPA

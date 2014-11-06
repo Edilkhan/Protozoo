@@ -5,16 +5,18 @@
  */
 package org.woz.protozoa.io.rest;
 
-import java.util.Collection;
-import org.woz.protozoa.core.item.Item;
 import org.woz.protozoa.model.api.IDevice;
-import org.woz.protozoa.model.api.Factory;
+import org.woz.protozoa.model.api.Repository;
+import org.woz.protozoa.model.mysql.MySQLRepository;
 
 /**
  *
  * @author wolfgang
  */
 public class DeviceResourceImpl implements DeviceResource {
+    
+    static Repository repo = new MySQLRepository();
+    
     
     @Override
     public String getAllDevices() {
@@ -23,7 +25,9 @@ public class DeviceResourceImpl implements DeviceResource {
 
     @Override
     public String getDevice(String id) {
-        return "";
+        IDevice dev = repo.getDevice(id);
+
+        return dev.toString();
     }
         
 }

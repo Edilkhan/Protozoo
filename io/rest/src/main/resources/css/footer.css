@@ -1,0 +1,127 @@
+/* # Maia overrides (footer)
+================================================== */
+#maia-footer-local {
+  height: 400px;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #maia-footer-local {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 479px) {
+  #maia-footer-local {
+    height: auto;
+  }
+}
+
+.ent-footer-top {
+  border-bottom: 1px dashed #e5e5e5;
+  height: 40px;
+  width: 100%;
+}
+@media only screen and (max-width: 479px) {
+  .ent-footer-top {
+    height: 100px;
+  }
+}
+
+.g-plus-wrapper {
+  float: left;
+}
+
+.g-plus-link {
+  float: left;
+}
+
+.search {
+  float: right;
+  max-height: 38px;
+  position: relative;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .search {
+    float: right;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .search {
+    float: left;
+  }
+}
+.search .maia-search input[type="text"] {
+  margin-bottom: 5px;
+}
+
+.ent-footer-links li {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .ent-footer-links {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .ent-footer-links {
+    width: 100%;
+  }
+}
+.ent-footer-links .ent-footer-unit {
+  display: block;
+  float: left;
+  width: 14%;
+}
+.ent-footer-links .ent-footer-unit.last {
+  margin-top: -1px;
+}
+.ent-footer-links .ent-footer-unit.last h4 {
+  margin-top: 0;
+}
+.ent-footer-links .ent-footer-unit.last h4.first {
+  margin-top: 1.236em;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .ent-footer-links .ent-footer-unit.last {
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .ent-footer-links .ent-footer-unit.last {
+    margin-top: 0;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .ent-footer-links .ent-footer-unit {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .ent-footer-links .ent-footer-unit {
+    float: none;
+    width: 100%;
+  }
+}
+.ent-footer-links .ent-footer-unit ul {
+  margin-left: 0;
+  margin-top: 0;
+}
+.ent-footer-links .ent-footer-unit ul li {
+  list-style-type: none;
+  margin-left: 0;
+  margin-bottom: 8px;
+}
+.ent-footer-links h4 {
+  font-family: arial,sans-serif;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .search {
+    top: 0;
+  }
+
+  .ent-footer-links .ent-footer-unit.last {
+    margin-top: 0 !important;
+  }
+}

@@ -5,10 +5,6 @@
  */
 package org.woz.protozoa.model.mysql;
 
-import java.util.Properties;
-import javax.jdo.JDOHelper;
-import javax.jdo.PersistenceManager;
-import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Transaction;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -47,10 +43,13 @@ public class PersistencyTest {
     }
 
     @Test
+    public void retrieveLocationTest() {
+            System.out.println("Retrieve location: " + repo.getLocation("Testloc"));        
+    }
+
+    /*
+    @Test
     public void createLocationTest() {
-        System.out.println("===================================");
-        System.out.println("DataNucleus AccessPlatform with JDO");
-        System.out.println("===================================");
 
         Transaction tx = repo.getPersistenceManager().currentTransaction();
 
@@ -72,7 +71,7 @@ public class PersistencyTest {
             repo.addDevice(tdev);
  
             tx.commit();
-            
+                        
             System.out.println("Completed!");
         }
         catch (Exception e)
@@ -89,4 +88,5 @@ public class PersistencyTest {
         }
         System.out.println("");        
     }
+    */
 }

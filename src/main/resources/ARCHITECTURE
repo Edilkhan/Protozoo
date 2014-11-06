@@ -24,7 +24,12 @@ Parameters (many-to-one towards Device)
 * Active (yes/no)
 
 
-https://api.wizardofos.org
+Application
+=======
+HTTPS://<URI>/protozoa
+
+- GET /v1/locations/list
+Lists all locations known in the system, including all attributes but without related devices
 - GET /v1/devices
 List devices the currently authenticated user has access to.
 - GET /v1/devices/{DEVICE_ID}

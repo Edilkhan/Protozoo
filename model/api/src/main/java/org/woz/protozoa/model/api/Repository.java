@@ -14,12 +14,12 @@ import org.woz.protozoa.core.item.Item;
  */
 public interface Repository {
     
-    public ILocation addLocation(ILocation newloc);
+    public ILocation addLocation(String name, String description);
     public boolean removeLocation(String name);
     public ILocation getLocation(String name);
-    public Collection<Item> getLocations();
+    public Collection<ILocation> getLocations();
     
-    public IDevice addDevice(IDevice newdev);
+    public IDevice addDevice(String name, String description);
     public boolean removeDevice(String name);
     public IDevice getDevice(String name);
     public Collection<Item> getDevices();

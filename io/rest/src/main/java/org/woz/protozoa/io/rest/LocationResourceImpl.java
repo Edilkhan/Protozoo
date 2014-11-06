@@ -6,9 +6,12 @@
 
 package org.woz.protozoa.io.rest;
 
-import javax.jdo.PersistenceManager;
+import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.woz.protozoa.model.api.ILocation;
+import org.woz.protozoa.model.api.Repository;
+import org.woz.protozoa.model.mysql.MySQLRepository;
 
 /**
  *
@@ -18,24 +21,28 @@ public class LocationResourceImpl implements LocationResource {
 
     protected final Logger log = LoggerFactory.getLogger(LocationResourceImpl.class);
     
-    PersistenceManager pm;
+    static Repository repo = new MySQLRepository();
     
     @Override
     public String getLocation(String name) {
-        pm.getObjectById("Location", name);
-        pm.get
+        log.info("REST getLocation called...");
+        
+        ILocation loc = repo.getLocation(name);
+        
+        return loc.toString();
     }
 
     @Override
     public String getLocations() {
-        return "Not implemented yet";
+        Collection result = repo.getLocations();
+        
+        return result.toString();
     }
 
-    public org.woz.protozoa.services.model.LocationService getLs() {
-        return ls;
-    }
-
-    public void setLs(org.woz.protozoa.services.model.LocationService ls) {
-        this.ls = ls;
+    @Override
+    public ILocation addLocation(String name, String description) {
+        log.info("Create location " + name);
+        
+        return repo.addLocation(name, description);
     }
 }

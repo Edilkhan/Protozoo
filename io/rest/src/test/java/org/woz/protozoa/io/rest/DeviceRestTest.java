@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.woz.protozoa.io.cxf.rest;
+package org.woz.protozoa.io.rest;
 
 import org.woz.protozoa.io.rest.Main;
 import javax.ws.rs.client.Client;

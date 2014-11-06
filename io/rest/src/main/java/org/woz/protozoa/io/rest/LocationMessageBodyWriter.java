@@ -23,7 +23,7 @@ import org.woz.protozoa.model.api.ILocation;
  *
  * @author wos
  */
-@Produces("application/xml")
+@Produces({ "application/xml", "text/html" })
 public class LocationMessageBodyWriter implements MessageBodyWriter<ILocation> {
 
     @Override

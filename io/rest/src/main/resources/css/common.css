@@ -1,0 +1,30 @@
+#maia-nav-x .maia-button.blue-button {
+  right: 120px;
+  margin-right: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+/* Mobile friendly settings */
+@media only screen and (max-device-width: 480px) {
+  .main {
+    padding: 0px;
+  }
+
+  body.two-column #gc-sidebar, body.two-column #gc-sidebar.wide {
+    width: auto;
+    margin-right:0;
+    padding:16px 0;
+    vertical-align:top;
+    float:none;
+  }
+
+  body.two-column #gc-content, body.two-column #gc-content.wide-sidebar {
+    margin-left: 0;
+    vertical-align: top;
+    padding-top: 14px;
+  }
+
+  /* Hide controls in mobile view. */
+  .doc-info-container { display: none; }
+}

@@ -1,0 +1,4 @@
+/* Import rules that are common between the documentation and other pages */
+@import url('css/common.css');
+@import url('css/dropdown-menu.css');
+@import url('css/footer.css');

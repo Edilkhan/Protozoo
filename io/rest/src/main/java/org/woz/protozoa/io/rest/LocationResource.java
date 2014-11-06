@@ -6,15 +6,19 @@
 
 package org.woz.protozoa.io.rest;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.QueryParam;
+import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
  * @author wolfgang
  */
-@Path("/location/")
+@Path("/locations/")
 public interface LocationResource {
     @GET
     @Path("{name}")
@@ -22,7 +26,15 @@ public interface LocationResource {
     public String getLocation(@PathParam("name") String name);
     
     @GET
-    @Path("All")
+    @Path("list")
     // @Produces({"application/xml","application/json"})
     public String getLocations();
+    
+    @POST
+    @Path("new")
+    @Consumes("text/html")
+    public ILocation addLocation(
+        @QueryParam("name") String name,
+        @QueryParam("description") String description
+    );
 }

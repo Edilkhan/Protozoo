@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="https://cloud.google.com/_static/d67431712d/css/screen-maia.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,500,500italic,300,300italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+        <link href="https://www.google.com/css/maia.experimental.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="https://cloud.google.com/_static/d67431712d/css/maia-cloud.css" />
+        <link rel="stylesheet" type="text/css" href="css/default-docs.css" />
+        <link rel="shortcut icon" href="https://cloud.google.com/images/gcp-favicon.ico" />
+        <link rel="apple-touch-icon" href="https://cloud.google.com/images/apple-touch-icon.png" />
+        <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width">
+        <!-- GSAP animation frameworks -->
+        <!-- script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <script src="http://www.gstatic.com/external_hosted/gsap/TweenMax.min.js"></script>
+        <script src="http://www.gstatic.com/external_hosted/gsap/TimelineMax.min.js"></script>
+        <script src="https://cloud.google.com/js/floodlight.js"></script-->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-sanitize.min.js"></script>
+        <script src="https://cloud.google.com/js/base.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+        <title>Product Variant Structures - FMO &mdash; Future Mode of Operations</title>
+
+    </head>
+
+    <body class="two-column docs helpouts normal-width">
+        <div class="maia-max">
+            <div id="maia-header">
+                <div class="maia-aux">
+                    <a href="https://cloud.google.com"><img src="https://cloud.google.com/_static/images/gcp-logo.png" alt="Google Cloud Platform"> </a>
+                </div>
+            </div>
+
+            <div class="kd-butterbar">
+                <span>
+                    <span class="message"></span>
+                    <a href="#" class="kd-butterbar-dismiss">Hide</a>
+                </span>
+            </div>
+
+            <div  itemscope itemtype="http://schema.org/Article">
+                <div id="maia-nav-x" class="maia-nav">
+                    <div class="maia-aux">
+                        <ul>
+                            <li>
+                                <a href="/why-google/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Why Google">Why Google</a>
+                            </li>
+
+                            <li id="main-nav-product-dropdown" class="dropdown">
+                                <a href="/products/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Products">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="/solutions/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Solutions">Solutions</a>
+
+                            </li>
+
+                            <li>
+                                <a href="/customers/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Customers">Customers</a>
+
+                            </li>
+
+                            <li>
+                                <a href="/docs/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Documentation">Documentation</a>
+
+                            </li>
+
+                            <li>
+                                <a href="/support/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Support">Support</a>
+
+                            </li>
+
+                            <li>
+                                <a href="/partners/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Partners">Partners</a>
+
+                            </li>
+
+                            <li>
+                                <a href="//googlecloudplatform.blogspot.com/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Blog">Blog</a>
+
+                            </li>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Products subnav -->
+                <div id="maia-nav-x" class="maia-nav products-nav">
+                    <div class="maia-aux">
+                        <div class="products-nav-dropdown maia-cols">
+
+                            <div id="compute-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Compute</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/compute/">
+                                        <span class="product-name">Compute Engine</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/appengine/">
+                                        <span class="product-name">App Engine</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="storage-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Storage</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/sql/">
+                                        <span class="product-name">Cloud SQL</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/storage/">
+                                        <span class="product-name">Cloud Storage</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/datastore/">
+                                        <span class="product-name">Cloud Datastore</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="big-data-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Big Data</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/bigquery/">
+                                        <span class="product-name">BigQuery</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="services-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Services</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/dns/">
+                                        <span class="product-name">Cloud DNS</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/endpoints/">
+                                        <span class="product-name">Cloud Endpoints</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/translate/">
+                                        <span class="product-name">Translate API</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/prediction/">
+                                        <span class="product-name">Prediction API</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/pubsub/">
+                                        <span class="product-name">Cloud Pub/Sub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="management-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Management</span>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/deployment-manager/">Cloud Deployment Manager</a></span>
+                                </div>
+                            </div>
+
+                            <div id="pricing-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Pricing</span>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/pricing/">Overview</a></span>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/products/calculator/">Calculator</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docs subnav -->
+                <div id="maia-nav-x" class="maia-nav products-docs-nav">
+                    <div class="maia-aux">
+                        <div class="products-nav-dropdown maia-cols">
+
+                            <div id="compute-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Compute</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/compute/docs">
+                                        <span class="product-name">Compute Engine</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/appengine/docs">
+                                        <span class="product-name">App Engine</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="storage-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Storage</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/sql/docs">
+                                        <span class="product-name">Cloud SQL</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/storage/docs">
+                                        <span class="product-name">Cloud Storage</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/datastore/docs">
+                                        <span class="product-name">Cloud Datastore</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="big-data-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Big Data</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/bigquery/docs">
+                                        <span class="product-name">BigQuery</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="services-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Services</span>
+                                <div class="dropdown-item-container">
+                                    <a href="/dns/docs">
+                                        <span class="product-name">Cloud DNS</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/appengine/features/#Endpoints">
+                                        <span class="product-name">Cloud Endpoints</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/translate/docs">
+                                        <span class="product-name">Translate API</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/prediction/docs">
+                                        <span class="product-name">Prediction API</span>
+                                    </a>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <a href="/pubsub/docs">
+                                        <span class="product-name">Cloud Pub/Sub</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="management-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Management</span>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/deployment-manager/docs">Cloud Deployment Manager</a></span>
+                                </div>
+                            </div>
+
+                            <div id="pricing-dropdown" class="products-column maia-col-2">
+                                <span class="product-list-title">Tools</span>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/sdk/">Google Cloud SDK</a></span>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/mobile/">Android Studio</a></span>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="https://developers.google.com/eclipse/">Plugin for Eclipse</a></span>
+                                </div>
+                                <div class="dropdown-item-container">
+                                    <span class="product-name"><a href="/devtools/repo/cloud-repositories">Cloud Repositories (Git)</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="gc-appnav" class="maia-aux">
+                    <ol class="breadcrumbs">
+                        <li><a href="/fmo/">FMO</a></li>
+                        <li><a href="/cmmgt/">Configuration Mgt</a></li>
+                        <li><a href="/cmmgt/pvs">Product Variant Structure</a></li>
+                    </ol>
+                </div>
+
+                <div class="maia-aux" id="gc-appbar">
+                    <a href="/appengine/docs/java" class="gc-appbar-title">
+                        PVS
+                    </a>
+                </div>
+
+                <div id="maia-main" class="main">
+                    <div id="gc-sidebar" class="wide">
+                        <nav class="gc-toc">
+                            <ul>
+                                <li class=""><a href="/appengine/docs/" title="FMO Home" data-title="App Engine Home"><span>FMO Home</span></a>
+                                    <ul>
+                                        <li><a href="" title="Configuration management" data-title="Config mgt"><span>Configuration management</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div id="gc-content" class="wide-sidebar">
+                        <div>
+                            <div itemprop="articleBody">
+                                <p><link rel="stylesheet" href="https://cloud.google.com/appengine/css/local_extensions.css"></link>
+                                <style>
+                                    body.docs section.expandable-bottom-margin {
+                                        margin-bottom: 1.5em;
+                                    }
+                                    body.docs section.expandable-no-left-margin {
+                                        margin-left: 0;
+                                    }
+                                </style>
+
+                                <h1 class="page-title" id="entities_properties_and_keys">Entities, Properties, and Keys</h1>
+                                <p>Data objects in the App Engine Datastore are known as <em>entities</em>. An entity has one or more named <em>properties</em>, each of which can have one or more values. Entities of the same kind need not have the same properties, and an entity's values for a given property need not all be of the same data type. (If necessary, an application can establish and enforce such restrictions in its own data model.)</p>
+                                <p>The Datastore supports a variety of <a href="#Java_Properties_and_value_types">data types for property values</a>.
+                                    These include, among others:</p>
+                                <ul>
+                                    <li>Integers</li>
+                                    <li>Floating-point numbers</li>
+                                    <li>Strings</li>
+                                    <li>Dates</li>
+                                    <li>Binary data</li>
+                                </ul>
+                                <p>Each entity in the Datastore has a <em>key</em> that uniquely identifies it. The key consists of the following components:</p>
+                                <ul>
+
+                                    <li>The <i>namespace</i> of the entity, which allows for <a href="/appengine/docs/java/multitenancy/">multitenancy</a></li>
+
+                                    <li>The <a href="#Java_Kinds_and_identifiers"><i>kind</i></a> of the entity, which categorizes it for the purpose of Datastore queries</li>
+                                    <li>An <a href="#Java_Kinds_and_identifiers"><i>identifier</i></a> for the individual entity, which can be either
+                                        <ul>
+                                            <li>a <i>key name</i> string</li>
+                                            <li>an integer <i>numeric ID</i></li>
+                                        </ul></li>
+                                    <li>An optional <a href="#Java_Ancestor_paths"><i>ancestor path</i></a> locating the entity within the Datastore hierarchy</li>
+                                </ul>
+
+                                <aside class="caution">Don't name a property "key." This name is reserved
+                                    for a special property used to store the Model key. Though it may work
+                                    locally, a property named "key" will prevent deployment to App Engine.</aside>
+                                <p>An application has access only to entities it has created itself; it can't access data belonging to other applications. It can fetch an individual entity from the Datastore using the entity's key, or it can retrieve one or more entities by issuing a <a href="queries"><em>query</em></a> based on the entities' keys or property values.</p>
+
+
+                                <p>The Java App Engine SDK includes a simple Java API, provided in the package <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/package-summary"><code>com.google.appengine.api.datastore</code></a>, that supports the features of the Datastore directly. All of the examples in this document are based on this low-level Java API; you can choose to use it either directly in your application or as a basis on which to build your own data management layer.</p>
+
+
+
+                                <p>The Datastore itself does not enforce any restrictions on the structure of entities, such as whether a given property has a value of a particular type; this task is left to the application.</p>
+
+                                <aside class="special"><strong>Important:</strong><span> In addition to the low-level Java API, the SDK also supports two standard Java interfaces for data storage, <a href="/appengine/docs/java/datastore/jdo/overview">Java Data Objects (JDO)</a> and the
+                                        <a href="/appengine/docs/java/datastore/jpa/overview">Java Persistence API (JPA)</a>, which you can use to manage and enforce the structure of entities. These interfaces let you model your data objects as Java classes, making it easier to port your application between the App Engine Datastore and other data storage solutions.</span></aside>
+
+                                <h2>Contents</h2>
+
+                                <ol class="toc">
+                                    <li><a href="#Java_Kinds_and_identifiers">Kinds and identifiers</a></li>
+                                    <li><a href="#Java_Ancestor_paths">Ancestor paths</a></li>
+                                    <li><a href="#Java_Transactions_and_entity_groups">Transactions and entity groups</a></li>
+                                    <li><a href="#Java_Properties_and_value_types">Properties and value types</a></li>
+                                    <li><a href="#Java_Working_with_entities">Working with entities</a>
+                                        <ol class="toc">
+                                            <li><a href="#Java_Creating_an_entity">Creating an entity</a></li>
+                                            <li><a href="#Java_Retrieving_an_entity">Retrieving an entity</a></li>
+                                            <li><a href="#Java_Updating_an_entity">Updating an entity</a></li>
+                                            <li><a href="#Java_Deleting_an_entity">Deleting an entity</a></li>
+
+
+
+                                            <li><a href="#Java_Embedded_entities">Embedded entities</a></li>
+                                            <li><a href="#Java_Batch_operations">Batch operations</a></li>
+                                            <li><a href="#Java_Generating_keys">Generating keys</a></li>
+
+                                        </ol>
+                                    </li>
+                                    <li><a href="#Java_Understanding_write_costs">Understanding write costs</a></li>
+                                </ol>
+
+                                <h2 id="Java_Kinds_and_identifiers">Kinds and identifiers</h2>
+
+                                <p>Each Datastore entity is of a particular <em>kind,</em> which categorizes the entity for the purpose of queries: for instance, a human resources application might represent each employee at a company with an entity of kind <code>Employee</code>. In the Java Datastore API, you specify an entity's kind when you create it, as an argument to the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Entity#Entity(java.lang.String)"><code>Entity()</code></a> constructor. All kind names that begin with two underscores (<code>__</code>) are reserved and may not be used.</p>
+                                <p>The following example creates an entity of kind <code>Employee</code>, populates its property values, and saves it to the Datastore:</p>
+
+
+                                <pre class="prettyprint notranslate" translate="no"><code>import java.util.Date;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+
+
+DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+
+
+Entity employee = new Entity("Employee");
+
+employee.setProperty("firstName", "Antonio");
+employee.setProperty("lastName", "Salieri");
+
+Date hireDate = new Date();
+employee.setProperty("hireDate", hireDate);
+
+employee.setProperty("attendedHrTraining", true);
+
+
+datastore.put(employee);
+</code></pre>
+
+
+
+                                <p>In addition to a kind, each entity has an <em>identifier</em>, assigned when the entity is created. Because it is part of the entity's key, the identifier is associated permanently with the entity and cannot be changed. It can be assigned in either of two ways:</p>
+                                <ul>
+                                    <li>Your application can specify its own <em>key name</em> string for the entity.</li>
+                                    <li>You can have the Datastore automatically assign the entity an integer <em>numeric ID</em>.</li>
+                                </ul>
+
+
+                                <p>To assign an entity a key name, provide the name as the second argument to the constructor when you create the entity:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Entity employee = new Entity("Employee", "asalieri");
+</code></pre>
+                                <p>To have the Datastore assign a numeric ID automatically, omit this argument:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Entity employee = new Entity("Employee");
+</code></pre>
+
+
+
+                                <h3 id="Java_Assigning_identifiers">Assigning identifiers</h3>
+
+
+                                The Datastore can be configured to generate auto IDs using <a href="/appengine/docs/java/config/appconfig#Java_appengine_web_xml_Auto_ID_policy">two different auto id policies</a>:</p>
+                                <ul>
+                                    <li>The <code>default</code> policy generates a random sequence of IDs that are approximately uniformly distributed. Each ID can be up to 16 decimal digits long.</li>
+                                    <li>The <code>legacy</code> policy creates a sequence of non-consecutive smaller integer IDs.</li>
+                                </ul>
+
+
+                                If you want to display the entity IDs to the user, and/or depend upon their order, the best thing to do is use manual allocation.</span></aside>
+                                <aside class="note"><strong>Note:</strong><span> Instead of using key name strings or generating numeric IDs automatically, advanced applications may sometimes wish to assign their own numeric IDs manually to the entities they create. Be aware, however, that there is nothing to prevent the Datastore from assigning one of your manual numeric IDs to another entity. The only way to avoid such conflicts is to have your application obtain a block of IDs with the methods <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#allocateIds(com.google.appengine.api.datastore.Key,%20java.lang.String,%20long)"><code>DatastoreService.allocateIds()</code></a> or <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/AsyncDatastoreService#allocateIds(com.google.appengine.api.datastore.Key,%20java.lang.String,%20long)"><code>AsyncDatastoreService.allocateIds()</code></a>. The Datastore's automatic ID generator will keep track of IDs that have been allocated with these methods and will avoid reusing them for another entity, so you can safely use such IDs without conflict.</span></aside>
+                                <p>Datastore generates a random sequence of IDs that are approximately uniformly distributed. Each ID can be up to 16 decimal digits long.</p>
+                                <h2 id="Java_Ancestor_paths">Ancestor paths</h2>
+
+                                <p>Entities in the Datastore form a hierarchically structured space similar to
+                                    the directory structure of a file system. When you create an entity, you can
+                                    optionally designate another entity as its <em>parent;</em> the new entity is a
+                                    <em>child</em> of the parent entity (note that unlike in a file system, the parent
+                                    entity need not actually exist). An entity without a parent is a <em>root
+                                        entity.</em> The association between an entity and its parent is permanent, and
+                                    cannot be changed once the entity is created. The Datastore will never assign
+                                    the same numeric ID to two entities with the same parent, or to two root
+                                    entities (those without a parent).</p>
+
+                                <p>An entity's parent, parent's parent, and so on recursively, are its
+                                    <em>ancestors;</em> its children, children's children, and so on, are its
+                                    <em>descendants.</em> An entity and its descendants are said to belong to the
+                                    same <em>entity group.</em> The sequence of entities beginning with a root
+                                    entity and proceeding from parent to child, leading to a given entity,
+                                    constitute that entity's <em>ancestor path.</em> The complete key identifying
+                                    the entity consists of a sequence of kind-identifier pairs specifying its
+                                    ancestor path and terminating with those of the entity itself:</p>
+
+                                <pre>[Person:GreatGrandpa, Person:Grandpa, Person:Dad, Person:Me]</pre>
+
+                                <p>For a root entity, the ancestor path is empty and the key consists solely of
+                                    the entity's own kind and identifier:</p>
+
+                                <pre>[Person:GreatGrandpa]</pre>
+
+
+
+                                <p>To designate an entity's parent, provide the parent entity's key as an argument to the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Entity#Entity(java.lang.String,%20com.google.appengine.api.datastore.Key)"><code>Entity()</code></a>
+                                    constructor when creating the child entity. You can get the key by calling the parent entity's <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Entity#getKey()"><code>getKey()</code></a> method:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Entity employee = new Entity("Employee");
+datastore.put(employee);
+
+Entity address = new Entity("Address", employee.getKey());
+datastore.put(address);
+</code></pre>
+                                <p>If the new entity also has a key name, provide the key name as the second argument to the <code>Entity()</code> constructor and the key of the parent entity as the third argument:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Entity address = new Entity("Address", "addr1", employee.getKey());
+</code></pre>
+
+
+
+                                <h2 id="Java_Transactions_and_entity_groups">Transactions and entity groups</h2>
+
+                                <p>Every attempt to create, update, or delete an entity takes place in the context of a <a href="/appengine/docs/java/datastore/transactions"><em>transaction</em></a>. A single transaction can include any number of such operations. To maintain the consistency of the data, the transaction ensures that all of the operations it contains are applied to the Datastore as a unit or, if any of the operations fails, that none of them are applied.</p>
+                                <aside class="note"><strong>Note:</strong><span> If your application receives an exception when attempting to commit a transaction, it does not necessarily mean that the transaction has failed. It is possible to receive a <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreTimeoutException"><code>DatastoreTimeoutException</code></a>, <a href="http://download.oracle.com/javase/6/docs/api/java/util/ConcurrentModificationException.html"><code>ConcurrentModificationException</code></a>, or  <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreFailureException"><code>DatastoreFailureException</code></a> even when a transaction has been committed and will eventually be applied successfully. Whenever possible, structure your Datastore transactions so that the end result will be unaffected if the same transaction is applied more than once.</span></aside>
+                                <p>A single transaction can apply to multiple entities, so long as the entities belong to a limited number (5) of entity groups. You need to take this limitation into account when designing your data model: the simplest approach is to determine which entities you need to be able to process in the same transaction. Then, when you create those entities, place them in the same entity group by declaring them with a common ancestor. They will then all be in the same entity group and you will always be able to update and read them transactionally.</p>
+
+                                <aside class="note"><strong>Note:</strong><span> Applications in the deprecated Master/Slave Datastore can only perform transactions on a single entity-group.</span></aside>
+
+                                <h2 id="Java_Properties_and_value_types">Properties and value types</h2>
+
+                                <p>The data values associated with an entity consist of one or more <em>properties.</em> Each property has a name and one or more values. A property can have values of more than one type, and two entities can have values of different types for the same property. Properties can be indexed or unindexed (queries that order or filter on a property <em>P</em> will ignore entities where <em>P</em> is unindexed).</p>
+                                <aside class="note"><strong>Note:</strong><span> Properties with multiple values can be useful, for instance, when performing queries with equality filters: an entity satisfies the query if any of its values for a property matches the value specified in the filter. For more details on multiple-valued properties, including issues you should be aware of, see the <a href="queries">Datastore Queries</a> page.</span></aside>
+
+                                <p><a name="Java_Value_type_sort_order"></a>The following value types are supported:</p>
+
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Value type</th>
+                                            <th>Java type(s)</th>
+                                            <th>Sort order</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Integer</td>
+                                            <td><code>short</code><br><code>int</code><br><code>long</code><br><code>java.lang.Short</code><br><code>java.lang.Integer</code><br><code>java.lang.Long</code></td>
+                                            <td>Numeric</td>
+                                            <td>Stored as long integer, then converted to the field type<br><br>Out-of-range values overflow</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Floating-point number</td>
+                                            <td><code>float</code><br><code>double</code><br><code>java.lang.Float</code><br><code>java.lang.Double</code></td>
+                                            <td>Numeric</td>
+                                            <td>64-bit double precision,<br>IEEE 754</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Boolean</td>
+                                            <td><code>boolean</code><br><code>java.lang.Boolean</code></td>
+                                            <td><code>false</code>&lt;<code>true</code></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Text string (short)</td>
+                                            <td><code>java.lang.String</code></td>
+                                            <td>Unicode</td>
+                                            <td>Up to 500 Unicode characters<br><br>Values longer than 500 characters throw <code>IllegalArgumentException</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Text string (long)</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Text"><code>com.google.appengine.api.datastore.Text</code></a></td>
+                                            <td>None</td>
+                                            <td>Up to 1 megabyte<br><br>Not indexed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Byte string (short)</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/ShortBlob"><code>com.google.appengine.api.datastore.ShortBlob</code></a></td>
+                                            <td>Byte order</td>
+                                            <td>Up to 500 bytes<br><br>Values longer than 500 bytes throw <code>IllegalArgumentException</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Byte string (long)</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Blob"><code>com.google.appengine.api.datastore.Blob</code></a></td>
+                                            <td>None</td>
+                                            <td>Up to 1 megabyte<br><br>Not indexed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date and time</td>
+                                            <td><code>java.util.Date</code></td>
+                                            <td>Chronological</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Geographical point</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/GeoPt"><code>com.google.appengine.api.datastore.GeoPt</code></a></td>
+                                            <td>By latitude,<br>then longitude</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Postal address</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/PostalAddress"><code>com.google.appengine.api.datastore.PostalAddress</code></a></td>
+                                            <td>Unicode</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telephone number</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/PhoneNumber"><code>com.google.appengine.api.datastore.PhoneNumber</code></a></td>
+                                            <td>Unicode</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email address</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Email"><code>com.google.appengine.api.datastore.Email</code></a></td>
+                                            <td>Unicode</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Google Accounts user</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/users/User"><code>com.google.appengine.api.users.User</code></a></td>
+                                            <td>Email address<br>in Unicode order</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Instant messaging handle</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/IMHandle"><code>com.google.appengine.api.datastore.IMHandle</code></a></td>
+                                            <td>Unicode</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Link</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Link"><code>com.google.appengine.api.datastore.Link</code></a></td>
+                                            <td>Unicode</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Category</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Category"><code>com.google.appengine.api.datastore.Category</code></a></td>
+                                            <td>Unicode</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rating</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Rating"><code>com.google.appengine.api.datastore.Rating</code></a></td>
+                                            <td>Numeric</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Datastore key</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Key"><code>com.google.appengine.api.datastore.Key</code></a><br>or the referenced object (as a child)</td>
+                                            <td>By path elements<br>(kind, identifier,<br>kind, identifier...)</td>
+                                            <td>Up to 500 Unicode characters<br><br>Values longer than 500 characters throw <code>IllegalArgumentException</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blobstore key</td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/blobstore/BlobKey"><code>com.google.appengine.api.blobstore.BlobKey</code></a></td>
+                                            <td>Byte order</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="#Java_Embedded_entities">Embedded entity</a></td>
+                                            <td><a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/EmbeddedEntity"><code>com.google.appengine.api.datastore.EmbeddedEntity</code></a></td>
+                                            <td>None</td>
+                                            <td>Not indexed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Null</td>
+                                            <td><code>null</code></td>
+                                            <td>None</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+
+
+                                <p>For text strings and unencoded binary data (byte strings), the Datastore supports two value types:</p>
+                                <ul>
+                                    <li>Short strings (up to 500 Unicode characters or bytes) are indexed and can be used in query filter conditions and sort orders.</li>
+                                    <li>Long strings (up to 1 megabyte) are not indexed and cannot be used in query filters and sort orders.</li>
+                                </ul>
+
+                                Note: The long byte string type is named <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Blob"><code>Blob</code></a> in the Datastore API. This type is unrelated to blobs as used in the <a href="/appengine/docs/java/blobstore">Blobstore API</a>.
+
+
+                                <p><a name="Java_Value_type_ordering"></a></p>
+                                <p>When a query involves a property with values of mixed types, the Datastore uses a deterministic ordering based on the internal representations:</p>
+                                <ol>
+                                    <li>Null values</li>
+                                    <li>Fixed-point numbers<ul>
+                                            <li>Integers</li>
+                                            <li>Dates and times
+                                            </li>
+                                            <li>Ratings
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Boolean values
+                                    </li>
+                                    <li>Byte strings (short)</li>
+                                    <li>Unicode strings
+
+
+                                        <ul>
+                                            <li>Text strings (short)</li>
+                                            <li>Postal addresses</li>
+                                            <li>Telephone numbers</li>
+                                            <li>Email addresses</li>
+                                            <li>IM handles</li>
+                                            <li>Links</li>
+                                            <li>Categories
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Floating-point numbers
+                                    </li>
+                                    <li>Geographical points
+
+                                    </li>
+                                    <li>Google Accounts users
+                                    </li>
+                                    <li>Datastore keys
+                                    </li>
+                                    <li>Blobstore keys
+                                    </li>
+                                </ol>
+
+                                <p>Because long text strings, long byte strings, and embedded entities are not indexed, they have no ordering defined.</p>
+
+                                <aside class="note"><strong>Note:</strong><span> Integers and floating-point numbers are considered separate types in the Datastore. If an entity uses a mix of integers and floats for the same property, all integers will be sorted before all floats: for example,<br><br><code>7</code> &lt; <code>3.2</code></span></aside>
+                                <h2 id="Java_Working_with_entities">Working with entities</h2>
+
+                                <p>Applications can use the Datastore API to create, retrieve, update, and delete entities. If the application knows the complete key for an entity (or can derive it from its parent key, kind, and identifier), it can use the key to operate directly on the entity. An application can also obtain an entity's key as a result of a Datastore query; see the <a href="queries">Datastore Queries</a> page for more information.</p>
+
+
+                                <p>The Java Datastore API uses methods of the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService"><code>DatastoreService</code></a> interface to operate on entities. You obtain a <code>DatastoreService</code> object by calling the static method <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreServiceFactory#getDatastoreService()"><code>DatastoreServiceFactory.getDatastoreService()</code></a>:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+
+// ...
+DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+</code></pre>
+                                <h3 id="Java_Creating_an_entity">Creating an entity</h3>
+
+                                <p>In Java, you create a new entity by constructing an instance of class <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Entity"><code>Entity</code></a>, supplying the entity's kind as an argument to the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Entity#Entity(java.lang.String)"><code>Entity()</code></a> constructor. After populating the entity's properties if necessary, you save it to the datstore by passing it as an argument to the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#put(com.google.appengine.api.datastore.Entity)"><code>DatastoreService.put()</code></a> method. You can specify the entity's key name by passing it as the second argument to the constructor:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Entity employee = new Entity("Employee", "asalieri");
+// ... set properties ...
+
+datastore.put(employee);
+</code></pre>
+                                <p>If you don't provide a key name, the Datastore will automatically generate a numeric ID for the entity's key:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Entity employee = new Entity("Employee");
+// ... set properties ...
+
+datastore.put(employee);
+</code></pre>
+                                <h3 id="Java_Retrieving_an_entity">Retrieving an entity</h3>
+
+                                <p>To retrieve an entity identified by a given key, pass the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Key"><code>Key</code></a>
+                                    object to the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#get(com.google.appengine.api.datastore.Key)"><code>DatastoreService.get()</code></a> method:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>// Key employeeKey = ...;
+Entity employee = datastore.get(employeeKey);
+</code></pre>
+                                <h3 id="Java_Updating_an_entity">Updating an entity</h3>
+
+                                <p>To update an existing entity, modify the attributes of the Entity object, then pass it to the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#put(com.google.appengine.api.datastore.Entity)"><code>DatastoreService.put()</code></a> method. The object data overwrites the existing entity. The entire object is sent to the Datastore with every call to <code>put()</code>.</p>
+                                <aside class="note"><strong>Note:</strong><span> The Datastore API does not distinguish between creating a new entity and updating an existing one. If the object's key represents an entity that already exists, the put() method overwrites the existing entity. You can use a <a href="/appengine/docs/java/datastore/transactions">transaction</a> to test whether an entity with a given key exists before creating one.</span></aside>
+                                <h3 id="Java_Deleting_an_entity">Deleting an entity</h3>
+
+                                <p>Given an entity's key, you can delete the entity with the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#delete(com.google.appengine.api.datastore.Key...)"><code>DatastoreService.delete()</code></a> method:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>// Key employeeKey = ...;
+datastore.delete(employeeKey);
+</code></pre>
+                                <h3 id="Java_Embedded_entities">Embedded entities</h3>
+
+                                <p>You may sometimes find it convenient to embed one entity as a property of another entity. This can be useful, for instance, for creating a hierarchical structure of property values within an entity. The Java class <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/EmbeddedEntity"><code>EmbeddedEntity</code></a> allows you to do this:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>// Entity employee = /*...*/;
+EmbeddedEntity embeddedContactInfo = new EmbeddedEntity();
+
+embeddedContactInfo.setProperty("homeAddress", /*...*/);
+embeddedContactInfo.setProperty("phoneNumber", /*...*/);
+embeddedContactInfo.setProperty("emailAddress", /*...*/);
+
+employee.setProperty("contactInfo", embeddedContactInfo);
+</code></pre>
+                                <p>Properties of an embedded entity are not indexed and cannot be used in queries. You can optionally associate a key with an embedded entity, but (unlike a full-fledged entity) the key is not required and, even if present, cannot be used to retrieve the entity.</p>
+                                <p>Instead of populating the embedded entity's properties manually, you can use the <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/PropertyContainer#setPropertiesFrom(com.google.appengine.api.datastore.PropertyContainer)"><code>setPropertiesFrom()</code></a> method to copy them from an existing entity:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>// Entity employee = /*...*/;
+// Entity contactInfo = /*...*/;
+EmbeddedEntity embeddedContactInfo = new EmbeddedEntity();
+Key infoKey;
+
+infoKey = contactInfo.getKey();
+embeddedContactInfo.setKey(infoKey);
+embeddedContactInfo.setPropertiesFrom(contactInfo);
+
+employee.setProperty("contactInfo", embeddedContactInfo);
+</code></pre>
+                                <p>You can later use the same method to recover the original entity from the embedded entity:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>// Entity employee = /*...*/;
+EmbeddedEntity embeddedContactInfo = employee.getProperty("contactInfo");
+Key infoKey = embeddedContactInfo.getKey();
+Entity contactInfo = new Entity(infoKey);
+
+contactInfo.setPropertiesFrom(embeddedContactInfo);
+</code></pre>
+                                <h3 id="Java_Batch_operations">Batch operations</h3>
+
+                                <p>The <code>DatastoreService</code> methods <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#put(java.lang.Iterable)"><code>put()</code></a>, <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#get(java.lang.Iterable)"><code>get()</code></a>,
+                                    and <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/DatastoreService#delete(java.lang.Iterable)"><code>delete()</code></a> (and their AsyncDatastoreService counterparts) have batch versions that accept an <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">iterable</a> object (of class <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Entity"><code>Entity</code></a> for <code>put()</code>, <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Key"><code>Key</code></a> for <code>get()</code> and <code>delete()</code>) and use it to operate on multiple entities in a single Datastore call:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>import java.util.Arrays;
+import java.util.List;
+
+// ...
+Entity employee1 = new Entity("Employee");
+Entity employee2 = new Entity("Employee");
+Entity employee3 = new Entity("Employee");
+// ...
+
+List&lt;Entity&gt; employees = Arrays.asList(employee1, employee2, employee3);
+datastore.put(employees);
+</code></pre>
+                                <p>These batch operations group all the entities or keys by entity group and then perform the requested operation on each entity group in parallel. Such batch calls are faster than making separate calls for each individual entity, because they incur the overhead for only one service call. If multiple entity groups are involved, the work for all the groups is performed in parallel on the server side.</p>
+                                <aside class="note"><strong>Note:</strong><span> A batch <code>put()</code> or <code>delete()</code> call may succeed for some entities but not others. If it is important that the call succeed completely or fail completely, use a <a href="/appengine/docs/java/datastore/transactions">transaction</a> with all affected entities in the same entity group. Attempting a batch operation inside a transaction with entities or keys belonging to multiple entity groups will result in an <code>IllegalArgumentException</code>.</span></aside>
+                                <h3 id="Java_Generating_keys">Generating keys</h3>
+
+                                <p>Applications can use the class <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory"><code>KeyFactory</code></a> to create a <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Key"><code>Key</code></a> object for an entity from known components, such as the entity's kind and identifier. For an entity with no parent, pass the kind and identifier (either a key name string or a numeric ID) to the static method <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory#createKey(java.lang.String,%20long)"><code>KeyFactory.createKey()</code></a> to create the key. The following examples create a key for an entity of kind <code>Person</code> with key name <code>"GreatGrandpa"</code> or numeric ID <code>74219</code>:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Key k = KeyFactory.createKey("Person", "GreatGrandpa");
+
+Key k = KeyFactory.createKey("Person", 74219);
+</code></pre>
+                                <p>If the key includes a path component, you can use the helper class <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory.Builder"><code>KeyFactory.Builder</code></a> to build the path. This class's <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory.Builder#addChild(java.lang.String,%20long)"><code>addChild</code></a> method adds a single entity to the path and returns the builder itself, so you can chain together a series of calls, beginning with the root entity, to build up the path one entity at a time. After building the complete path, call <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory.Builder#getKey()"><code>getKey</code></a> to retrieve the resulting key:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Key k = new KeyFactory.Builder("Person", "GreatGrandpa")
+                      .addChild("Person", "Grandpa")
+                      .addChild("Person", "Dad")
+                      .addChild("Person", "Me")
+                      .getKey();
+</code></pre>
+                                <p>Class <code>KeyFactory</code> also includes the static methods <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory#keyToString(com.google.appengine.api.datastore.Key)"><code>keyToString</code></a> and <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/KeyFactory#stringToKey(java.lang.String)"><code>stringToKey</code></a> for converting between keys and their string representations:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>String personKeyStr = KeyFactory.keyToString(personKey);
+// ...
+
+Key    personKey = KeyFactory.stringToKey(personKeyStr);
+Entity person    = datastore.get(personKey);
+</code></pre>
+                                <p>The string representation of a key is "web-safe": it does not contain characters considered special in HTML or in URLs.</p>
+                                <aside class="note"><strong>Note:</strong><span> The <code>KeyFactory.keyToString</code> method is different from <a href="/appengine/docs/java/javadoc/com/google/appengine/api/datastore/Key#toString()"><code>Key.toString</code></a>, which returns a human-readable string suitable for use in debugging and logging. If you need a string value that can be converted to a usable key, use <code>KeyFactory.keyToString</code>.<br><br>Note also that a key's string representation is not encrypted: a user can decode the key string to extract its components, including the kinds and identifiers of the entity and its ancestors. If it is important to conceal this information from the user, you must encrypt the key string yourself before sending it to the user.</span></aside>
+
+
+
+                                <h2 id="Java_Understanding_write_costs">Understanding write costs</h2>
+
+                                <p>When your application executes a Datastore <code>put</code> operation, the Datastore must perform a number of writes to store the entity. Your  application is charged for each of these writes. You can see how many writes will be required to store an entity by looking at the data viewer in the SDK Development Console. This section explains how these write costs are calculated.</p>
+                                <p>Every entity requires a minimum of two writes to store: one for the entity itself and another for the built-in <code>EntitiesByKind</code> index, which is used by the query planner to service a variety of queries. In addition, the Datastore maintains two other built-in indexes, <code>EntitiesByProperty</code> and <code>EntitiesByPropertyDesc</code>, which provide efficient scans of entities by single property values in ascending and descending order, respectively. Each of an entity's indexed property values must be written to each of these indexes.</p>
+                                <p>As an example, consider an entity with properties <em>A</em>, <em>B</em>, and <em>C</em>:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Key: 'Foo:1' (kind = 'Foo', id = 1, no parent)
+A: 1, 2
+B: null
+C: 'this', 'that', 'theOther'
+</code></pre>
+                                <p>Assuming there are no composite indexes (see below) for entities of this kind, this entity requires 14 writes to store:</p>
+                                <ul>
+                                    <li>1 for the entity itself</li>
+                                    <li>1 for the <code>EntitiesByKind</code> index</li>
+                                    <li>4 for property <em>A</em> (2 for each of two values)</li>
+                                    <li>2 for property <em>B</em> (a null value still needs to be written)</li>
+                                    <li>6 for property <em>C</em> (2 for each of three values)</li>
+                                </ul>
+                                <p>Composite indexes (those referring to multiple properties) require additional writes to maintain. Suppose you define the following composite index:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Kind: 'Foo'
+A ?, B ?
+</code></pre>
+                                <p>where the triangles indicate the sort order for the specified properties: ascending for property <em>A</em> and descending for property <em>B.</em> Storing the entity defined above now takes an additional write to the composite index for every combination of <em>A</em> and <em>B</em> values:</p>
+                                <p>(<code>1</code>, <code>null</code>)
+                                    (<code>2</code>, <code>null</code>)</p>
+                                <p>This adds 2 writes for the composite index, for a total of 1 + 1 + 4 + 2 + 6 + 2 = 16. Now add property <em>C</em> to the index:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Kind: 'Foo'
+A ?, B ?, C ?
+</code></pre>
+                                <p>Storing the same entity now requires a write to the composite index for each possible combination of <em>A</em>, <em>B</em>, and <em>C</em> values:</p>
+                                <p>(<code>1</code>, <code>null</code>, <code>'this'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'that'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'theOther'</code>)</p>
+                                <p>(<code>2</code>, <code>null</code>, <code>'this'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'that'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'theOther'</code>)</p>
+                                <p>This brings the total number of writes to 1 + 1 + 4 + 2 + 6 + 6 = 20.</p>
+                                <p>If a Datastore entity contains many multiple-valued properties, or if a single such property is referenced many times, the number of writes required to maintain the index can explode combinatorially. Such <a href="indexes#Java_Index_limits">exploding indexes</a> can be very expensive to maintain. For example, consider a composite index that includes ancestors:</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Kind: 'Foo'
+A ?, B ?, C ?
+Ancestor: True
+</code></pre>
+                                <p>Storing a simple entity with this index present takes the same number of writes as before. However, if the entity has ancestors, it requires a write for each possible combination of property values <em>and ancestors</em>, in addition to those for the entity itself. Thus an entity defined as</p>
+                                <pre class="prettyprint notranslate" translate="no"><code>Key: 'GreatGrandpa:1/Grandpa:1/Dad:1/Foo:1' (kind = 'Foo', id = 1, parent = 'GreatGrandpa:1/Grandpa:1/Dad:1')
+A: 1, 2
+B: null
+C: 'this', 'that', 'theOther'
+</code></pre>
+                                <p>would require a write to the composite index for each of the following combinations of properties and ancestors:</p>
+                                <p>(<code>1</code>, <code>null</code>, <code>'this'</code>, <code>'GreatGrandpa'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'this'</code>, <code>'Grandpa'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'this'</code>, <code>'Dad'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'this'</code>, <code>'Foo'</code>)</p>
+                                <p>(<code>1</code>, <code>null</code>, <code>'that'</code>, <code>'GreatGrandpa'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'that'</code>, <code>'Grandpa'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'that'</code>, <code>'Dad'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'that'</code>, <code>'Foo'</code>)</p>
+                                <p>(<code>1</code>, <code>null</code>, <code>'theOther'</code>, <code>'GreatGrandpa'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'theOther'</code>, <code>'Grandpa'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'theOther'</code>, <code>'Dad'</code>)
+                                    (<code>1</code>, <code>null</code>, <code>'theOther'</code>, <code>'Foo'</code>)</p>
+                                <p>(<code>2</code>, <code>null</code>, <code>'this'</code>, <code>'GreatGrandpa'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'this'</code>, <code>'Grandpa'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'this'</code>, <code>'Dad'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'this'</code>, <code>'Foo'</code>)</p>
+                                <p>(<code>2</code>, <code>null</code>, <code>'that'</code>, <code>'GreatGrandpa'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'that'</code>, <code>'Grandpa'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'that'</code>, <code>'Dad'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'that'</code>, <code>'Foo'</code>)</p>
+                                <p>(<code>2</code>, <code>null</code>, <code>'theOther'</code>, <code>'GreatGrandpa'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'theOther'</code>, <code>'Grandpa'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'theOther'</code>, <code>'Dad'</code>)
+                                    (<code>2</code>, <code>null</code>, <code>'theOther'</code>, <code>'Foo'</code>)</p>
+                                <p>Storing this entity in the Datastore now requires 1 + 1 + 4 + 2 + 6 + 24 = 38 writes.</p>
+
+                            </div>
+
+
+                        </div>
+
+                        <div id="gc-content-footer">
+
+                            <div id="gc-content-license">
+
+
+
+                                <p>Except as otherwise noted, the content of this page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="/site-policies">Site Policies</a>.</p>
+
+
+
+
+
+                            </div>
+
+
+
+                            <div itemprop="datePublished" content="2014-10-22T00:26:56.278680" id="gc-content-last-updated">Last updated October 22, 2014.</div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div id="maia-signature"></div>
+                <div id="maia-footer">
+
+
+
+                    <div id="maia-footer-local">
+                        <div class="maia-aux">
+                            <div class="ent-footer-top">
+                                <div class="g-plus-wrapper">
+                                    <div class="g-plusone" data-href="https://cloud.google.com/"></div>
+                                </div>
+                                <div class="g-plus-link"><a href="https://plus.google.com/+googlecloudplatform" rel="publisher">Google+</a></div>
+                            </div>
+                            <div class="ent-footer-links">
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/why-google/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Why Google">Why Google</a></h4>
+                                    <ul>
+                                        <li><a href="/why-google/#infrastructure" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Infrastructure">Infrastructure</a></li>
+                                        <li><a href="/why-google/#product" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Product">Product</a></li>
+                                        <li><a href="/why-google/#services" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Services">Services</a></li>
+                                        <li><a href="/why-google/#scalability" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Scalability">Scalability</a></li>
+                                        <li><a href="/why-google/#performance" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Performance">Performance</a></li>
+                                        <li><a href="/why-google/#support" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Why Google" data-g-label="Support">Support</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/products/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Products">Products</a></h4>
+                                    <ul>
+                                        <li><a href="/products/app-engine/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="App Engine">App Engine</a></li>
+                                        <li><a href="/products/compute-engine/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Compute Engine">Compute Engine</a></li>
+                                        <li><a href="/products/cloud-storage/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Cloud Storage">Cloud Storage</a></li>
+                                        <li><a href="/products/cloud-sql/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Cloud SQL">Cloud SQL</a></li>
+                                        <li><a href="/products/cloud-datastore/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Cloud Datastore">Cloud Datastore</a></li>
+                                        <li><a href="/products/bigquery" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="BigQuery">BigQuery</a></li>
+                                        <li><a href="/products/prediction-api/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Prediction API">Prediction API</a></li>
+                                        <li><a href="/products/translate-api/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Translate API">Translate API</a></li>
+                                        <li><a href="/products/cloud-endpoints/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Cloud Endpoints">Cloud Endpoints</a></li>
+                                        <li><a href="/products/calculator/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Products" data-g-label="Pricing Calculator">Pricing Calculator</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/solutions/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Solutions" data-g-label="Solutions">Solutions</a></h4>
+                                    <ul>
+                                        <li><a href="/solutions/mobile/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Solutions" data-g-label="Mobile">Mobile</a></li>
+                                        <li><a href="/solutions/gaming/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Solutions" data-g-label="Gaming">Gaming</a></li>
+                                        <li><a href="/solutions/hadoop/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Solutions" data-g-label="Hadoop">Hadoop</a></li>
+                                    </ul>
+                                </div>
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/customers/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Customers" data-g-label="Customers">Customers</a></h4>
+                                </div>
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/docs/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Documentation" data-g-label="Documentation">Documentation</a></h4>
+                                </div>
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/support/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Support" data-g-label="Support">Support</a></h4>
+                                    <ul>
+                                        <li><a href="https://support.google.com/cloud/" target="_blank" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Support" data-g-label="Google Cloud Platform Support Help Center">Support Help Center</a></li>
+                                        <li><a href="https://support.google.com/cloudbilling/" target="_blank" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Support" data-g-label="Google Cloud Billing Help Center">Billing Help Center</a></li>
+                                        <li><a href="https://enterprise.google.com/supportcenter" target="_blank" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Support" data-g-label="Google Enterprise Support Center">Google Enterprise Support Center</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="ent-footer-unit">
+                                    <h4><a href="/partners/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Partners" data-g-label="Partners">Partners</a></h4>
+                                    <ul>
+                                        <li><a href="/partners/technology-partners/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Partners" data-g-label="Find A Technology Partner">Find a Technology Partner</a></li>
+                                        <li><a href="/partners/service-partners/" event="autotrack-data-g" data-g-event="Footer" data-g-action="Footer Links: Partners" data-g-label="Find A Service Partner">Find a Service Partner</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <br class="clear" />
+                        </div>
+                    </div>
+
+                    <!-- Secondary right-side scroll-nav -->
+                    <script>
+                        new lfl.ui.ScrollNav({});
+                        new lfl.cloud.GlobalProductMenu();
+                    </script>
+
+
+
+
+                    <div id="maia-footer-global">
+                        <div class="maia-aux">
+                            <ul>
+                                <li><a href="http://www.google.com/">Google</a></li>
+                                <li><a href="https://developers.google.com/site-terms">Terms of Service</a></li>
+                                <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="search-autocomplete" class="search-results search-autocomplete" style="display:none"></div>
+            <script type="text/javascript" async="" defer="" src="https://www.gstatic.com/feedback/api.js"></script>
+
+            <script>
+                (function ($) {
+                    var cssHref = $('#screen-foot').attr('data-href');
+                    $('#screen-foot').attr('href', cssHref);
+                })(jQuery);
+            </script>
+
+            <script id="jqueryui" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+            <script type="text/javascript" src="https://cloud.google.com/_static2/d67431712d/jsi18n/?hl=en"></script>
+            <script src="https://cloud.google.com/_static/d67431712d/js/script_foot.js"></script>
+            <script>
+                (function ($) {
+                    devsite.devsite.Init($, 'cloud',
+                            '[]', '',
+                            'en', true,
+                            'd67431712d');
+                })(jQuery);
+
+
+                devsite.localInit = function () {
+
+                };
+            </script>
+
+            <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+            <script type="text/javascript">
+                $('#setlang select').each(function () {
+                    if (navigator.userAgent.match(/msie/i)) {
+                        $(this).change(function () {
+                            $('#setlang').submit();
+                        });
+                    } else {
+                        $(this).kdSelect({'change': function () {
+                                $('#setlang').submit();
+                            }});
+                    }
+                });
+            </script>
+
+            <script src="http://www.google.com/js/maia.js"></script>
+
+            <script type="text/javascript">
+                var axel = Math.random() + "";
+                var a = axel * 10000000000000;
+                document.write('<iframe src="https://2507573.fls.doubleclick.net/activityi;src=2507573;type=other026;cat=googl875;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+            </script>
+
+            <script type="text/javascript" defer>
+                $(document).ready(function () {
+                    contentTimer.name = 'content';
+                    contentTimer.tick('ol');
+                    window.jstiming.report(contentTimer);
+                });
+            </script>
+        </div><!-- END DIV.MAIA-MAX -->
+    </body>
+</html>

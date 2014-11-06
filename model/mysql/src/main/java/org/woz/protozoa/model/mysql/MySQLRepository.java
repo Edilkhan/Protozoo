@@ -10,7 +10,11 @@ import java.util.Properties;
 import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
+import javax.jdo.Query;
+import javax.jdo.Transaction;
 import org.osgi.service.component.annotations.Component;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.woz.protozoa.core.item.Item;
 import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.ILocation;
@@ -25,6 +29,9 @@ public class MySQLRepository implements Repository {
 
     Properties properties = new Properties();
     PersistenceManagerFactory pmf;
+    static PersistenceManager pm;
+    
+    Logger log = LoggerFactory.getLogger(MySQLRepository.class);
 
     public MySQLRepository() {
         // Create a PersistenceManagerFactory for this datastore
@@ -37,17 +44,37 @@ public class MySQLRepository implements Repository {
         properties.setProperty("datanucleus.schema.autoCreateAll", "true");
 
         pmf = JDOHelper.getPersistenceManagerFactory(properties);
+        
+        log.info("MySQL repository created...");
     }
     
     public PersistenceManager getPersistenceManager() {
-        return pmf.getPersistenceManager();
+        if (pm == null) {
+            pm = pmf.getPersistenceManager();
+        }
+        
+        return pm;
     }
 
     @Override
-    public ILocation addLocation(ILocation newloc) {
-        Location loc = (Location)newloc;
-        
-        return getPersistenceManager().makePersistent(loc);
+    public ILocation addLocation(String name, String description) {
+
+        Transaction tx = getPersistenceManager().currentTransaction();
+ 
+        try {
+            tx.begin();
+            
+            ILocation newloc = getPersistenceManager().makePersistent(new Location(name, description));
+            
+            tx.commit();
+            
+            return newloc;
+            
+        } catch (Exception e) {
+            tx.rollback();
+            
+            return null;
+        }
     }
 
     @Override
@@ -65,19 +92,23 @@ public class MySQLRepository implements Repository {
 
     @Override
     public ILocation getLocation(String name) {
-        return (Location) getPersistenceManager().newQuery(Location.class, name).execute();
+        log.info("getLocation called...");
+                
+        return getPersistenceManager().getObjectById(Location.class, name);
     }
 
     @Override
-    public Collection<Item> getLocations() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public IDevice addDevice(IDevice newdev) {
-        Device dev = (Device)newdev;
+    public Collection<ILocation> getLocations() {
+        log.info("getLocations called...");
         
-        return getPersistenceManager().makePersistent(dev);
+        Query query = getPersistenceManager().newQuery(Location.class);
+                
+        return (Collection) query.execute();
+    }
+
+    @Override
+    public IDevice addDevice(String name, String description) {
+        return getPersistenceManager().makePersistent(new Device(name, description));
     }
 
     @Override
