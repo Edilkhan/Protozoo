@@ -2,9 +2,9 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0"
           name="${project.artifactId}-${project.version}">
     <feature name="protozoacxf" description="protozoa cxf hello" version="1.0.0-SNAPSHOT" resolver="(obr)">
-        <details>Protozoa CXF Rest</details>
+        <details>Protozoa REST</details>
         <feature>http</feature>
-        <feature>cxf</feature>
+        <feature>io</feature>
         <!--feature>this-project-dependants</feature-->
 
         <!--bundle>mvn:org.woz.protozoa.io.cxf/protozoa.io.cxf.service/1.0.0-SNAPSHOT</bundle-->
