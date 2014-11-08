@@ -28,12 +28,23 @@ Application
 =======
 HTTPS://<URI>/protozoa
 
-- GET /v1/locations/list
-Lists all locations known in the system, including all attributes but without related devices
-- GET /v1/devices
-List devices the currently authenticated user has access to.
-- GET /v1/devices/{DEVICE_ID}
-Get basic information about the given Core, including the custom variables and functions it has exposed.
+List of locations
+	GET /locations
+A single location including all details
+- GET /locations/{locationId}
+Retrieves all details of the specific location
+- POST /locations/new?name=<LOCATION_NAME>&description=<LOCATION_DESCRIPTION>
+Create a new location with the specified details
+- GET /locations/{LOCATION_ID}/devices/list
+
+List of devices
+	GET /devices
+A single device including all details
+	GET /devices/{deviceId}
+All devices located on this location:
+	GET /locations/{locationId}/devices
+
+List all devices of the specific location
 - PUT /v1/devices/{DEVICE_ID}
 Update the device, including the display name.
 - GET /v1/devices/{DEVICE_ID}/{VARIABLE}
@@ -44,3 +55,59 @@ Call a function exposed by the core, with arguments passed in request body, e.g.
 - GET /v1/devices/events[/:event_name]
 - GET /v1/devices/{DEVICE_ID}/events[/:event_name]
 Open a stream of Server-Sent Events
+
+
+    List of magazines:
+        GET http://www.example.gov/api/v1/magazines.json
+    Filtering is a query:
+        GET http://www.example.gov/api/v1/magazines.json?year=2011&sort=desc
+        GET http://www.example.gov/api/v1/magazines.json?topic=economy&year=2011
+    A single magazine in JSON format:
+        GET http://www.example.gov/api/v1/magazines/1234.json
+    All articles in (or belonging to) this magazine:
+        GET http://www.example.gov/api/v1/magazines/1234/articles.json
+    All articles in this magazine in XML format:
+        GET http://example.gov/api/v1/magazines/1234/articles.xml
+    Specify optional fields in a comma separated list:
+        GET http://www.example.gov/api/v1/magazines/1234.json?fields=title,subtitle,date
+    Add a new article to a particular magazine:
+        POST http://example.gov/api/v1/magazines/1234/articles
+
+
+
+OSGi structure
+----------------------
+
+= org.protozoa.system
+All basic system components, mandatory to run the minimum of the protozoa framework
+
+== org.protozoa.system.core
+All core components, eg. system boot loader
+
+== org.protozoa.system.branding
+Specific branding of the Protozoa framework
+
+= org.protozoa.model
+All basic components which define the business models of the protozoa framework.
+The implementations of these models can support functionality like:
+- Persistency
+
+== org.protozoa.model.api
+The interfaces for all contained business models. Typically, this module is added as a dependency to other modules
+Supports:
+- Location
+- Device
+- Parameter
+- Value
+
+Persistency is implemented via the Repository API
+
+== org.protozoa.model.mysql
+The MySQL implementation of the model framework.
+
+= org.protozoa.io
+
+== org.protozoa.io.rest
+All REST services
+
+
