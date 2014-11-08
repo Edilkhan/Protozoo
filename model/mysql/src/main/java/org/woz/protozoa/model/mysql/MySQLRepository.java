@@ -123,6 +123,10 @@ public class MySQLRepository implements Repository {
 
     @Override
     public Collection<Item> getDevices() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        log.info("getDevices called...");
+        
+        Query query = getPersistenceManager().newQuery(Device.class);
+                
+        return (Collection) query.execute();
     }
 }

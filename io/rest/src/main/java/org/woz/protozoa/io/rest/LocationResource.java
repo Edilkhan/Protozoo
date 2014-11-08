@@ -27,7 +27,6 @@ public interface LocationResource {
     
     @GET
     @Path("list")
-    // @Produces({"application/xml","application/json"})
     public String getLocations();
     
     @POST
