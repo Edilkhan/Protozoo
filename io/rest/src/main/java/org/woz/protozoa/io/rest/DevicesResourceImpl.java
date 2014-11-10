@@ -6,41 +6,38 @@
 package org.woz.protozoa.io.rest;
 
 import java.util.Collection;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.Repository;
+import org.woz.protozoa.model.mysql.Device;
 import org.woz.protozoa.model.mysql.MySQLRepository;
 
 /**
  *
  * @author wolfgang
  */
-@Produces(MediaType.APPLICATION_JSON)
-public class DeviceResourceImpl implements DeviceResource {
+public class DevicesResourceImpl implements DevicesResource {
     
-    protected final Logger log = LoggerFactory.getLogger(LocationResourceImpl.class);
+    protected final Logger log = LoggerFactory.getLogger(DevicesResourceImpl.class);
 
-    static Repository repo = new MySQLRepository();
+    static MySQLRepository repo = new MySQLRepository();
       
     @Override
-    public String getDevices() {
+    public Collection<Device> getDevices() {
         Collection result = repo.getDevices();
         
-        return result.toString();
+        return result;
     }
 
     @Override
-    public IDevice getDevice(String id) {
-        log.info("REST getDevice called...");
+    public Device getDevice(String name) {
+        log.info("REST getDevice called for id: " + name);
                 
-        IDevice dev = repo.getDevice(id);
+        Device dev = (Device) repo.getDevice(name);
 
+        log.info("REST returns: " + dev);
+        
         return dev;
     }
 
-    
-    
 }

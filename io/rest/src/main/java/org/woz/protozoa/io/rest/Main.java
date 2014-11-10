@@ -12,8 +12,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 import java.io.IOException;
 import java.net.URI;
 import javax.ws.rs.ext.ContextResolver;
+import org.eclipse.persistence.jaxb.MarshallerProperties;
 import org.glassfish.jersey.moxy.json.MoxyJsonConfig;
-import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 
 /**
  *
@@ -22,8 +22,7 @@ import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 public class Main {
 
     // Base URI the Grizzly HTTP server will listen on
-
-    public static final String BASE_URI = "http://localhost:8080/protozoa";
+    public static final String BASE_URI = "http://localhost:8080/protozoa/";
 
     /**
      * Starts Grizzly HTTP server exposing JAX-RS resources defined in this
@@ -37,13 +36,15 @@ public class Main {
 
         // final ResourceConfig rc = new ResourceConfig().packages("org.woz.protozoa.io.cxf.rest");
         final ResourceConfig rc = new ResourceConfig()
-                .registerClasses(DeviceResourceImpl.class)
-                .registerClasses(LocationResourceImpl.class)
-                .registerClasses(MyResource.class)
+                .registerClasses(DevicesResourceImpl.class)
+                .registerClasses(LocationsResourceImpl.class)
+                .registerClasses(ContactResource.class)
+                .property(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, "true");
                 // Providers - JSON
-                .register(MoxyJsonFeature.class)
-                .register(JsonConfiguration.class);
+                // .register(MoxyJsonFeature.class)
+                // .register(JsonConfiguration.class);
 
+        
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);

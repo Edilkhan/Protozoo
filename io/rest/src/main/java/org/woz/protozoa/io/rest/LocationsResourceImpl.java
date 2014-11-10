@@ -11,38 +11,42 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.woz.protozoa.model.api.ILocation;
 import org.woz.protozoa.model.api.Repository;
+import org.woz.protozoa.model.mysql.Location;
 import org.woz.protozoa.model.mysql.MySQLRepository;
 
 /**
  *
  * @author wolfgang
  */
-public class LocationResourceImpl implements LocationResource {
+public class LocationsResourceImpl implements LocationsResource {
 
-    protected final Logger log = LoggerFactory.getLogger(LocationResourceImpl.class);
+    protected final Logger log = LoggerFactory.getLogger(LocationsResourceImpl.class);
     
-    static Repository repo = new MySQLRepository();
+    static MySQLRepository repo = new MySQLRepository();
     
     @Override
-    public String getLocation(String name) {
+    public Location getLocation(String name) {
         log.info("REST getLocation called...");
         
-        ILocation loc = repo.getLocation(name);
+        Location loc = (Location) repo.getLocation(name);
         
-        return loc.toString();
+        log.info("REST returns: " + loc);
+        
+        return loc;
     }
 
     @Override
-    public String getLocations() {
+    public Collection<Location> getLocations() {
         Collection result = repo.getLocations();
         
-        return result.toString();
+        return result;
     }
 
     @Override
-    public ILocation addLocation(String name, String description) {
+    public Location addLocation(String name, String description) {
         log.info("Create location " + name);
         
-        return repo.addLocation(name, description);
+        return (Location) repo.addLocation(name, description);
     }
+
 }

@@ -5,29 +5,27 @@
  */
 package org.woz.protozoa.io.rest;
 
-import javax.validation.constraints.NotNull;
+import java.util.Collection;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import org.woz.protozoa.model.api.IDevice;
+import org.woz.protozoa.model.mysql.Device;
 
 /**
  *
  * @author wolfgang
  */
-@Path("/devices/")
-public interface DeviceResource {
+@Path("devices")
+@Produces(MediaType.APPLICATION_JSON)
+public interface DevicesResource {
     
     @GET
-    @Path("list")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getDevices();
+    public Collection<Device> getDevices();
     
     @GET
-    @Path("{id}")
-    @NotNull(message = "{device.does.not.exist")
-    @Produces(MediaType.APPLICATION_JSON)
-    public IDevice getDevice(@PathParam("id") String id);
+    @Path("{name}")
+    public Device getDevice(@PathParam("name") String name);
 }
+

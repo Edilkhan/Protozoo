@@ -25,4 +25,5 @@ public interface IMeasurement extends Item {
     
     public void setParameter(IParameter parameter);
     public IParameter getParameter();
+    
 }

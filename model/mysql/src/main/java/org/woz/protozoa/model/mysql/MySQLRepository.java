@@ -16,16 +16,14 @@ import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.woz.protozoa.core.item.Item;
-import org.woz.protozoa.model.api.IDevice;
 import org.woz.protozoa.model.api.ILocation;
-import org.woz.protozoa.model.api.Repository;
 
 /**
  *
  * @author wos
  */
 @Component
-public class MySQLRepository implements Repository {
+public class MySQLRepository {
 
     Properties properties = new Properties();
     PersistenceManagerFactory pmf;
@@ -56,15 +54,15 @@ public class MySQLRepository implements Repository {
         return pm;
     }
 
-    @Override
-    public ILocation addLocation(String name, String description) {
+    
+    public Location addLocation(String name, String description) {
 
         Transaction tx = getPersistenceManager().currentTransaction();
  
         try {
             tx.begin();
             
-            ILocation newloc = getPersistenceManager().makePersistent(new Location(name, description));
+            Location newloc = getPersistenceManager().makePersistent(new Location(name, description));
             
             tx.commit();
             
@@ -77,7 +75,7 @@ public class MySQLRepository implements Repository {
         }
     }
 
-    @Override
+    
     public boolean removeLocation(String name) {
         
         Location loc = (Location) getLocation(name);
@@ -90,14 +88,14 @@ public class MySQLRepository implements Repository {
         }
     }
 
-    @Override
-    public ILocation getLocation(String name) {
+    
+    public Location getLocation(String name) {
         log.info("getLocation called...");
                 
         return getPersistenceManager().getObjectById(Location.class, name);
     }
 
-    @Override
+    
     public Collection<ILocation> getLocations() {
         log.info("getLocations called...");
         
@@ -106,22 +104,24 @@ public class MySQLRepository implements Repository {
         return (Collection) query.execute();
     }
 
-    @Override
-    public IDevice addDevice(String name, String description) {
+    
+    public Device addDevice(String name, String description) {
         return getPersistenceManager().makePersistent(new Device(name, description));
     }
 
-    @Override
+    
     public boolean removeDevice(String name) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public IDevice getDevice(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public Device getDevice(String name) {
+        log.info("getDevice called...");
+                
+        return getPersistenceManager().getObjectById(Device.class, name);
     }
 
-    @Override
+    
     public Collection<Item> getDevices() {
         log.info("getDevices called...");
         

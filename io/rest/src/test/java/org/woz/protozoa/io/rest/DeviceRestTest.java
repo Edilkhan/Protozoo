@@ -5,10 +5,13 @@
  */
 package org.woz.protozoa.io.rest;
 
+import java.util.Collection;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import org.glassfish.grizzly.http.server.HttpServer;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -49,22 +52,11 @@ public class DeviceRestTest {
     public void tearDown() {
         server.shutdown();
     }
-
-    @Test
-    public void queryBasics() {
-        String responseMsg = target.path("myresource").request().get(String.class);
-        assertEquals("Got it!", responseMsg);
-        
-        target.path("myresource").request().put(Entity.text("Hello World!"));
-
-        responseMsg = target.path("myresource").request().get(String.class);
-        assertEquals("Hello World!", responseMsg);
-    }
     
     @Test
     public void queryDevices() {
-        String devices = target.path("devices").request().get(String.class);
-        assertEquals("", devices);
-        
+        Response result = target.path("devices").request().accept(MediaType.APPLICATION_JSON).get();
+        //assertEquals("", devices);
+        System.out.println(result);
     }
 }

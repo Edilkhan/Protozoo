@@ -3,36 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package org.woz.protozoa.io.rest;
 
+import java.util.Collection;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import org.woz.protozoa.model.api.ILocation;
+import javax.ws.rs.core.MediaType;
+import org.woz.protozoa.model.mysql.Location;
 
 /**
  *
  * @author wolfgang
  */
-@Path("/locations/")
-public interface LocationResource {
+@Path("locations")
+@Produces(MediaType.APPLICATION_JSON)
+public interface LocationsResource {
+
     @GET
-    @Path("{name}")
-    // @Produces("application/xml")
-    public String getLocation(@PathParam("name") String name);
+    public Collection<Location> getLocations();
     
     @GET
-    @Path("list")
-    public String getLocations();
+    @Path("{name}")
+    public Location getLocation(@PathParam("name") String name);
     
     @POST
     @Path("new")
     @Consumes("text/html")
-    public ILocation addLocation(
+    public Location addLocation(
         @QueryParam("name") String name,
         @QueryParam("description") String description
     );

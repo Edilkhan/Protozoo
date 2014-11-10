@@ -11,30 +11,39 @@ import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import static org.woz.protozoa.core.type.State.ACTIVE;
 import org.woz.protozoa.core.type.Type;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
-import org.woz.protozoa.model.api.IDevice;
-import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
  * @author wos
  */
+@XmlRootElement
 @PersistenceCapable(table = "Location")
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
-public class Location extends AbstractItem implements ILocation {
+public class Location extends AbstractItem {
 
+    //@XmlElement
     private String name;
+    //@XmlElement
     private String description;
     
+    //@XmlElement
     private State state;
+    //@XmlElement
     private Type type;
 
     @Join
     private final Set<Device> devices = new HashSet<>();
+    
+    private Location() {
+        
+    }
     
     public Location(String name) {
         this(name, null);
@@ -51,13 +60,13 @@ public class Location extends AbstractItem implements ILocation {
 
     }
     
-    @Override
-    public boolean addDevice(IDevice device) {
+    
+    public boolean addDevice(Device device) {
         return devices.add((Device)device);
     }
     
-    @Override
-    public boolean removeDevice(IDevice device) {
+    
+    public boolean removeDevice(Device device) {
         return devices.remove((Device)device);
     }
     
@@ -65,34 +74,34 @@ public class Location extends AbstractItem implements ILocation {
         return devices.size();
     }
 
-    @Override
+    
     public Set<Device> getDevices() {
         return this.devices;
     }
 
-    @Override
+    
     public void setState(State state) {
         this.state = state;
     }
 
-    @Override
+    
     public State getState() {
         return this.state;
     }
 
-    @Override
+    
     public void setType(Type type) {
         this.type = type;
     }
 
-    @Override
+    
     public Type getType() {
         return this.type;
     }
 
-    @Override
-    public IDevice getDevice(String deviceName) {
-        for (IDevice d : devices) {
+    
+    public Device getDevice(String deviceName) {
+        for (Device d : devices) {
             if (d.getName().equals(deviceName)) {
                 return d;
             }
@@ -101,25 +110,26 @@ public class Location extends AbstractItem implements ILocation {
         return null;
     }
 
-    @Override
+    
     public String getName() {
         return name;
     }
 
-    @Override
+    
     public void setName(String name) {
         this.name = name;
     }
 
-    @Override
+    
     public String getDescription() {
         return description;
     }
 
-    @Override
+    
     public void setDescription(String description) {
         this.description = description;
     }
+    
     
     @Override
     public String toString() {

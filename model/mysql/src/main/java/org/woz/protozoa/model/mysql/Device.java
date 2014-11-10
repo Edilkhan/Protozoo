@@ -10,38 +10,48 @@ import java.util.Set;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import static org.woz.protozoa.core.type.State.ACTIVE;
 import org.woz.protozoa.core.type.Type;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
-import org.woz.protozoa.model.api.IDevice;
-import org.woz.protozoa.model.api.ILocation;
 import org.woz.protozoa.model.api.IParameter;
 
 /**
  *
  * @author wos
  */
+@XmlRootElement
 @PersistenceCapable(table = "Device")
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
-public class Device extends AbstractItem implements IDevice{
+public class Device extends AbstractItem {
 
+    //@XmlElement
     private String name;
+    //@XmlElement
     private String description;
     
+    //@XmlElement
     private State state;
+    //@XmlElement
     private Type type;
 
+    //@XmlElement
     private Location location;
-    private final Set<IParameter> parameters = new HashSet<>();
+//    private final Set<IParameter> parameters = new HashSet<>();
 
+    private Device() {
+        
+    }
+    
     public Device(String name) {
         this(name, null);
     }
 
     /**
-     * Creates a new Device, attached to the specified {@link ILocation} with the
+     * Creates a new Device, attached to the specified {@link Location} with the
      * given name and description
      *
      * @param name is the identifier of the device
@@ -57,67 +67,67 @@ public class Device extends AbstractItem implements IDevice{
 
     }
 
-    @Override
-    public void setLocation(ILocation location) {
+/*    
+    public void setLocation(Location location) {
         this.location = (Location)location;
     }
 
-    @Override
-    public ILocation getLocation() {
+    
+    public Location getLocation() {
         return this.location;
     }
 
-    @Override
+    
     public Set<IParameter> getParameters() {
         return this.parameters;
     }
 
-    @Override
+    
     public boolean addParameter(IParameter parameter) {
         return parameters.add(parameter);
     }
 
-    @Override
+    
     public boolean removeParameter(IParameter parameter) {
         return parameters.remove(parameter);
     }
-
-    @Override
+*/
+    
     public void setState(State state) {
         this.state = state;
     }
 
-    @Override
+    
     public State getState() {
         return this.state;
     }
 
-    @Override
+    
     public void setType(Type type) {
         this.type = type;
     }
 
-    @Override
+    
     public Type getType() {
         return this.type;
     }
 
-    @Override
+    
     public String getName() {
         return name;
     }
 
-    @Override
+    
     public void setName(String name) {
         this.name = name;
     }
 
-    @Override
+    
     public String getDescription() {
         return description;
     }
 
-    @Override
+    
     public void setDescription(String description) {
         this.description = description;
     }

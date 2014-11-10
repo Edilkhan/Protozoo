@@ -18,35 +18,25 @@ import org.woz.protozoa.model.api.ILocation;
  */
 @Component
 public class LocationServiceImpl implements LocationService {
-    
+
     @Override
     public ILocation createLocation(String name) {
-        return factory.createLocation(name);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public ILocation getLocation(String name) {
-        return factory.getDatabase().getLocation(name);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public ILocation updateLocation(String name, String description, State state, Type type) {
-        ILocation location = getLocation(name);
-
-        if (location != null) {
-            location.setDescription(description);
-            location.setState(state);
-            location.setType(type);
-            
-            return location;
-        } else {
-            return null;
-        }
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public boolean removeLocation(String name) {
-        return factory.getDatabase().removeLocation(name);
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
