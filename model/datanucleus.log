@@ -2856,3 +2856,260 @@
 12:51:04,289 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\wos\Documents\NetBeansProjects\Protozoa\model\mysql\target\classes\org\woz\protozoa\model\mysql\Location.class" with enhanced definition
 12:51:04,289 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.woz.protozoa.model.mysql.Location" completed
 12:51:04,289 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+22:23:03,614 (main) DEBUG [DataNucleus.General] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+22:23:03,678 (main) DEBUG [DataNucleus.General] - Registering bundle org.sonatype.inject version 2.3.0 at URL file:/C:/Users/wos/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar.
+22:23:03,730 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+22:23:03,732 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+22:23:03,735 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus version 4.0.3 at URL file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar.
+22:23:03,765 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar!/plugin.xml.
+22:23:03,803 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar!/plugin.xml.
+22:23:03,809 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.store.rdbms version 4.0.4 at URL file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar.
+22:23:03,848 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar!/plugin.xml.
+22:23:03,864 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar!/plugin.xml.
+22:23:03,876 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.api.jdo version 4.0.3 at URL file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar.
+22:23:03,880 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar!/plugin.xml.
+22:23:03,882 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/C:/Users/wos/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar!/plugin.xml.
+22:23:03,922 (main) DEBUG [DataNucleus.Persistence] - Java types support initialising ...
+22:23:03,979 (main) DEBUG [DataNucleus.Persistence] - Java types support loaded : supported java types=[B, [C, [D, [F, [I, [J, [Ljava.lang.Boolean;, [Ljava.lang.Byte;, [Ljava.lang.Character;, [Ljava.lang.Double;, [Ljava.lang.Enum;, [Ljava.lang.Float;, [Ljava.lang.Integer;, [Ljava.lang.Long;, [Ljava.lang.Number;, [Ljava.lang.Short;, [Ljava.lang.String;, [Ljava.math.BigDecimal;, [Ljava.math.BigInteger;, [Ljava.util.Date;, [Ljava.util.Locale;, [S, [Z, boolean, byte, char, double, float, int, java.awt.Color, java.awt.image.BufferedImage, java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Class, java.lang.Double, java.lang.Enum, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Number, java.lang.Short, java.lang.String, java.lang.StringBuffer, java.lang.StringBuilder, java.math.BigDecimal, java.math.BigInteger, java.net.URI, java.net.URL, java.sql.Date, java.sql.Time, java.sql.Timestamp, java.util.ArrayList, java.util.Arrays$ArrayList, java.util.BitSet, java.util.Calendar, java.util.Collection, java.util.Currency, java.util.Date, java.util.GregorianCalendar, java.util.HashMap, java.util.HashSet, java.util.Hashtable, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.LinkedList, java.util.List, java.util.Locale, java.util.Map, java.util.PriorityQueue, java.util.Properties, java.util.Queue, java.util.Set, java.util.SortedMap, java.util.SortedSet, java.util.Stack, java.util.TimeZone, java.util.TreeMap, java.util.TreeSet, java.util.UUID, java.util.Vector, long, short
+22:23:03,979 (main) DEBUG [DataNucleus.Persistence] - Type converter support initialising ...
+22:23:04,021 (main) DEBUG [DataNucleus.Persistence] - Type converter support loaded
+22:23:04,021 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for byte[] to : java.nio.ByteBuffer
+22:23:04,021 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for char[] to : java.nio.ByteBuffer
+22:23:04,021 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for double[] to : java.nio.ByteBuffer
+22:23:04,021 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for float[] to : java.nio.ByteBuffer
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for int[] to : java.nio.ByteBuffer
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for long[] to : java.nio.ByteBuffer
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for short[] to : java.nio.ByteBuffer
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for boolean[] to : java.nio.ByteBuffer
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.awt.Color to : java.lang.String,int[]
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.io.Serializable to : java.nio.ByteBuffer,byte[],java.lang.String
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Boolean to : java.lang.Character,java.lang.Integer
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Character to : java.lang.String
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Class to : java.lang.String
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Integer to : java.lang.String
+22:23:04,022 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Long to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuffer to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuilder to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigDecimal to : java.nio.ByteBuffer,java.lang.Double,java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigInteger to : java.nio.ByteBuffer,java.lang.String,java.lang.Long
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URI to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URL to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Date to : java.lang.String,java.lang.Long,java.util.Date
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Time to : java.lang.String,java.lang.Long,java.util.Date
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Timestamp to : java.lang.String,java.lang.Long,java.util.Date
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.BitSet to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Calendar to : [Ljava.lang.Object;,java.lang.String,java.sql.Timestamp,java.util.Date
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Currency to : java.lang.String
+22:23:04,023 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Date to : java.lang.String,java.lang.Long
+22:23:04,024 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Locale to : java.lang.String
+22:23:04,024 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.TimeZone to : java.lang.String
+22:23:04,024 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.UUID to : java.lang.String
+22:23:04,026 (main) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false, XML-Suffices=(persistence=*.jdo, orm=orm, query=*.jdoquery), JDO-listener=false
+22:23:04,026 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 4.0.3) for API "JDO"
+22:23:04,026 (main) DEBUG [DataNucleus.Enhancer] - DataNucleus Enhancer : Classpath
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\datanucleus\datanucleus-maven-plugin\4.0.0-m2\datanucleus-maven-plugin-4.0.0-m2.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\codehaus\plexus\plexus-utils\3.0.8\plexus-utils-3.0.8.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\sonatype\sisu\sisu-inject-bean\2.3.0\sisu-inject-bean-2.3.0.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\sonatype\sisu\sisu-guice\3.1.0\sisu-guice-3.1.0-no_aop.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\sonatype\sisu\sisu-guava\0.9.9\sisu-guava-0.9.9.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\apache\xbean\xbean-reflect\3.4\xbean-reflect-3.4.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\log4j\log4j\1.2.12\log4j-1.2.12.jar
+22:23:04,027 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\commons-logging\commons-logging-api\1.1\commons-logging-api-1.1.jar
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\com\google\collections\google-collections\1.0\google-collections-1.0.jar
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\junit\junit\3.8.2\junit-3.8.2.jar
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\Documents\NetBeansProjects\Protozoa\model\mysql\target\classes
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\datanucleus\datanucleus-core\4.0.3\datanucleus-core-4.0.3.jar
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\datanucleus\datanucleus-rdbms\4.0.4\datanucleus-rdbms-4.0.4.jar
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\datanucleus\datanucleus-api-jdo\4.0.3\datanucleus-api-jdo-4.0.3.jar
+22:23:04,028 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\javax\jdo\jdo-api\3.1-rc1\jdo-api-3.1-rc1.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\javax\transaction\transaction-api\1.1\transaction-api-1.1.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\Documents\NetBeansProjects\Protozoa\model\api\target\api-1.0.0-SNAPSHOT.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\woz\protozoa\system\core\1.0.0-SNAPSHOT\core-1.0.0-SNAPSHOT.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\slf4j\slf4j-simple\1.7.7\slf4j-simple-1.7.7.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\mysql\mysql-connector-java\5.1.32\mysql-connector-java-5.1.32.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\osgi\org.osgi.compendium\5.0.0\org.osgi.compendium-5.0.0.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\slf4j\slf4j-api\1.7.7\slf4j-api-1.7.7.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\org\osgi\org.osgi.core\5.0.0\org.osgi.core-5.0.0.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - >>  C:\Users\wos\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar
+22:23:04,029 (main) DEBUG [DataNucleus.Enhancer] - Reading fileListFile: C:\Users\wos\AppData\Local\Temp\enhancer-5357806234603387596.flf
+22:23:04,037 (main) DEBUG [DataNucleus.Enhancer] - Enhancing classes
+22:23:04,049 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Loading Metadata for classes "[org.woz.protozoa.model.mysql.Device, org.woz.protozoa.model.mysql.internal.Activator, org.woz.protozoa.model.mysql.Location, org.woz.protozoa.model.mysql.MySQLRepository]" ...
+22:23:04,176 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" has been specified with JDO annotations so using those.
+22:23:04,198 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /META-INF/package.jdo
+22:23:04,199 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /WEB-INF/package.jdo
+22:23:04,199 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /package.jdo
+22:23:04,206 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/package.jdo
+22:23:04,207 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org.jdo
+22:23:04,208 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/package.jdo
+22:23:04,212 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz.jdo
+22:23:04,212 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/package.jdo
+22:23:04,213 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa.jdo
+22:23:04,213 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model/package.jdo
+22:23:04,213 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model.jdo
+22:23:04,213 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model/mysql/package.jdo
+22:23:04,214 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model/mysql.jdo
+22:23:04,214 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model/mysql/internal/package.jdo
+22:23:04,215 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model/mysql/internal.jdo
+22:23:04,215 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" NOT found at /org/woz/protozoa/model/mysql/internal/Activator.jdo
+22:23:04,215 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.internal.Activator" not found
+22:23:04,216 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.woz.protozoa.model.mysql.internal.Activator" as not having MetaData.
+22:23:04,216 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.internal.Activator" has no MetaData or annotations.
+22:23:04,217 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" has been specified with JDO annotations so using those.
+22:23:04,241 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /META-INF/package.jdo
+22:23:04,241 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /WEB-INF/package.jdo
+22:23:04,242 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /package.jdo
+22:23:04,247 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/package.jdo
+22:23:04,247 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org.jdo
+22:23:04,247 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/package.jdo
+22:23:04,251 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz.jdo
+22:23:04,251 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa/package.jdo
+22:23:04,252 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa.jdo
+22:23:04,252 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa/model/package.jdo
+22:23:04,252 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa/model.jdo
+22:23:04,253 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa/model/mysql/package.jdo
+22:23:04,253 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa/model/mysql.jdo
+22:23:04,253 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" NOT found at /org/woz/protozoa/model/mysql/MySQLRepository.jdo
+22:23:04,253 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.model.mysql.MySQLRepository" not found
+22:23:04,253 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.woz.protozoa.model.mysql.MySQLRepository" as not having MetaData.
+22:23:04,253 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.MySQLRepository" has no MetaData or annotations.
+22:23:04,254 (main) DEBUG [DataNucleus.MetaData] - Populating all MetaData ...
+22:23:04,254 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" : Populating Meta-Data
+22:23:04,255 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /META-INF/package.jdo
+22:23:04,255 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /WEB-INF/package.jdo
+22:23:04,256 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /package.jdo
+22:23:04,262 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/package.jdo
+22:23:04,263 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org.jdo
+22:23:04,263 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/package.jdo
+22:23:04,269 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz.jdo
+22:23:04,270 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa/package.jdo
+22:23:04,270 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa.jdo
+22:23:04,271 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa/core/package.jdo
+22:23:04,271 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa/core.jdo
+22:23:04,272 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa/core/item/package.jdo
+22:23:04,272 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa/core/item.jdo
+22:23:04,273 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" NOT found at /org/woz/protozoa/core/item/AbstractItem.jdo
+22:23:04,273 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.item.AbstractItem" not found
+22:23:04,273 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.core.item.AbstractItem" has been specified with JDO annotations so using those.
+22:23:04,279 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.core.item.AbstractItem" : Populating Meta-Data
+22:23:04,281 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" field "name" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,281 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" field "description" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,281 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" field "state" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,281 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" field "type" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,282 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" field "location" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,282 (main) DEBUG [DataNucleus.Persistence] - Java type org.woz.protozoa.core.type.State using the support for java.lang.Enum
+22:23:04,283 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /META-INF/package.jdo
+22:23:04,284 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /WEB-INF/package.jdo
+22:23:04,284 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /package.jdo
+22:23:04,291 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/package.jdo
+22:23:04,292 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org.jdo
+22:23:04,292 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/package.jdo
+22:23:04,295 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz.jdo
+22:23:04,295 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa/package.jdo
+22:23:04,296 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa.jdo
+22:23:04,296 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa/core/package.jdo
+22:23:04,296 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa/core.jdo
+22:23:04,297 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa/core/type/package.jdo
+22:23:04,297 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa/core/type.jdo
+22:23:04,297 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" NOT found at /org/woz/protozoa/core/type/State.jdo
+22:23:04,297 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.State" not found
+22:23:04,297 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.woz.protozoa.core.type.State" as not having MetaData.
+22:23:04,298 (main) DEBUG [DataNucleus.Persistence] - Java type org.woz.protozoa.core.type.Type using the support for java.lang.Enum
+22:23:04,298 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /META-INF/package.jdo
+22:23:04,298 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /WEB-INF/package.jdo
+22:23:04,299 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /package.jdo
+22:23:04,302 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/package.jdo
+22:23:04,302 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org.jdo
+22:23:04,302 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/package.jdo
+22:23:04,306 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz.jdo
+22:23:04,306 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa/package.jdo
+22:23:04,306 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa.jdo
+22:23:04,307 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa/core/package.jdo
+22:23:04,307 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa/core.jdo
+22:23:04,307 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa/core/type/package.jdo
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa/core/type.jdo
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" NOT found at /org/woz/protozoa/core/type/Type.jdo
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.woz.protozoa.core.type.Type" not found
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.woz.protozoa.core.type.Type" as not having MetaData.
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" : Populating Meta-Data
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" field "name" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,308 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" field "description" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,309 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" field "state" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,309 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" field "type" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+22:23:04,309 (main) DEBUG [DataNucleus.MetaData] - Initialising all MetaData ...
+22:23:04,310 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.core.item.AbstractItem" : Initialising Meta-Data
+22:23:04,313 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Device" : Initialising Meta-Data
+22:23:04,313 (main) DEBUG [DataNucleus.MetaData] - Class "org.woz.protozoa.model.mysql.Location" : Initialising Meta-Data
+22:23:04,313 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Load of Metadata complete
+22:23:04,318 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.woz.protozoa.model.mysql.Device" starting ...
+22:23:04,337 (main) INFO  [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Device" is already enhanced.
+22:23:04,337 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.woz.protozoa.model.mysql.Device" completed
+22:23:04,337 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.woz.protozoa.model.mysql.Location" starting ...
+22:23:04,338 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt implement the interface "org.datanucleus.enhancer.Persistable" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have field "dnFieldFlags" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have field "dnInheritedFieldCount" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have field "dnPersistableSuperclass" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have field "dnFieldNames" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have field "dnFieldTypes" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "__dnFieldTypesInit" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "__dnPersistableSuperclassInit" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnNewInstance" but is required
+22:23:04,339 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnNewInstance" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "__dnGetInheritedFieldCount" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnProvideField" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnGetManagedFieldCount" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnReplaceField" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "__dnFieldNamesInit" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnCopyFields" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "__dnFieldFlagsInit" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnCopyField" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "___dn$loadClass" but is required
+22:23:04,340 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnIsDetached" but is required
+22:23:04,341 (main) DEBUG [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" doesnt have method "dnSuperClone" but is required
+22:23:04,356 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancer.Persistable
+22:23:04,360 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.<init> : omitting enhance of set of field "org.woz.protozoa.model.mysql.Location.devices"
+22:23:04,361 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.<init> : omitting enhance of set of field "org.woz.protozoa.model.mysql.Location.devices"
+22:23:04,361 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.<init> : omitting enhance of set of field "org.woz.protozoa.model.mysql.Location.name"
+22:23:04,361 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.<init> : omitting enhance of set of field "org.woz.protozoa.model.mysql.Location.description"
+22:23:04,361 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.<init> : omitting enhance of set of field "org.woz.protozoa.model.mysql.Location.state"
+22:23:04,362 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.<init> : omitting enhance of set of field "org.woz.protozoa.model.mysql.Location.type"
+22:23:04,362 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.setState changing field "org.woz.protozoa.model.mysql.Location.state" for call to "dnSetstate()"
+22:23:04,362 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.getState changing field "org.woz.protozoa.model.mysql.Location.state" for call to "dnGetstate()"
+22:23:04,362 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.setType changing field "org.woz.protozoa.model.mysql.Location.type" for call to "dnSettype()"
+22:23:04,363 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.getType changing field "org.woz.protozoa.model.mysql.Location.type" for call to "dnGettype()"
+22:23:04,363 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.getName changing field "org.woz.protozoa.model.mysql.Location.name" for call to "dnGetname()"
+22:23:04,364 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.setName changing field "org.woz.protozoa.model.mysql.Location.name" for call to "dnSetname()"
+22:23:04,364 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.getDescription changing field "org.woz.protozoa.model.mysql.Location.description" for call to "dnGetdescription()"
+22:23:04,364 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.woz.protozoa.model.mysql.Location.setDescription changing field "org.woz.protozoa.model.mysql.Location.description" for call to "dnSetdescription()"
+22:23:04,364 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+22:23:04,364 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+22:23:04,364 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+22:23:04,365 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+22:23:04,365 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+22:23:04,366 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+22:23:04,366 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+22:23:04,366 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm)"
+22:23:04,367 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm, class java.lang.Object obj)"
+22:23:04,368 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+22:23:04,368 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+22:23:04,368 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class org.woz.protozoa.model.mysql.Location obj, int index)"
+22:23:04,369 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+22:23:04,369 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+22:23:04,370 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+22:23:04,370 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+22:23:04,370 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+22:23:04,370 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+22:23:04,370 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+22:23:04,371 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+22:23:04,371 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+22:23:04,372 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetdescription(class org.woz.protozoa.model.mysql.Location objPC)"
+22:23:04,372 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetdescription(class org.woz.protozoa.model.mysql.Location objPC, class java.lang.String val)"
+22:23:04,372 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetname(class org.woz.protozoa.model.mysql.Location objPC)"
+22:23:04,372 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetname(class org.woz.protozoa.model.mysql.Location objPC, class java.lang.String val)"
+22:23:04,373 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.woz.protozoa.core.type.State dnGetstate(class org.woz.protozoa.model.mysql.Location objPC)"
+22:23:04,373 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetstate(class org.woz.protozoa.model.mysql.Location objPC, class org.woz.protozoa.core.type.State val)"
+22:23:04,373 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.woz.protozoa.core.type.Type dnGettype(class org.woz.protozoa.model.mysql.Location objPC)"
+22:23:04,373 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSettype(class org.woz.protozoa.model.mysql.Location objPC, class org.woz.protozoa.core.type.Type val)"
+22:23:04,374 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\wos\Documents\NetBeansProjects\Protozoa\model\mysql\target\classes\org\woz\protozoa\model\mysql\Location.class" with enhanced definition
+22:23:04,375 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.woz.protozoa.model.mysql.Location" completed
+22:23:04,375 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.

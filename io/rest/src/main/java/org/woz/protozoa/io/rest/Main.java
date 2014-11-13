@@ -12,8 +12,10 @@ import org.glassfish.jersey.server.ResourceConfig;
 import java.io.IOException;
 import java.net.URI;
 import javax.ws.rs.ext.ContextResolver;
-import org.eclipse.persistence.jaxb.MarshallerProperties;
+import org.glassfish.grizzly.ssl.SSLContextConfigurator;
+import org.glassfish.grizzly.ssl.SSLEngineConfigurator;
 import org.glassfish.jersey.moxy.json.MoxyJsonConfig;
+import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 
 /**
  *
@@ -22,7 +24,7 @@ import org.glassfish.jersey.moxy.json.MoxyJsonConfig;
 public class Main {
 
     // Base URI the Grizzly HTTP server will listen on
-    public static final String BASE_URI = "http://localhost:8080/protozoa/";
+    public static final String BASE_URI = "https://localhost:8080/protozoa/";
 
     /**
      * Starts Grizzly HTTP server exposing JAX-RS resources defined in this
@@ -39,15 +41,25 @@ public class Main {
                 .registerClasses(DevicesResourceImpl.class)
                 .registerClasses(LocationsResourceImpl.class)
                 .registerClasses(ContactResource.class)
-                .property(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, "true");
+                //.property(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE)
                 // Providers - JSON
-                // .register(MoxyJsonFeature.class)
-                // .register(JsonConfiguration.class);
+                .register(MoxyJsonFeature.class)
+                .register(JsonConfiguration.class)
+                .register(LocationNotFoundMapper.class);
 
         
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
-        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+        // return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+
+        SSLContextConfigurator sslCon = new SSLContextConfigurator();
+        sslCon.createSSLContext();
+
+//        sslCon.setKeyStoreFile(ConfigLoader.getKeystoreLocation()); // contains server keypair
+//        sslCon.setKeyStorePass(ConfigLoader.getKeystorePassword());
+
+        
+        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc, true, new SSLEngineConfigurator(sslCon, false, false, false));
     }
 
     /**

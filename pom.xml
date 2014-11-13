@@ -11,12 +11,13 @@
     <packaging>pom</packaging>
     
     <modules>
-        <module>system</module>
-        <module>services</module>
-        <module>io</module>
         <module>assemblies</module>
         <module>model</module>
-    </modules>
+        <module>io</module>
+        <module>system</module>
+        <module>services</module>
+    <module>web</module>
+  </modules>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

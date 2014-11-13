@@ -9,8 +9,6 @@ package org.woz.protozoa.io.rest;
 import java.util.Collection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.woz.protozoa.model.api.ILocation;
-import org.woz.protozoa.model.api.Repository;
 import org.woz.protozoa.model.mysql.Location;
 import org.woz.protozoa.model.mysql.MySQLRepository;
 
@@ -25,28 +23,32 @@ public class LocationsResourceImpl implements LocationsResource {
     static MySQLRepository repo = new MySQLRepository();
     
     @Override
-    public Location getLocation(String name) {
-        log.info("REST getLocation called...");
-        
-        Location loc = (Location) repo.getLocation(name);
-        
-        log.info("REST returns: " + loc);
-        
-        return loc;
-    }
-
-    @Override
     public Collection<Location> getLocations() {
+    
         Collection result = repo.getLocations();
         
         return result;
     }
 
     @Override
-    public Location addLocation(String name, String description) {
-        log.info("Create location " + name);
+    public Location getLocation(String name) throws LocationNotFoundException {
+        log.info("get location with name: " + name);
         
-        return (Location) repo.addLocation(name, description);
+        Location loc = (Location) repo.getLocation(name);
+        if (loc == null) {
+            throw new LocationNotFoundException("Location with name not found");
+        }
+        
+        log.info("returns: " + loc);
+        
+        return loc;
+    }
+
+    @Override
+    public Location addLocation() {
+        log.info("Create location ");
+        
+        return (Location) repo.addLocation("", "");
     }
 
 }

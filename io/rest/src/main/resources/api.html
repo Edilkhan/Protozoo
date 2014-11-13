@@ -4,7 +4,7 @@
         <link rel="stylesheet" type="text/css" href="css/screen-maia.css" />
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,500,500italic,300,300italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-        <link href="css/maia.experimental.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/maia.experimental.css" />
         <link rel="stylesheet" type="text/css" href="css/maia-cloud.css" />
         <link rel="stylesheet" type="text/css" href="css/default-docs.css" />
         <link rel="shortcut icon" href="images/gcp-favicon.ico" />
@@ -19,7 +19,7 @@
         <script src="js/base.min.js"></script>
         <script src="js/jquery.min.js"></script>
 
-        <title>Product Variant Structures - FMO &mdash; Future Mode of Operations</title>
+        <title>Protozoa - REST api v1</title>
 
     </head>
 
@@ -27,7 +27,7 @@
         <div class="maia-max">
             <div id="maia-header">
                 <div class="maia-aux">
-                    <a href="https://cloud.google.com"><img src="images/gcp-logo.png" alt="Google Cloud Platform"> </a>
+                    <!--a href="https://cloud.google.com"><img src="images/gcp-logo.png" alt="Google Cloud Platform"> </a-->
                 </div>
             </div>
 
@@ -41,277 +41,19 @@
             <div  itemscope itemtype="http://schema.org/Article">
                 <div id="maia-nav-x" class="maia-nav">
                     <div class="maia-aux">
-                        <ul>
-                            <li>
-                                <a href="/why-google/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Why Google">Why Google</a>
-                            </li>
-
-                            <li id="main-nav-product-dropdown" class="dropdown">
-                                <a href="/products/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Products">Products</a>
-                            </li>
-
-                            <li>
-                                <a href="/solutions/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Solutions">Solutions</a>
-
-                            </li>
-
-                            <li>
-                                <a href="/customers/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Customers">Customers</a>
-
-                            </li>
-
-                            <li>
-                                <a href="/docs/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Documentation">Documentation</a>
-
-                            </li>
-
-                            <li>
-                                <a href="/support/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Support">Support</a>
-
-                            </li>
-
-                            <li>
-                                <a href="/partners/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Partners">Partners</a>
-
-                            </li>
-
-                            <li>
-                                <a href="//googlecloudplatform.blogspot.com/" event="autotrack-data-g" data-g-event="Global Nav" data-g-action="Nav Bar" data-g-label="Blog">Blog</a>
-
-                            </li>
-
-
-
-
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Products subnav -->
-                <div id="maia-nav-x" class="maia-nav products-nav">
-                    <div class="maia-aux">
-                        <div class="products-nav-dropdown maia-cols">
-
-                            <div id="compute-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Compute</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/compute/">
-                                        <span class="product-name">Compute Engine</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/appengine/">
-                                        <span class="product-name">App Engine</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="storage-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Storage</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/sql/">
-                                        <span class="product-name">Cloud SQL</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/storage/">
-                                        <span class="product-name">Cloud Storage</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/datastore/">
-                                        <span class="product-name">Cloud Datastore</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="big-data-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Big Data</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/bigquery/">
-                                        <span class="product-name">BigQuery</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="services-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Services</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/dns/">
-                                        <span class="product-name">Cloud DNS</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/endpoints/">
-                                        <span class="product-name">Cloud Endpoints</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/translate/">
-                                        <span class="product-name">Translate API</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/prediction/">
-                                        <span class="product-name">Prediction API</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/pubsub/">
-                                        <span class="product-name">Cloud Pub/Sub</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="management-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Management</span>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/deployment-manager/">Cloud Deployment Manager</a></span>
-                                </div>
-                            </div>
-
-                            <div id="pricing-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Pricing</span>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/pricing/">Overview</a></span>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/products/calculator/">Calculator</a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Docs subnav -->
-                <div id="maia-nav-x" class="maia-nav products-docs-nav">
-                    <div class="maia-aux">
-                        <div class="products-nav-dropdown maia-cols">
-
-                            <div id="compute-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Compute</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/compute/docs">
-                                        <span class="product-name">Compute Engine</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/appengine/docs">
-                                        <span class="product-name">App Engine</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="storage-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Storage</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/sql/docs">
-                                        <span class="product-name">Cloud SQL</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/storage/docs">
-                                        <span class="product-name">Cloud Storage</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/datastore/docs">
-                                        <span class="product-name">Cloud Datastore</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="big-data-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Big Data</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/bigquery/docs">
-                                        <span class="product-name">BigQuery</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="services-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Services</span>
-                                <div class="dropdown-item-container">
-                                    <a href="/dns/docs">
-                                        <span class="product-name">Cloud DNS</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/appengine/features/#Endpoints">
-                                        <span class="product-name">Cloud Endpoints</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/translate/docs">
-                                        <span class="product-name">Translate API</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/prediction/docs">
-                                        <span class="product-name">Prediction API</span>
-                                    </a>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <a href="/pubsub/docs">
-                                        <span class="product-name">Cloud Pub/Sub</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div id="management-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Management</span>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/deployment-manager/docs">Cloud Deployment Manager</a></span>
-                                </div>
-                            </div>
-
-                            <div id="pricing-dropdown" class="products-column maia-col-2">
-                                <span class="product-list-title">Tools</span>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/sdk/">Google Cloud SDK</a></span>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/mobile/">Android Studio</a></span>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="https://developers.google.com/eclipse/">Plugin for Eclipse</a></span>
-                                </div>
-                                <div class="dropdown-item-container">
-                                    <span class="product-name"><a href="/devtools/repo/cloud-repositories">Cloud Repositories (Git)</a></span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
                 <div id="gc-appnav" class="maia-aux">
                     <ol class="breadcrumbs">
-                        <li><a href="/fmo/">FMO</a></li>
-                        <li><a href="/cmmgt/">Configuration Mgt</a></li>
-                        <li><a href="/cmmgt/pvs">Product Variant Structure</a></li>
+                        <li><a href="/protozoa/">Protozoa</a></li>
+                        <li><a href="/protozoa/rest/">REST</a></li>
+                        <li><a href="/protozoa/rest/api">API</a></li>
                     </ol>
                 </div>
 
-                <div class="maia-aux" id="gc-appbar">
-                    <a href="/appengine/docs/java" class="gc-appbar-title">
-                        PVS
-                    </a>
-                </div>
 
                 <div id="maia-main" class="main">
-                    <div id="gc-sidebar" class="wide">
-                        <nav class="gc-toc">
-                            <ul>
-                                <li class=""><a href="/appengine/docs/" title="FMO Home" data-title="App Engine Home"><span>FMO Home</span></a>
-                                    <ul>
-                                        <li><a href="" title="Configuration management" data-title="Config mgt"><span>Configuration management</span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
                     <div id="gc-content" class="wide-sidebar">
                         <div>
                             <div itemprop="articleBody">
@@ -325,18 +67,9 @@
                                     }
                                 </style>
 
-                                <h1 class="page-title" id="entities_properties_and_keys">Entities, Properties, and Keys</h1>
-                                <p>Data objects in the App Engine Datastore are known as <em>entities</em>. An entity has one or more named <em>properties</em>, each of which can have one or more values. Entities of the same kind need not have the same properties, and an entity's values for a given property need not all be of the same data type. (If necessary, an application can establish and enforce such restrictions in its own data model.)</p>
-                                <p>The Datastore supports a variety of <a href="#Java_Properties_and_value_types">data types for property values</a>.
-                                    These include, among others:</p>
-                                <ul>
-                                    <li>Integers</li>
-                                    <li>Floating-point numbers</li>
-                                    <li>Strings</li>
-                                    <li>Dates</li>
-                                    <li>Binary data</li>
-                                </ul>
-                                <p>Each entity in the Datastore has a <em>key</em> that uniquely identifies it. The key consists of the following components:</p>
+                                <h1 class="page-title" id="locations">Locations</h1>
+                                <p>Locations represent either <em>physical</em> locations (e.g. Germany, your home or office, a garage door, kitchen table) or <em>virtual</em> locations (e.g. <i>to be defined</i>).  Locations will be the placeholder for all devices registered. A single location can relate to an arbitrary number of devices.</p>
+                                <p>Each location is uniquely identified by a <a href="http://en.wikipedia.org/wiki/Globally_unique_identifier">GUID</a>, or Globally Unique IDentifier. The key consists of the following components:</p>
                                 <ul>
 
                                     <li>The <i>namespace</i> of the entity, which allows for <a href="/appengine/docs/java/multitenancy/">multitenancy</a></li>
@@ -925,25 +658,11 @@ C: 'this', 'that', 'theOther'
                             <div itemprop="datePublished" content="2014-10-22T00:26:56.278680" id="gc-content-last-updated">Last updated October 22, 2014.</div>
 
                         </div>
-
-
                     </div>
-
-
-
                 </div>
-
-
-
-
-
-
 
                 <div id="maia-signature"></div>
                 <div id="maia-footer">
-
-
-
                     <div id="maia-footer-local">
                         <div class="maia-aux">
                             <div class="ent-footer-top">

@@ -11,7 +11,6 @@ import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
@@ -28,14 +27,10 @@ import static org.woz.protozoa.core.type.Type.PHYSICAL;
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
 public class Location extends AbstractItem {
 
-    //@XmlElement
     private String name;
-    //@XmlElement
     private String description;
     
-    //@XmlElement
     private State state;
-    //@XmlElement
     private Type type;
 
     @Join
@@ -60,11 +55,9 @@ public class Location extends AbstractItem {
 
     }
     
-    
     public boolean addDevice(Device device) {
         return devices.add((Device)device);
     }
-    
     
     public boolean removeDevice(Device device) {
         return devices.remove((Device)device);
@@ -79,7 +72,6 @@ public class Location extends AbstractItem {
         return this.devices;
     }
 
-    
     public void setState(State state) {
         this.state = state;
     }
