@@ -4,6 +4,7 @@
 package org.woz.protozoa.core.item;
 
 import java.util.Observable;
+import java.util.UUID;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
@@ -20,16 +21,13 @@ import javax.jdo.annotations.PrimaryKey;
 public abstract class AbstractItem extends Observable implements Item {
 
     @PrimaryKey
-    protected String id;
+    protected UUID id;
 
     protected AbstractItem() {
         // Satisfy JDO
+        this.id = UUID.randomUUID();
     }
     
-    public AbstractItem(String id) {
-        this.id = id;
-    }
-
     /**
      * This is a generic <code>toString</code> method which outputs the name of
      * the class and the name and description of the instance.
@@ -43,14 +41,7 @@ public abstract class AbstractItem extends Observable implements Item {
 
     @Override
     public String getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(String id) {
-        this.id = id;
-        setChanged();
-        notifyObservers();
+        return id.toString();
     }
 
 }

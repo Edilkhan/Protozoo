@@ -58,7 +58,6 @@ public class Device extends AbstractItem {
      * @param description of the new device
      */
     public Device(String name, String description) {
-        super(name);
         
         this.name = name;
         this.description = description;

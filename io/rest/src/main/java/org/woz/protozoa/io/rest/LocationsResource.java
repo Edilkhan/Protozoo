@@ -5,32 +5,43 @@
  */
 package org.woz.protozoa.io.rest;
 
-import java.util.Collection;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import org.woz.protozoa.io.rest.exception.CreateLocationFailedException;
+import org.woz.protozoa.io.rest.exception.DeleteLocationFailedException;
+import org.woz.protozoa.io.rest.exception.LocationNotFoundException;
 import org.woz.protozoa.model.mysql.Location;
 
 /**
- *
- * @author wolfgang
+ * CRUD operations on Locations
+ * 
+ * @since 1.0
+ * @author Wolfgang van Os
  */
+
 @Path("locations")
+@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface LocationsResource {
 
     @GET
-    public Collection<Location> getLocations();
+    public Response getLocations();
     
     @GET
     @Path("{name}")
-    public Location getLocation(@PathParam("name") String name) throws LocationNotFoundException;
+    public Response getLocation(@PathParam("name") String name) throws LocationNotFoundException;
     
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Location addLocation();
+    public Response createLocation(Location loc) throws CreateLocationFailedException;
+    
+    @DELETE
+    public Response deleteLocation(Location loc) throws DeleteLocationFailedException;
+    
 }

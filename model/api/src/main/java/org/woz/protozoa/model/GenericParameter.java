@@ -23,7 +23,6 @@ public class GenericParameter extends AbstractItem implements IParameter {
     private final Set<IMeasurement> measurements = new HashSet<>();
 
     public GenericParameter(String name) {
-        super(name);
     }
       
     public void addMeasurement(GenericMeasurement measurement) {

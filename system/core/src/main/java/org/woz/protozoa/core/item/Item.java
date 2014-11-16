@@ -11,13 +11,6 @@ package org.woz.protozoa.core.item;
 public interface Item {
 
     /**
-     * Sets the identifier of the item
-     *
-     * @param id of the item
-     */
-    public void setId(String id);
-
-    /**
      * Retrieves the id of the item
      *
      * @return the id of the item

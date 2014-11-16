@@ -38,8 +38,6 @@ public class GenericLocation extends AbstractItem implements ILocation {
     }
     
     public GenericLocation(String name, String description) {
-
-        super(name);
         
         this.name = name;
         this.description = description;

@@ -42,9 +42,7 @@ public class GenericDevice extends AbstractItem implements IDevice {
      * @param description of the new device
      */
     public GenericDevice(ILocation location, String name, String description) {
-
-        super(name);
-        
+      
         this.name = name;
         this.description = description;
         this.location = location;

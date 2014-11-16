@@ -45,9 +45,7 @@ public class Location extends AbstractItem {
     }
     
     public Location(String name, String description) {
-
-        super(name);
-        
+      
         this.name = name;
         this.description = description;
         this.state = ACTIVE;

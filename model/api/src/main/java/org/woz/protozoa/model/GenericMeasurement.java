@@ -27,7 +27,6 @@ public class GenericMeasurement extends AbstractItem implements IMeasurement {
     }
 
     public GenericMeasurement(String name, String description) {
-        super(name);
         
         this.description = description;
     }

@@ -40,8 +40,6 @@ public class Main {
         final ResourceConfig rc = new ResourceConfig()
                 .registerClasses(DevicesResourceImpl.class)
                 .registerClasses(LocationsResourceImpl.class)
-                .registerClasses(ContactResource.class)
-                //.property(javax.xml.bind.Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE)
                 // Providers - JSON
                 .register(MoxyJsonFeature.class)
                 .register(JsonConfiguration.class)

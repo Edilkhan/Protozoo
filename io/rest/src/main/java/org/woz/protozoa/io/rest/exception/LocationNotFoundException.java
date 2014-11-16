@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.woz.protozoa.io.rest;
+package org.woz.protozoa.io.rest.exception;
 
 /**
  *
  * @author wos
  */
 public class LocationNotFoundException extends Exception {
+
+    public LocationNotFoundException() {
+        super();
+    }
 
     public LocationNotFoundException(String message) {
         super(message);
