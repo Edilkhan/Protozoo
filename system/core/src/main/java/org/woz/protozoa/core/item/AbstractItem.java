@@ -3,12 +3,15 @@
  */
 package org.woz.protozoa.core.item;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Observable;
 import java.util.UUID;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.PrimaryKey;
+import javax.jdo.annotations.Column;
 
 /**
  * An abstract implementation of the Item interface, which includes the
@@ -22,10 +25,13 @@ public abstract class AbstractItem extends Observable implements Item {
 
     @PrimaryKey
     protected UUID id;
+    @Column(name = "created")
+    protected Date createdTimestamp;
 
     protected AbstractItem() {
         // Satisfy JDO
         this.id = UUID.randomUUID();
+        this.createdTimestamp = Calendar.getInstance().getTime();
     }
     
     /**
@@ -36,7 +42,7 @@ public abstract class AbstractItem extends Observable implements Item {
      */
     @Override
     public String toString() {
-        return String.format("%s id=%s", this.getClass().getName(), id);
+        return String.format("%s id={%s}, created %s", this.getClass().getName(), id, createdTimestamp);
     }
 
     @Override
@@ -44,4 +50,8 @@ public abstract class AbstractItem extends Observable implements Item {
         return id.toString();
     }
 
+    @Override
+    public Date getCreatedTimestamp() {
+        return this.createdTimestamp;
+    }
 }

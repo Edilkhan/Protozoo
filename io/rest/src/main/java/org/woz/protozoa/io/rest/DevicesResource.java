@@ -5,12 +5,18 @@
  */
 package org.woz.protozoa.io.rest;
 
-import java.util.Collection;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import org.woz.protozoa.io.rest.exception.CreateDeviceFailedException;
+import org.woz.protozoa.io.rest.exception.DeleteDeviceFailedException;
+import org.woz.protozoa.io.rest.exception.DeviceNotFoundException;
 import org.woz.protozoa.model.mysql.Device;
 
 /**
@@ -18,14 +24,22 @@ import org.woz.protozoa.model.mysql.Device;
  * @author wolfgang
  */
 @Path("devices")
+@Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface DevicesResource {
     
     @GET
-    public Collection<Device> getDevices();
+    public Response getDevices();
     
     @GET
     @Path("{name}")
-    public Device getDevice(@PathParam("name") String name);
+    public Response getDevice(@PathParam("name") String name) throws DeviceNotFoundException;
+    
+    @POST
+    public Response createDevice(Device device) throws CreateDeviceFailedException;
+    
+    @DELETE
+    public Response deleteDevice(@PathParam("name") String name) throws DeleteDeviceFailedException;
+    
 }
 

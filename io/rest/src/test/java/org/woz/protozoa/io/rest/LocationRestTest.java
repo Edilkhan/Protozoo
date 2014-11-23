@@ -52,6 +52,7 @@ public class LocationRestTest {
         //System.out.println("All locations: " + responseMsg);
     }
 
+    /*
     @Test
     public void createTestLocation() {
         target.path("locations/new")
@@ -60,4 +61,5 @@ public class LocationRestTest {
                 .request()
                 .post(null);
     }
+    */
 }

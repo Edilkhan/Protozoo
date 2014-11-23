@@ -3,6 +3,8 @@
  */
 package org.woz.protozoa.core.item;
 
+import java.util.Date;
+
 /**
  * This is the base of all classes of the Protozoa framework
  * 
@@ -16,5 +18,7 @@ public interface Item {
      * @return the id of the item
      */
     public String getId();
+    
+    public Date getCreatedTimestamp();
     
 }

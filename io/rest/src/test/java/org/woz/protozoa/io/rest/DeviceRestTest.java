@@ -50,10 +50,12 @@ public class DeviceRestTest {
         server.shutdown();
     }
     
+    /*
     @Test
     public void queryDevices() {
         Response result = target.path("devices").request().accept(MediaType.APPLICATION_JSON).get();
         //assertEquals("", devices);
         System.out.println(result);
     }
+    */
 }

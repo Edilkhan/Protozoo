@@ -16,14 +16,13 @@ import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.woz.protozoa.core.item.Item;
-import org.woz.protozoa.model.api.ILocation;
 
 /**
  *
  * @author wos
  */
 @Component
-public class MySQLRepository {
+public class MySQLRepository  {
 
     Properties properties = new Properties();
     PersistenceManagerFactory pmf;
@@ -54,77 +53,96 @@ public class MySQLRepository {
         return pm;
     }
 
-    public Location addLocation(String name, String description) {
+    public Item createItem(Item item) {
+        log.info("Create item");
 
         Transaction tx = getPersistenceManager().currentTransaction();
 
-        try {
-            tx.begin();
+        tx.begin();
 
-            Location newloc = getPersistenceManager().makePersistent(new Location(name, description));
+        try {
+        
+            Item newitem = getPersistenceManager().makePersistent(item);
 
             tx.commit();
 
-            return newloc;
+            return newitem;
 
         } catch (Exception e) {
-            tx.rollback();
+
+            if (tx.isActive()) {
+                tx.rollback();
+            }
 
             return null;
         }
     }
+    
+    public Item getItemByName(Class clazz, String name) {
 
-    public boolean removeLocation(String name) {
+        try {
 
-        Location loc = (Location) getLocation(name);
+            Query q = getPersistenceManager()
+                    .newQuery(clazz);
+            q.setFilter("name == \"" + name + "\"");
 
-        if (loc != null) {
-            getPersistenceManager().deletePersistent(loc);
+            Collection<?> result = (Collection<?>) q.execute();
+
+            return (Item) result.iterator().next();
+
+        } catch (Exception e) {
+
+            return null;
+        }
+    }
+    
+    public Collection<?> getItems(Class clazz) {
+        Query query = getPersistenceManager().newQuery(clazz);
+
+        Collection<Item> result = (Collection<Item>) query.execute();
+        
+        return result;
+    }
+    
+    public Item updateItem(Item item) {
+        Transaction tx = getPersistenceManager().currentTransaction();
+        
+        if (item != null) {
+            tx.begin();
+            getPersistenceManager().makePersistent(item);
+            tx.commit();
+            
+            return item;
+        } else {
+            return null;
+        }
+    }
+    
+    public boolean deleteItem(Item item) {
+        Transaction tx = getPersistenceManager().currentTransaction();
+
+        if (item != null) {
+            tx.begin();
+            getPersistenceManager().deletePersistent(item);
+            tx.commit();
+
             return true;
         } else {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+
             return false;
         }
     }
-
-    public Location getLocation(String name) {
-        log.info("getLocation called...");
-
-        try {
-            log.info("within try...");
-            return getPersistenceManager().getObjectById(Location.class, name);
-        } catch (Exception e) {
-            log.info("within catch...");
-            return null;
+    
+    public boolean deleteItemByName(Class clazz, String name) {
+        Item item  = getItemByName(clazz, name);
+        
+        if (item == null) {
+            return false;
+        } else {
+            return deleteItem(item);
         }
-    }
-
-    public Collection<ILocation> getLocations() {
-        log.info("getLocations called...");
-
-        Query query = getPersistenceManager().newQuery(Location.class);
-
-        return (Collection) query.execute();
-    }
-
-    public Device addDevice(String name, String description) {
-        return getPersistenceManager().makePersistent(new Device(name, description));
-    }
-
-    public boolean removeDevice(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Device getDevice(String name) {
-        log.info("getDevice called...");
-
-        return getPersistenceManager().getObjectById(Device.class, name);
-    }
-
-    public Collection<Item> getDevices() {
-        log.info("getDevices called...");
-
-        Query query = getPersistenceManager().newQuery(Device.class);
-
-        return (Collection) query.execute();
     }
 }

@@ -11,6 +11,7 @@ import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Unique;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
@@ -27,6 +28,7 @@ import static org.woz.protozoa.core.type.Type.PHYSICAL;
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
 public class Location extends AbstractItem {
 
+    @Unique
     private String name;
     private String description;
     

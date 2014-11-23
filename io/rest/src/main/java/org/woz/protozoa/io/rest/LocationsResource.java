@@ -39,9 +39,9 @@ public interface LocationsResource {
     public Response getLocation(@PathParam("name") String name) throws LocationNotFoundException;
     
     @POST
-    public Response createLocation(Location loc) throws CreateLocationFailedException;
+    public Response createLocation(Location location) throws CreateLocationFailedException;
     
     @DELETE
-    public Response deleteLocation(Location loc) throws DeleteLocationFailedException;
+    public Response deleteLocation(@PathParam("name") String name) throws DeleteLocationFailedException;
     
 }
