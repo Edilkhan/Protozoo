@@ -15,6 +15,7 @@ import org.woz.protozoa.io.rest.exception.CreateDeviceFailedException;
 import org.woz.protozoa.io.rest.exception.DeleteDeviceFailedException;
 import org.woz.protozoa.io.rest.exception.DeviceNotFoundException;
 import org.woz.protozoa.model.mysql.Device;
+import org.woz.protozoa.model.mysql.Location;
 import org.woz.protozoa.model.mysql.MySQLRepository;
 
 /**
@@ -28,9 +29,9 @@ public class DevicesResourceImpl implements DevicesResource {
     static MySQLRepository repo = new MySQLRepository();
       
     @Override
-    public Response getDevices() {
+    public Response getDevices(Location location) {
     
-        Collection<Device> result = (Collection<Device>) repo.getItems(Device.class);
+        Collection<Device> result = (Collection<Device>) repo.getItemsByQuery(Device.class, "location.id == \"" + location.getId() + "\"");
         
         GenericEntity<Collection<Device>> entity = new GenericEntity<Collection<Device>>(result) {};
         

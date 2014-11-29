@@ -5,17 +5,24 @@
  */
 package org.woz.protozoa.io.rest.exception;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author wos
  */
-public class LocationNotFoundException extends Exception {
 
-    public LocationNotFoundException() {
-        super();
-    }
+@XmlRootElement
+public class LocationNotFoundException extends Exception {
+    
+    String message;
 
     public LocationNotFoundException(String message) {
-        super(message);
+        this.message = message;
+    }
+    
+    @Override
+    public String getMessage() {
+        return message;
     }
 }

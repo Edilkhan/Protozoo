@@ -13,25 +13,17 @@ import org.woz.protozoa.core.item.Item;
  * @author wolfgang
  */
 public interface IRepository {
-    
-    public ILocation addLocation(String name, String description);
-    public boolean removeLocation(String name);
-    public ILocation getLocation(String name);
-    public Collection<?> getLocations();
-    
-    public IDevice addDevice(String name, String description);
-    public boolean removeDevice(String name);
-    public IDevice getDevice(String name);
-    public Collection<?> getDevices();
 
     /*
      * Generic CRUD operations
      */
     
     public Item createItem(Item item);
-    public Item getItemByName(String name);
+    public Item getItemByName(Class clazz, String name);
     public Collection<?> getItems(Class clazz);
+    public Collection<?> getItemsByQuery(Class clazz, String query);
+    
     public Item updateItem(Item item);
-    public Item deleteItem(Item item);
-    public Item deleteItemByName(String name);
+    public boolean deleteItem(Item item);
+    public boolean deleteItemByName(Class clazz, String name);
 }

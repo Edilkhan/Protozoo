@@ -38,6 +38,10 @@ public interface LocationsResource {
     @Path("{name}")
     public Response getLocation(@PathParam("name") String name) throws LocationNotFoundException;
     
+    @GET
+    @Path("{name}/devices")
+    public Response getDevicesByLocation(@PathParam("name") String name) throws LocationNotFoundException;
+
     @POST
     public Response createLocation(Location location) throws CreateLocationFailedException;
     

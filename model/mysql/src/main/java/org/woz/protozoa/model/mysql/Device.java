@@ -5,19 +5,15 @@
  */
 package org.woz.protozoa.model.mysql;
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import org.woz.protozoa.core.item.AbstractItem;
 import org.woz.protozoa.core.type.State;
 import static org.woz.protozoa.core.type.State.ACTIVE;
 import org.woz.protozoa.core.type.Type;
 import static org.woz.protozoa.core.type.Type.PHYSICAL;
-import org.woz.protozoa.model.api.IParameter;
 
 /**
  *
@@ -28,17 +24,12 @@ import org.woz.protozoa.model.api.IParameter;
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
 public class Device extends AbstractItem {
 
-    //@XmlElement
     private String name;
-    //@XmlElement
     private String description;
     
-    //@XmlElement
     private State state;
-    //@XmlElement
     private Type type;
 
-    //@XmlElement
     private Location location;
 //    private final Set<IParameter> parameters = new HashSet<>();
 
@@ -66,7 +57,7 @@ public class Device extends AbstractItem {
 
     }
 
-/*    
+    
     public void setLocation(Location location) {
         this.location = (Location)location;
     }
@@ -76,7 +67,7 @@ public class Device extends AbstractItem {
         return this.location;
     }
 
-    
+/*    
     public Set<IParameter> getParameters() {
         return this.parameters;
     }

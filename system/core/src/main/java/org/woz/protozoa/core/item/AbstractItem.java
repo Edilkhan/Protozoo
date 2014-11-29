@@ -24,13 +24,13 @@ import javax.jdo.annotations.Column;
 public abstract class AbstractItem extends Observable implements Item {
 
     @PrimaryKey
-    protected UUID id;
+    protected String id;
     @Column(name = "created")
     protected Date createdTimestamp;
 
     protected AbstractItem() {
         // Satisfy JDO
-        this.id = UUID.randomUUID();
+        this.id = UUID.randomUUID().toString();
         this.createdTimestamp = Calendar.getInstance().getTime();
     }
     
@@ -47,7 +47,7 @@ public abstract class AbstractItem extends Observable implements Item {
 
     @Override
     public String getId() {
-        return id.toString();
+        return id;
     }
 
     @Override

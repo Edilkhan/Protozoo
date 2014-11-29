@@ -18,18 +18,19 @@ import org.woz.protozoa.io.rest.exception.CreateDeviceFailedException;
 import org.woz.protozoa.io.rest.exception.DeleteDeviceFailedException;
 import org.woz.protozoa.io.rest.exception.DeviceNotFoundException;
 import org.woz.protozoa.model.mysql.Device;
+import org.woz.protozoa.model.mysql.Location;
 
 /**
  *
  * @author wolfgang
  */
-@Path("devices")
+//@Path("devices")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface DevicesResource {
     
     @GET
-    public Response getDevices();
+    public Response getDevices(Location location);
     
     @GET
     @Path("{name}")

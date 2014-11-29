@@ -45,16 +45,31 @@ public class LocationsResourceImpl implements LocationsResource {
 
     @Override
     public Response getLocation(String name) throws LocationNotFoundException {
-        log.info("Get location with name: " + name);
+
+        if (name == null) {
+            throw new LocationNotFoundException("Invalid or no name specified for location");
+        }
         
         Location loc = (Location) repo.getItemByName(Location.class, name);
+
         if (loc == null) {
-            throw new LocationNotFoundException("Location with name not found");
+            throw new LocationNotFoundException("Location with name '" + name + "' not found");
         }
         
         return Response.status(Response.Status.OK)
                 .entity(loc)
                 .build();
+    }
+
+    @Override
+    public Response getDevicesByLocation(String name) throws LocationNotFoundException {
+        
+        Location loc = (Location) repo.getItemByName(Location.class, name);
+        if (loc == null) {
+            throw new LocationNotFoundException("Location with name not found");
+        }
+
+        return new DevicesResourceImpl().getDevices(loc);
     }
 
     @Override

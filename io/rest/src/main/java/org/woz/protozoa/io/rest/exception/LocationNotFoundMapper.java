@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.woz.protozoa.io.rest;
+package org.woz.protozoa.io.rest.exception;
 
-import org.woz.protozoa.io.rest.exception.LocationNotFoundException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
@@ -20,9 +19,9 @@ public class LocationNotFoundMapper implements ExceptionMapper<LocationNotFoundE
 
     @Override
     public Response toResponse(LocationNotFoundException ex) {
-        return Response.status(Response.Status.NOT_FOUND).
-                entity(ex.getMessage()).
-                type(MediaType.APPLICATION_JSON).
-                build();
+        return Response.status(Response.Status.NOT_FOUND)
+                .entity(ex)
+                .type(MediaType.APPLICATION_JSON)
+                .build();
     }
 }

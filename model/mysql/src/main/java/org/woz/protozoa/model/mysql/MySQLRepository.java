@@ -16,13 +16,14 @@ import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.woz.protozoa.core.item.Item;
+import org.woz.protozoa.model.api.IRepository;
 
 /**
  *
  * @author wos
  */
 @Component
-public class MySQLRepository  {
+public class MySQLRepository implements IRepository {
 
     Properties properties = new Properties();
     PersistenceManagerFactory pmf;
@@ -53,6 +54,7 @@ public class MySQLRepository  {
         return pm;
     }
 
+    @Override
     public Item createItem(Item item) {
         log.info("Create item");
 
@@ -78,6 +80,7 @@ public class MySQLRepository  {
         }
     }
     
+    @Override
     public Item getItemByName(Class clazz, String name) {
 
         try {
@@ -96,6 +99,7 @@ public class MySQLRepository  {
         }
     }
     
+    @Override
     public Collection<?> getItems(Class clazz) {
         Query query = getPersistenceManager().newQuery(clazz);
 
@@ -104,6 +108,19 @@ public class MySQLRepository  {
         return result;
     }
     
+    @Override
+    public Collection<?> getItemsByQuery(Class clazz, String q) {
+        Query query = getPersistenceManager().newQuery(clazz);
+        query.setFilter(q);
+        System.out.println(q);
+        System.out.println(query);
+
+        Collection<Item> result = (Collection<Item>) query.execute();
+        
+        return result;
+    }
+
+    @Override
     public Item updateItem(Item item) {
         Transaction tx = getPersistenceManager().currentTransaction();
         
@@ -118,6 +135,7 @@ public class MySQLRepository  {
         }
     }
     
+    @Override
     public boolean deleteItem(Item item) {
         Transaction tx = getPersistenceManager().currentTransaction();
 
@@ -136,6 +154,7 @@ public class MySQLRepository  {
         }
     }
     
+    @Override
     public boolean deleteItemByName(Class clazz, String name) {
         Item item  = getItemByName(clazz, name);
         
