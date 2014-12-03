@@ -21,7 +21,6 @@
     
     <modules>
         <module>rest</module>
-        <module>kar</module>
     </modules>
 
 </project>

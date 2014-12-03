@@ -39,6 +39,7 @@
         <!--module>standard</module>
         <module>spring</module>
         <module>enterprise</module-->
-    </modules>
+    <module>kar</module>
+  </modules>
 
 </project>
