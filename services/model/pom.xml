@@ -4,34 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.protozoo</groupId>
         <artifactId>services</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.woz.protozoa.services</groupId>
+    <groupId>org.protozoo.services</groupId>
     <artifactId>model</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>Protozoa :: Services :: Model</name>
+    <name>Protozoo :: Services :: Model</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-            <version>5.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.woz.protozoa.model</groupId>
-            <artifactId>api</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.compendium</artifactId>
-            <version>5.0.0</version>
-            <type>jar</type>
-        </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.scr.annotations</artifactId>
@@ -43,6 +27,16 @@
             <artifactId>org.apache.felix.scr.ds-annotations</artifactId>
             <version>1.2.8</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.protozoo.model</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.protozoo.system</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -72,8 +66,6 @@
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>org.woz.protozoa.services.model.internal.Activator</Bundle-Activator>
                         <Import-Package>*</Import-Package>
-                        <Export-Package>org.woz.protozoa.services.model</Export-Package>
-                        <Private-Package>org.woz.protozoa.services.model.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

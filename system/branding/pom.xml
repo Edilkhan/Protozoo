@@ -4,16 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.protozoo</groupId>
         <artifactId>system</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.woz.protozoa.system</groupId>
+    <groupId>org.protozoo.system</groupId>
     <artifactId>branding</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>Protozoa :: System :: Branding</name>
+    <name>Protozoo :: System :: Branding</name>
 
     <build>
         <resources>

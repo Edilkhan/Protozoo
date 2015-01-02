@@ -3,21 +3,21 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz</groupId>
-        <artifactId>protozoa</artifactId>
+        <groupId>org</groupId>
+        <artifactId>protozoo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.woz.protozoa</groupId>
+    <groupId>org.protozoo</groupId>
     <artifactId>services</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <name>Protozoa :: Services</name>
-    <description>The Protozoa Services package delivers the optional services to run the system.</description>
+    <name>Protozoo :: Services</name>
+    <description>The Protozoo Services package delivers the optional services to run the system.</description>
     
     <modules>
         <module>model</module>

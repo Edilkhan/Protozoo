@@ -4,15 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz</groupId>
-        <artifactId>protozoa</artifactId>
+        <groupId>org</groupId>
+        <artifactId>protozoo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.woz.protozoa</groupId>
+    <groupId>org.protozoo</groupId>
     <artifactId>model</artifactId>
     <packaging>pom</packaging>
-    <name>Protozoa :: Model</name>
+    <name>Protozoo :: Model</name>
     
     <modules>
         <module>api</module>

@@ -5,14 +5,17 @@
  */
 package org.woz.protozoa.model.mysql;
 
+import org.protozoo.model.mysql.Location;
+import org.protozoo.model.mysql.MySQLRepository;
+import org.protozoo.model.mysql.Device;
 import java.util.Collection;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.woz.protozoa.core.item.Item;
-import org.woz.protozoa.core.type.State;
+import org.protozoo.core.item.Item;
+import org.protozoo.core.type.State;
 
 /**
  *

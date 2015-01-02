@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="protozoa-framework-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.2.0 http://karaf.apache.org/xmlns/features/v1.2.0">
-    <feature name="${project.version}" description="Protozoa framework" version="${project.version}" resolver="(obr)">
-        <details>Protozoa REST</details>
-        <feature>http</feature>
-        <feature>io</feature>
+    <feature name="Protozoa Shell" description="Protozoa shell" version="${project.version}" resolver="(obr)">
+        <details>Protozoa Shell</details>
         <!--feature>this-project-dependants</feature-->
 
-        <!--bundle>mvn:org.woz.protozoa.io.cxf/protozoa.io.cxf.service/1.0.0-SNAPSHOT</bundle-->
-        <bundle start="true" start-level="15">mvn:org.woz.protozoa.io/rest/1.0.0-SNAPSHOT</bundle>
-        <bundle start="true" start-level="15">mvn:org.woz.protozoa.services/model/1.0.0-SNAPSHOT</bundle>
+        <bundle start="true" start-level="15">mvn:org.protozoo.shell/commands/1.0.0-SNAPSHOT</bundle>
+        <bundle start="true" start-level="15">mvn:org.protozoo.system/core/1.0.0-SNAPSHOT</bundle>
     </feature>
 
     <!--feature name="this-project-dependants">

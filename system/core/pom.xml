@@ -3,17 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.protozoo</groupId>
         <artifactId>system</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.woz.protozoa.system</groupId>
+    <groupId>org.protozoo.system</groupId>
     <artifactId>core</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>Protozoa :: System :: Core</name>
+    <name>Protozoo :: System :: Core</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,8 +31,6 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.woz.protozoa.core.internal.Activator</Bundle-Activator>
-                        <Export-Package>org.woz.protozoa.core.item,org.woz.protozoa.core.type</Export-Package>
-                        <Private-Package>org.woz.protozoa.core.internal.*,org.woz.protozoa.core.item.*,org.woz.protozoa.core.type.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>
@@ -60,31 +58,39 @@
                 <artifactId>karaf-maven-plugin</artifactId>
                 <extensions>true</extensions>
             </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <inherited>true</inherited>
+                <configuration>
+                    <updateReleaseInfo>true</updateReleaseInfo>
+                    <repositoryId>Local</repositoryId>
+                </configuration>
+            </plugin>
         </plugins>
+        <extensions>
+            <!-- Enabling the use of FTP -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>2.8</version>
+            </extension>
+        </extensions>
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-            <version>5.0.0</version>
-            <type>jar</type>
-        </dependency>
         <dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo-api</artifactId>

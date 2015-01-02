@@ -4,17 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>protozoa</artifactId>
-        <groupId>org.woz</groupId>
+        <artifactId>protozoo</artifactId>
+        <groupId>org</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.woz.protozoa</groupId>
+    <groupId>org.protozoo</groupId>
     <artifactId>web</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>Protozoa :: Web</name>
+    <name>Protozoo :: Web</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

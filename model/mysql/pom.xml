@@ -5,15 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.protozoo</groupId>
         <artifactId>model</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     
-    <groupId>org.woz.protozoa.model</groupId>
+    <groupId>org.protozoo.model</groupId>
     <artifactId>mysql</artifactId>
     <packaging>bundle</packaging>
-    <name>Protozoa :: Model :: MySQL</name>
+    <name>Protozoo :: Model :: MySQL</name>
     
     <dependencies>
         <dependency>
@@ -57,6 +57,11 @@
             <artifactId>org.osgi.compendium</artifactId>
             <version>5.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.protozoo.system</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     
     <build>
@@ -69,8 +74,6 @@
                 <configuration>
                     <instructions>
                         <Bundle-Activator>org.woz.protozoa.model.mysql.internal.Activator</Bundle-Activator>
-                        <Export-Package>org.woz.protozoa.model.mysql</Export-Package>
-                        <Private-Package>org.woz.protozoa.model.mysql.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

@@ -1,36 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.protozoo</groupId>
         <artifactId>io</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     
-    <groupId>org.woz.protozoa.io</groupId>
+    <groupId>org.protozoo.io</groupId>
     <artifactId>rest</artifactId>
+
     <packaging>bundle</packaging>
-    <name>Protozoa :: IO :: Rest</name>
+    <name>Protozoo :: IO :: Rest</name>
 
     <dependencies>
-        <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>org.osgi.core</artifactId>
-            <version>5.0.0</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.10</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-grizzly2-http</artifactId>
@@ -50,15 +35,20 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.woz.protozoa.model</groupId>
-            <artifactId>mysql</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-moxy</artifactId>
             <version>2.13</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.protozoo.model</groupId>
+            <artifactId>mysql</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.protozoo.system</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
     
@@ -74,8 +64,6 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>org.woz.protozoa.io.cxf.rest.internal.Activator</Bundle-Activator>
-                        <Export-Package>org.woz.protozoa.io.cxf.rest</Export-Package>
-                        <Private-Package>org.woz.protozoa.io.cxf.rest.*</Private-Package>
                     </instructions>
                 </configuration>
             </plugin>

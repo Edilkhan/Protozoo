@@ -1,0 +1,19 @@
+h1. Synopsis
+
+${project.name}
+
+${project.description}
+
+Maven URL:
+[mvn:${project.groupId}/${project.artifactId}/${project.version}]
+
+h1. Description
+
+This bundle provides various shell commands.
+
+The following commands are available:
+* shell:info - Prints system information.
+
+h1. See also
+
+Commands - and Using the console - sections of the Protozoa User Guide.

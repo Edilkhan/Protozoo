@@ -4,23 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz.protozoa</groupId>
+        <groupId>org.protozoo</groupId>
         <artifactId>model</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.woz.protozoa.model</groupId>
+    <groupId>org.protozoo.model</groupId>
     <artifactId>api</artifactId>
     <packaging>bundle</packaging>
-    <name>Protozoa :: Model :: API</name>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.woz.protozoa.system</groupId>
-            <artifactId>core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+    <name>Protozoo :: Model :: API</name>
 
     <build>
         <plugins>
@@ -30,13 +22,16 @@
                 <version>2.3.7</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <instructions>
-                        <Export-Package>org.woz.protozoa.model,org.woz.protozoa.model.api</Export-Package>
-                        <Private-Package>org.woz.protozoa.model.*</Private-Package>
-                    </instructions>
+                    <instructions></instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    
+    <dependencies>
+        <dependency>
+            <groupId>org.protozoo.system</groupId>
+            <artifactId>core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

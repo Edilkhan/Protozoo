@@ -12,3 +12,10 @@
 /io/rest/target/
 /io/kar/target/
 /web/target/
+/assemblies/features/kar/target/
+/target/
+/shell/commands/target/
+/itests/target/
+/assemblies/features/shell/target/
+/system/event/target/
+/system/timer/target/

@@ -3,25 +3,29 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.woz</groupId>
-        <artifactId>protozoa</artifactId>
+        <groupId>org</groupId>
+        <artifactId>protozoo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.woz.protozoa</groupId>
+    <groupId>org.protozoo</groupId>
     <artifactId>system</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <name>Protozoa :: System</name>
-    <description>The Protozoa Core package delivers the necessary services to run the system. It is mandatory to include this module.</description>
+ 
+    <name>Protozoo :: System</name>
+    <description>The Protozoo Core package delivers the necessary services to run the system. It is mandatory to include this module.</description>
     
     <modules>
         <module>core</module>
         <module>branding</module>
-    </modules>
+        <module>event</module>
+    <module>timer</module>
+  </modules>
 
 </project>

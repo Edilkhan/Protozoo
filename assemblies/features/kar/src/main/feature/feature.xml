@@ -24,7 +24,7 @@
     </feature>
     
     <feature  name="api" description="Model API" version="1.0.0-SNAPSHOT">
-        <bundle>mvn:org.woz.protozoa.model/api/1.0.0-SNAPSHOT</bundle>
+        <bundle>mvn:org.protozoo.model/api/1.0.0-SNAPSHOT</bundle>
     </feature>
 
 </features>

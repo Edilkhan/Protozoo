@@ -2,7 +2,7 @@
  * Copyright (C) 2014, Wizardofos.nl
  */
 
-This is the Protozoa framework and utilizes the following components:
+This is the Protozoo framework and utilizes the following components:
 
 - Apache Karaf
 - Datanucleus JDO persistency container

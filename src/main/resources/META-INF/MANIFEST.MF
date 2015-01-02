@@ -1,0 +1,28 @@
+#Bundle-ActivationPolicy: lazy
+#Bundle-Activator: com.acme.fw.Activator
+#Bundle-Category: osgi, test, nursery
+#Bundle-ClassPath: /jar/http.jar,.
+#Bundle-ContactAddress: 2400 Oswego Road, Austin, TX 74563
+#Bundle-Copyright: OSGi (c) 2002
+#Bundle-Description: Network Firewall
+#Bundle-DocURL: http://www.example.com/Firewall/doc
+#Bundle-Icon: /icons/acme-logo.png;size=64
+#Bundle-License: http://www.opensource.org/licenses/jabberpl.php
+#Bundle-Localization: OSGI-INF/l10n/bundle
+#Bundle-ManifestVersion: 2
+#Bundle-Name: Firewall
+#Bundle-NativeCode: /lib/http.DLL; osname = QNX; osversion = 3.1
+#Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0
+#Bundle-SymbolicName: com.acme.daffy
+#Bundle-UpdateLocation: http://www.acme.com/Firewall/bundle.jar
+#Bundle-Vendor: OSGi Alliance
+#Bundle-Version: 1.1
+#DynamicImport-Package: com.acme.plugin.*
+#Export-Package: org.osgi.util.tracker;version=1.3
+#Export-Service: org.osgi.service.log.LogService
+#Fragment-Host: org.eclipse.swt; bundle-version="[3.0.0,4.0.0)"
+#Import-Package: org.osgi.util.tracker,org.osgi.service.io;version=1.4
+#Import-Service: org.osgi.service.log.LogService
+#Provide-Capability: com.acme.dict; from=nl; to=de; version:Version=1.2
+#Require-Bundle: com.acme.chess
+#Require-Capability: osgi.ee; filter:="(&(osgi.ee=AcmeMin)(version=1.1))"

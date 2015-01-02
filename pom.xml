@@ -3,22 +3,25 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.woz</groupId>
-    <artifactId>protozoa</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <name>Protozoa</name>
+    <name>Protozoo</name>
     <inceptionYear>2014</inceptionYear>
-    <packaging>pom</packaging>
-    
-    <modules>
-        <module>assemblies</module>
-        <module>model</module>
-        <module>io</module>
-        <module>system</module>
-        <module>services</module>
-    <module>web</module>
-  </modules>
-    
+
+    <groupId>org</groupId>
+    <artifactId>protozoo</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <developers>
+        <developer>
+            <name>Wizardofos</name>
+            <organization>wizardofos.nl</organization>
+            <organizationUrl>http://www.wizardofos.nl</organizationUrl>
+            <id>wizardofos</id>
+            <roles>
+                <role>Project lead</role>
+            </roles>
+        </developer>
+    </developers>
+                
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
@@ -31,10 +34,64 @@
         <url>https://github.com/wizardofos/Protozoa.git;a=summary</url>
         <tag>HEAD</tag>
     </scm>
+        
+    <distributionManagement>
+        <repository>
+            <id>OSSRH</id>
+            <name>Sonatype OSSRH (OSS Repository Hosting)</name>
+        </repository>
+    </distributionManagement>
     
     <prerequisites>
-        <maven>3.0.3</maven>
+        <maven>3.2.3</maven>
     </prerequisites>
+
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>assemblies</module>
+        <module>model</module>
+        <module>io</module>
+        <module>system</module>
+        <module>services</module>
+        <module>web</module>
+        <module>shell</module>
+        <module>itests</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.compendium</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     
     <build>
         <defaultGoal>install</defaultGoal>
@@ -105,6 +162,29 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        
+        <plugins>
+            <!--plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <inherited>true</inherited>
+                <configuration>
+                    <updateReleaseInfo>true</updateReleaseInfo>
+                    <url>https://192.168.2.3/maven2</url>
+                </configuration>
+            </plugin-->
+            <!--plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>Local</serverId>
+                    <nexusUrl>https://192.168.2.3/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin-->
+        </plugins>
     </build>
     
     <profiles>

@@ -5,6 +5,7 @@
  */
 package org.woz.protozoa.io.rest;
 
+import org.protozoo.io.rest.Main;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;

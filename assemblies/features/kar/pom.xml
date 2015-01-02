@@ -22,16 +22,16 @@
 
     <parent>
     <artifactId>features</artifactId>
-    <groupId>org.woz.protozoa.assemblies</groupId>
+    <groupId>org.protozoo.assemblies</groupId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
-    <groupId>org.woz.protozoa.assemblies.features</groupId>
+    <groupId>org.protozoo.assemblies.features</groupId>
     <artifactId>kar</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>kar</packaging>
 
-    <name>Protozoa :: Assemblies :: Features :: KAR</name>
+    <name>Protozoo :: Assemblies :: Features :: KAR</name>
     <description>kar details</description>
 
     <build>
