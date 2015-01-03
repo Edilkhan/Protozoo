@@ -50,13 +50,15 @@
     
     <modules>
         <module>assemblies</module>
-        <module>model</module>
+        <module>device</module>
+        <module>driver</module>
         <module>io</module>
-        <module>system</module>
-        <module>services</module>
-        <module>web</module>
-        <module>shell</module>
         <module>itests</module>
+        <module>model</module>
+        <module>services</module>
+        <module>shell</module>
+        <module>system</module>
+        <module>web</module>
     </modules>
 
     <dependencies>

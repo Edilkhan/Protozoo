@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.protozoo.device;
+package org.protozoo.driver;
 
 import java.util.Hashtable;
 import org.osgi.framework.BundleContext;
@@ -12,6 +12,7 @@ import static org.osgi.service.device.Constants.DRIVER_ID;
 import static org.osgi.service.device.Device.MATCH_NONE;
 import org.osgi.service.device.Driver;
 import org.protozoo.core.type.State;
+import org.protozoo.device.Pinger;
 
 /**
  *
@@ -24,7 +25,7 @@ public class PingerDriver implements Driver {
     private BundleContext bc = null;
     private ServiceRegistration sReg = null;
 
-    public void register(BundleContext bc) throws Exception {
+    public void register(BundleContext bc) {
 
         this.bc = bc;
 
@@ -33,7 +34,7 @@ public class PingerDriver implements Driver {
         sReg = bc.registerService(Driver.class.getName(), this, props);
     }
 
-    public void unregister() throws Exception {
+    public void unregister() {
         if (sReg != null) {
             sReg.unregister();
         }

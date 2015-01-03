@@ -19,3 +19,5 @@
 /assemblies/features/shell/target/
 /system/event/target/
 /system/timer/target/
+/device/target/
+/driver/target/

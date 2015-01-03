@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.protozoo.device;
+package org.protozoo.device.impl;
 
 import java.util.Hashtable;
 import java.util.UUID;
@@ -12,6 +12,7 @@ import static org.osgi.service.device.Constants.DEVICE_CATEGORY;
 import static org.osgi.service.device.Constants.DEVICE_SERIAL;
 import org.osgi.service.device.Device;
 import org.protozoo.core.item.CapableItem;
+import org.protozoo.device.Pinger;
 import static org.protozoo.core.type.Capability.OFF;
 import static org.protozoo.core.type.Capability.ON;
 import static org.protozoo.core.type.Capability.PING;
