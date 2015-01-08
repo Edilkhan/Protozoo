@@ -28,10 +28,10 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>org.protozoo.assemblies.features.framework</groupId>
+    <groupId>org.protozoo.features.framework</groupId>
     <artifactId>framework</artifactId>
     <packaging>karaf-assembly</packaging>
-    <name>Protozoo :: Assemblies :: Features :: Framework</name>
+    <name>Protozoo :: Features :: Framework</name>
 
     <dependencies>
         <!--dependency>

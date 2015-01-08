@@ -9,6 +9,6 @@ package org.protozoo.io.rest.exception;
  *
  * @author wolfgang
  */
-public class CreateLocationFailedException extends Exception {
+public class UpdateDeviceFailedException extends Exception {
     
 }

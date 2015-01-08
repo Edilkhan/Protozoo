@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.protozoo.io.rest.exception.CreateLocationFailedException;
 import org.protozoo.io.rest.exception.DeleteLocationFailedException;
+import org.protozoo.io.rest.exception.UpdateLocationFailedException;
 import org.protozoo.model.mysql.Location;
 import org.protozoo.model.mysql.MySQLRepository;
 
@@ -89,9 +90,29 @@ public class LocationsResourceImpl implements LocationsResource {
     }
 
     @Override
+    public Response updateLocation(Location loc) throws UpdateLocationFailedException {
+
+        log.info("Updating location: " + loc.getName());
+        
+        Location updatedLocation = (Location) repo.updateItem(loc);
+        
+        if (updatedLocation != null) {        
+
+            return Response.status(Response.Status.OK)
+                    .entity(updatedLocation)
+                    .header("X-RateLimit-Limit", 5000)
+                    .header("X-RateLimit-Remaining", 4999)
+                    .build();
+        } else {
+            throw new UpdateLocationFailedException();
+        }
+        
+    }
+    
+    @Override
     public Response deleteLocation(String name) throws DeleteLocationFailedException {
         
-        log.info("Delete location ");
+        log.info("Deleting location: " + name);
         
         Location loc = (Location) repo.getItemByName(Location.class, name);
         

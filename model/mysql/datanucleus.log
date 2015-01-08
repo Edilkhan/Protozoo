@@ -1328,3 +1328,364 @@
 22:16:09,203 (main) INFO  [DataNucleus.Enhancer] - Class "org.woz.protozoa.model.mysql.Location" is already enhanced.
 22:16:09,203 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.woz.protozoa.model.mysql.Location" completed
 22:16:09,203 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 2 classes.
+12:05:34,625 (main) DEBUG [DataNucleus.General] - Using PluginRegistry org.datanucleus.plugin.NonManagedPluginRegistry
+12:05:34,683 (main) DEBUG [DataNucleus.General] - Registering bundle org.sonatype.inject version 2.3.0 at URL file:/Users/wolfgang/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar.
+12:05:34,743 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+12:05:34,746 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar!/plugin.xml.
+12:05:34,750 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus version 4.0.3 at URL file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar.
+12:05:34,787 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar!/plugin.xml.
+12:05:34,840 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar!/plugin.xml.
+12:05:34,852 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.store.rdbms version 4.0.4 at URL file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar.
+12:05:34,902 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar!/plugin.xml.
+12:05:34,936 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar!/plugin.xml.
+12:05:34,960 (main) DEBUG [DataNucleus.General] - Registering bundle org.datanucleus.api.jdo version 4.0.3 at URL file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar.
+12:05:34,967 (main) DEBUG [DataNucleus.General] - Loading extension points from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar!/plugin.xml.
+12:05:34,970 (main) DEBUG [DataNucleus.General] - Loading extensions from plug-in file jar:file:/Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar!/plugin.xml.
+12:05:35,027 (main) DEBUG [DataNucleus.Persistence] - Java types support initialising ...
+12:05:35,089 (main) DEBUG [DataNucleus.Persistence] - Java types support loaded : supported java types=[B, [C, [D, [F, [I, [J, [Ljava.lang.Boolean;, [Ljava.lang.Byte;, [Ljava.lang.Character;, [Ljava.lang.Double;, [Ljava.lang.Enum;, [Ljava.lang.Float;, [Ljava.lang.Integer;, [Ljava.lang.Long;, [Ljava.lang.Number;, [Ljava.lang.Short;, [Ljava.lang.String;, [Ljava.math.BigDecimal;, [Ljava.math.BigInteger;, [Ljava.util.Date;, [Ljava.util.Locale;, [S, [Z, boolean, byte, char, double, float, int, java.awt.Color, java.awt.image.BufferedImage, java.lang.Boolean, java.lang.Byte, java.lang.Character, java.lang.Class, java.lang.Double, java.lang.Enum, java.lang.Float, java.lang.Integer, java.lang.Long, java.lang.Number, java.lang.Short, java.lang.String, java.lang.StringBuffer, java.lang.StringBuilder, java.math.BigDecimal, java.math.BigInteger, java.net.URI, java.net.URL, java.sql.Date, java.sql.Time, java.sql.Timestamp, java.util.ArrayList, java.util.Arrays$ArrayList, java.util.BitSet, java.util.Calendar, java.util.Collection, java.util.Currency, java.util.Date, java.util.GregorianCalendar, java.util.HashMap, java.util.HashSet, java.util.Hashtable, java.util.LinkedHashMap, java.util.LinkedHashSet, java.util.LinkedList, java.util.List, java.util.Locale, java.util.Map, java.util.PriorityQueue, java.util.Properties, java.util.Queue, java.util.Set, java.util.SortedMap, java.util.SortedSet, java.util.Stack, java.util.TimeZone, java.util.TreeMap, java.util.TreeSet, java.util.UUID, java.util.Vector, long, short
+12:05:35,089 (main) DEBUG [DataNucleus.Persistence] - Type converter support initialising ...
+12:05:35,133 (main) DEBUG [DataNucleus.Persistence] - Type converter support loaded
+12:05:35,134 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for byte[] to : java.nio.ByteBuffer
+12:05:35,134 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for char[] to : java.nio.ByteBuffer
+12:05:35,134 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for double[] to : java.nio.ByteBuffer
+12:05:35,134 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for float[] to : java.nio.ByteBuffer
+12:05:35,134 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for int[] to : java.nio.ByteBuffer
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for long[] to : java.nio.ByteBuffer
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for short[] to : java.nio.ByteBuffer
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for boolean[] to : java.nio.ByteBuffer
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.awt.Color to : java.lang.String,int[]
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.io.Serializable to : java.lang.String,java.nio.ByteBuffer,byte[]
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Boolean to : java.lang.Character,java.lang.Integer
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Character to : java.lang.String
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Class to : java.lang.String
+12:05:35,135 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Integer to : java.lang.String
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.Long to : java.lang.String
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuffer to : java.lang.String
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.lang.StringBuilder to : java.lang.String
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigDecimal to : java.lang.String,java.lang.Double,java.nio.ByteBuffer
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.math.BigInteger to : java.lang.String,java.nio.ByteBuffer,java.lang.Long
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URI to : java.lang.String
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.net.URL to : java.lang.String
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Date to : java.lang.String,java.lang.Long,java.util.Date
+12:05:35,136 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Time to : java.lang.String,java.lang.Long,java.util.Date
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.sql.Timestamp to : java.lang.String,java.lang.Long,java.util.Date
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.BitSet to : java.lang.String
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Calendar to : java.sql.Timestamp,java.lang.String,[Ljava.lang.Object;,java.util.Date
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Currency to : java.lang.String
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Date to : java.lang.String,java.lang.Long
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.Locale to : java.lang.String
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.TimeZone to : java.lang.String
+12:05:35,137 (main) DEBUG [DataNucleus.Persistence] - TypeConverter(s) available for java.util.UUID to : java.lang.String
+12:05:35,140 (main) DEBUG [DataNucleus.MetaData] - MetaDataManager : Input=(XML,Annotations), XML-Validation=false, XML-Suffices=(persistence=*.jdo, orm=orm, query=*.jdoquery), JDO-listener=false
+12:05:35,141 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 4.0.3) for API "JDO"
+12:05:35,141 (main) DEBUG [DataNucleus.Enhancer] - DataNucleus Enhancer : Classpath
+12:05:35,141 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-maven-plugin/4.0.0-m2/datanucleus-maven-plugin-4.0.0-m2.jar
+12:05:35,141 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar
+12:05:35,141 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/sonatype/sisu/sisu-guava/0.9.9/sisu-guava-0.9.9.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/log4j/log4j/1.2.12/log4j-1.2.12.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+12:05:35,142 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/NetbeansProjects/Protozoo/model/mysql/target/classes
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-core/4.0.3/datanucleus-core-4.0.3.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-rdbms/4.0.4/datanucleus-rdbms-4.0.4.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.0.3/datanucleus-api-jdo-4.0.3.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/javax/jdo/jdo-api/3.1-rc1/jdo-api-3.1-rc1.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/protozoo/model/api/1.0.0-SNAPSHOT/api-1.0.0-SNAPSHOT.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar
+12:05:35,143 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/osgi/org.osgi.compendium/5.0.0/org.osgi.compendium-5.0.0.jar
+12:05:35,144 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/protozoo/system/core/1.0.0-SNAPSHOT/core-1.0.0-SNAPSHOT.jar
+12:05:35,144 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar
+12:05:35,144 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/osgi/org.osgi.core/5.0.0/org.osgi.core-5.0.0.jar
+12:05:35,144 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar
+12:05:35,144 (main) DEBUG [DataNucleus.Enhancer] - >>  /Users/wolfgang/.m2/repository/org/slf4j/slf4j-simple/1.7.7/slf4j-simple-1.7.7.jar
+12:05:35,145 (main) DEBUG [DataNucleus.Enhancer] - Enhancing classes
+12:05:35,160 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Loading Metadata for classes "[org.protozoo.model.mysql.Device, org.protozoo.model.mysql.internal.Activator, org.protozoo.model.mysql.Location, org.protozoo.model.mysql.MySQLRepository, org.protozoo.model.mysql.Parameter]" ...
+12:05:35,293 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" has been specified with JDO annotations so using those.
+12:05:35,317 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /META-INF/package.jdo
+12:05:35,318 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /WEB-INF/package.jdo
+12:05:35,319 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /package.jdo
+12:05:35,328 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/package.jdo
+12:05:35,329 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org.jdo
+12:05:35,329 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/package.jdo
+12:05:35,337 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo.jdo
+12:05:35,338 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model/package.jdo
+12:05:35,338 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model.jdo
+12:05:35,339 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model/mysql/package.jdo
+12:05:35,339 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model/mysql.jdo
+12:05:35,339 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model/mysql/internal/package.jdo
+12:05:35,340 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model/mysql/internal.jdo
+12:05:35,340 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" NOT found at /org/protozoo/model/mysql/internal/Activator.jdo
+12:05:35,340 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.internal.Activator" not found
+12:05:35,341 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.protozoo.model.mysql.internal.Activator" as not having MetaData.
+12:05:35,341 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.internal.Activator" has no MetaData or annotations.
+12:05:35,342 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Location" has been specified with JDO annotations so using those.
+12:05:35,372 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /META-INF/package.jdo
+12:05:35,372 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /WEB-INF/package.jdo
+12:05:35,372 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /package.jdo
+12:05:35,381 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/package.jdo
+12:05:35,381 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org.jdo
+12:05:35,382 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo/package.jdo
+12:05:35,393 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo.jdo
+12:05:35,393 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo/model/package.jdo
+12:05:35,394 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo/model.jdo
+12:05:35,394 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo/model/mysql/package.jdo
+12:05:35,394 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo/model/mysql.jdo
+12:05:35,395 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" NOT found at /org/protozoo/model/mysql/MySQLRepository.jdo
+12:05:35,395 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.model.mysql.MySQLRepository" not found
+12:05:35,395 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.protozoo.model.mysql.MySQLRepository" as not having MetaData.
+12:05:35,395 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.MySQLRepository" has no MetaData or annotations.
+12:05:35,397 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Parameter" has been specified with JDO annotations so using those.
+12:05:35,397 (main) DEBUG [DataNucleus.MetaData] - Populating all MetaData ...
+12:05:35,398 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" : Populating Meta-Data
+12:05:35,399 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /META-INF/package.jdo
+12:05:35,399 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /WEB-INF/package.jdo
+12:05:35,399 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /package.jdo
+12:05:35,408 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/package.jdo
+12:05:35,409 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org.jdo
+12:05:35,409 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo/package.jdo
+12:05:35,416 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo.jdo
+12:05:35,417 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo/core/package.jdo
+12:05:35,417 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo/core.jdo
+12:05:35,419 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo/core/item/package.jdo
+12:05:35,419 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo/core/item.jdo
+12:05:35,420 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" NOT found at /org/protozoo/core/item/AbstractItem.jdo
+12:05:35,420 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.item.AbstractItem" not found
+12:05:35,420 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.core.item.AbstractItem" has been specified with JDO annotations so using those.
+12:05:35,432 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.core.item.AbstractItem" : Populating Meta-Data
+12:05:35,433 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" field "name" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,434 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" field "description" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,434 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" field "state" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,434 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" field "type" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,434 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" field "location" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,435 (main) DEBUG [DataNucleus.Persistence] - Java type org.protozoo.core.type.State using the support for java.lang.Enum
+12:05:35,435 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /META-INF/package.jdo
+12:05:35,436 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /WEB-INF/package.jdo
+12:05:35,436 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /package.jdo
+12:05:35,443 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/package.jdo
+12:05:35,444 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org.jdo
+12:05:35,444 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo/package.jdo
+12:05:35,451 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo.jdo
+12:05:35,451 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo/core/package.jdo
+12:05:35,452 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo/core.jdo
+12:05:35,452 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo/core/type/package.jdo
+12:05:35,452 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo/core/type.jdo
+12:05:35,453 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" NOT found at /org/protozoo/core/type/State.jdo
+12:05:35,453 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.State" not found
+12:05:35,453 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.protozoo.core.type.State" as not having MetaData.
+12:05:35,453 (main) DEBUG [DataNucleus.Persistence] - Java type org.protozoo.core.type.Type using the support for java.lang.Enum
+12:05:35,454 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /META-INF/package.jdo
+12:05:35,454 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /WEB-INF/package.jdo
+12:05:35,454 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /package.jdo
+12:05:35,461 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/package.jdo
+12:05:35,462 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org.jdo
+12:05:35,462 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo/package.jdo
+12:05:35,469 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo.jdo
+12:05:35,470 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo/core/package.jdo
+12:05:35,470 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo/core.jdo
+12:05:35,470 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo/core/type/package.jdo
+12:05:35,471 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo/core/type.jdo
+12:05:35,471 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" NOT found at /org/protozoo/core/type/Type.jdo
+12:05:35,471 (main) DEBUG [DataNucleus.MetaData] - MetaData of type "jdo" for class "org.protozoo.core.type.Type" not found
+12:05:35,471 (main) DEBUG [DataNucleus.MetaData] - Registering class "org.protozoo.core.type.Type" as not having MetaData.
+12:05:35,471 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Location" : Populating Meta-Data
+12:05:35,472 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Location" field "description" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,472 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Location" field "state" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,472 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Location" field "type" : Adding Meta-Data for field since it didnt appear in the Meta-Data definition.
+12:05:35,472 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Parameter" : Populating Meta-Data
+12:05:35,473 (main) DEBUG [DataNucleus.MetaData] - Initialising all MetaData ...
+12:05:35,474 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.core.item.AbstractItem" : Initialising Meta-Data
+12:05:35,476 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Device" : Initialising Meta-Data
+12:05:35,476 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Location" : Initialising Meta-Data
+12:05:35,477 (main) DEBUG [DataNucleus.MetaData] - Class "org.protozoo.model.mysql.Parameter" : Initialising Meta-Data
+12:05:35,477 (main) DEBUG [DataNucleus.MetaData] - MetaData Management : Load of Metadata complete
+12:05:35,482 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.protozoo.model.mysql.Device" starting ...
+12:05:35,498 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt implement the interface "org.datanucleus.enhancer.Persistable" but is required
+12:05:35,498 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have field "dnFieldFlags" but is required
+12:05:35,498 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have field "dnInheritedFieldCount" but is required
+12:05:35,498 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have field "dnPersistableSuperclass" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have field "dnFieldNames" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have field "dnFieldTypes" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "__dnFieldTypesInit" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "__dnPersistableSuperclassInit" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnNewInstance" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnNewInstance" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "__dnGetInheritedFieldCount" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnProvideField" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnGetManagedFieldCount" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnReplaceField" but is required
+12:05:35,499 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "__dnFieldNamesInit" but is required
+12:05:35,500 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnCopyFields" but is required
+12:05:35,500 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "__dnFieldFlagsInit" but is required
+12:05:35,500 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnCopyField" but is required
+12:05:35,500 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "___dn$loadClass" but is required
+12:05:35,500 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnIsDetached" but is required
+12:05:35,500 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Device" doesnt have method "dnSuperClone" but is required
+12:05:35,514 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancer.Persistable
+12:05:35,520 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Device.name"
+12:05:35,520 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Device.description"
+12:05:35,521 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Device.state"
+12:05:35,521 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Device.type"
+12:05:35,522 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.setLocation changing field "org.protozoo.model.mysql.Device.location" for call to "dnSetlocation()"
+12:05:35,522 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.getLocation changing field "org.protozoo.model.mysql.Device.location" for call to "dnGetlocation()"
+12:05:35,522 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.setState changing field "org.protozoo.model.mysql.Device.state" for call to "dnSetstate()"
+12:05:35,522 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.getState changing field "org.protozoo.model.mysql.Device.state" for call to "dnGetstate()"
+12:05:35,522 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.setType changing field "org.protozoo.model.mysql.Device.type" for call to "dnSettype()"
+12:05:35,523 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.getType changing field "org.protozoo.model.mysql.Device.type" for call to "dnGettype()"
+12:05:35,523 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.getName changing field "org.protozoo.model.mysql.Device.name" for call to "dnGetname()"
+12:05:35,523 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.setName changing field "org.protozoo.model.mysql.Device.name" for call to "dnSetname()"
+12:05:35,523 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.getDescription changing field "org.protozoo.model.mysql.Device.description" for call to "dnGetdescription()"
+12:05:35,523 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Device.setDescription changing field "org.protozoo.model.mysql.Device.description" for call to "dnSetdescription()"
+12:05:35,524 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+12:05:35,524 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+12:05:35,524 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+12:05:35,524 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+12:05:35,524 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+12:05:35,526 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+12:05:35,526 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+12:05:35,527 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm)"
+12:05:35,528 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm, class java.lang.Object obj)"
+12:05:35,529 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+12:05:35,529 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+12:05:35,530 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class org.protozoo.model.mysql.Device obj, int index)"
+12:05:35,531 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+12:05:35,531 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+12:05:35,531 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+12:05:35,532 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+12:05:35,532 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+12:05:35,532 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+12:05:35,532 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+12:05:35,533 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+12:05:35,533 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+12:05:35,534 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetdescription(class org.protozoo.model.mysql.Device objPC)"
+12:05:35,535 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetdescription(class org.protozoo.model.mysql.Device objPC, class java.lang.String val)"
+12:05:35,536 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.protozoo.model.mysql.Location dnGetlocation(class org.protozoo.model.mysql.Device objPC)"
+12:05:35,536 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetlocation(class org.protozoo.model.mysql.Device objPC, class org.protozoo.model.mysql.Location val)"
+12:05:35,536 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetname(class org.protozoo.model.mysql.Device objPC)"
+12:05:35,537 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetname(class org.protozoo.model.mysql.Device objPC, class java.lang.String val)"
+12:05:35,537 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.protozoo.core.type.State dnGetstate(class org.protozoo.model.mysql.Device objPC)"
+12:05:35,537 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetstate(class org.protozoo.model.mysql.Device objPC, class org.protozoo.core.type.State val)"
+12:05:35,538 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.protozoo.core.type.Type dnGettype(class org.protozoo.model.mysql.Device objPC)"
+12:05:35,538 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSettype(class org.protozoo.model.mysql.Device objPC, class org.protozoo.core.type.Type val)"
+12:05:35,539 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/Users/wolfgang/NetbeansProjects/Protozoo/model/mysql/target/classes/org/protozoo/model/mysql/Device.class" with enhanced definition
+12:05:35,539 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.protozoo.model.mysql.Device" completed
+12:05:35,539 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.protozoo.model.mysql.Location" starting ...
+12:05:35,540 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt implement the interface "org.datanucleus.enhancer.Persistable" but is required
+12:05:35,540 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have field "dnFieldFlags" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have field "dnInheritedFieldCount" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have field "dnPersistableSuperclass" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have field "dnFieldNames" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have field "dnFieldTypes" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "__dnFieldTypesInit" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "__dnPersistableSuperclassInit" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnNewInstance" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnNewInstance" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "__dnGetInheritedFieldCount" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnProvideField" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnGetManagedFieldCount" but is required
+12:05:35,541 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnReplaceField" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "__dnFieldNamesInit" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnCopyFields" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "__dnFieldFlagsInit" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnCopyField" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "___dn$loadClass" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnIsDetached" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Location" doesnt have method "dnSuperClone" but is required
+12:05:35,542 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancer.Persistable
+12:05:35,543 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Location.devices"
+12:05:35,543 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Location.devices"
+12:05:35,543 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Location.name"
+12:05:35,543 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Location.description"
+12:05:35,544 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Location.state"
+12:05:35,544 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.<init> : omitting enhance of set of field "org.protozoo.model.mysql.Location.type"
+12:05:35,544 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.setState changing field "org.protozoo.model.mysql.Location.state" for call to "dnSetstate()"
+12:05:35,545 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.getState changing field "org.protozoo.model.mysql.Location.state" for call to "dnGetstate()"
+12:05:35,545 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.setType changing field "org.protozoo.model.mysql.Location.type" for call to "dnSettype()"
+12:05:35,545 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.getType changing field "org.protozoo.model.mysql.Location.type" for call to "dnGettype()"
+12:05:35,546 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.getName changing field "org.protozoo.model.mysql.Location.name" for call to "dnGetname()"
+12:05:35,546 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.setName changing field "org.protozoo.model.mysql.Location.name" for call to "dnSetname()"
+12:05:35,546 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.getDescription changing field "org.protozoo.model.mysql.Location.description" for call to "dnGetdescription()"
+12:05:35,546 (main) DEBUG [DataNucleus.Enhancer] - Enhancing original method org.protozoo.model.mysql.Location.setDescription changing field "org.protozoo.model.mysql.Location.description" for call to "dnSetdescription()"
+12:05:35,547 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+12:05:35,547 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+12:05:35,547 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+12:05:35,547 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+12:05:35,547 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+12:05:35,547 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+12:05:35,548 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+12:05:35,548 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm)"
+12:05:35,548 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm, class java.lang.Object obj)"
+12:05:35,548 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+12:05:35,549 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+12:05:35,549 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class org.protozoo.model.mysql.Location obj, int index)"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+12:05:35,550 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+12:05:35,551 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+12:05:35,551 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+12:05:35,551 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetdescription(class org.protozoo.model.mysql.Location objPC)"
+12:05:35,551 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetdescription(class org.protozoo.model.mysql.Location objPC, class java.lang.String val)"
+12:05:35,552 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.String dnGetname(class org.protozoo.model.mysql.Location objPC)"
+12:05:35,552 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetname(class org.protozoo.model.mysql.Location objPC, class java.lang.String val)"
+12:05:35,552 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.protozoo.core.type.State dnGetstate(class org.protozoo.model.mysql.Location objPC)"
+12:05:35,552 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSetstate(class org.protozoo.model.mysql.Location objPC, class org.protozoo.core.type.State val)"
+12:05:35,553 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.protozoo.core.type.Type dnGettype(class org.protozoo.model.mysql.Location objPC)"
+12:05:35,553 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnSettype(class org.protozoo.model.mysql.Location objPC, class org.protozoo.core.type.Type val)"
+12:05:35,554 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/Users/wolfgang/NetbeansProjects/Protozoo/model/mysql/target/classes/org/protozoo/model/mysql/Location.class" with enhanced definition
+12:05:35,554 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.protozoo.model.mysql.Location" completed
+12:05:35,554 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.protozoo.model.mysql.Parameter" starting ...
+12:05:35,554 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt implement the interface "org.datanucleus.enhancer.Persistable" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have field "dnFieldFlags" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have field "dnInheritedFieldCount" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have field "dnPersistableSuperclass" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have field "dnFieldNames" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have field "dnFieldTypes" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "__dnFieldTypesInit" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "__dnPersistableSuperclassInit" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnNewInstance" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnNewInstance" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "__dnGetInheritedFieldCount" but is required
+12:05:35,555 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnProvideField" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnGetManagedFieldCount" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnReplaceField" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "__dnFieldNamesInit" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnCopyFields" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "__dnFieldFlagsInit" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnCopyField" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "___dn$loadClass" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnIsDetached" but is required
+12:05:35,556 (main) DEBUG [DataNucleus.Enhancer] - Class "org.protozoo.model.mysql.Parameter" doesnt have method "dnSuperClone" but is required
+12:05:35,557 (main) DEBUG [DataNucleus.Enhancer] - Adding interface: org.datanucleus.enhancer.Persistable
+12:05:35,557 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[B dnFieldFlags"
+12:05:35,557 (main) DEBUG [DataNucleus.Enhancer] - Adding field "java.lang.Class dnPersistableSuperclass"
+12:05:35,557 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.Class; dnFieldTypes"
+12:05:35,557 (main) DEBUG [DataNucleus.Enhancer] - Adding field "[Ljava.lang.String; dnFieldNames"
+12:05:35,557 (main) DEBUG [DataNucleus.Enhancer] - Adding field "int dnInheritedFieldCount"
+12:05:35,558 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void <clinit>()"
+12:05:35,558 (main) DEBUG [DataNucleus.Enhancer] - Adding method "boolean dnIsDetached()"
+12:05:35,558 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm)"
+12:05:35,558 (main) DEBUG [DataNucleus.Enhancer] - Adding method "org.datanucleus.enhancer.Persistable dnNewInstance(interface org.datanucleus.state.StateManager sm, class java.lang.Object obj)"
+12:05:35,558 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnReplaceField(int index)"
+12:05:35,559 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnProvideField(int index)"
+12:05:35,559 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyField(class org.protozoo.model.mysql.Parameter obj, int index)"
+12:05:35,559 (main) DEBUG [DataNucleus.Enhancer] - Adding method "void dnCopyFields(class java.lang.Object obj, class [I indices)"
+12:05:35,559 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.String; __dnFieldNamesInit()"
+12:05:35,559 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[Ljava.lang.Class; __dnFieldTypesInit()"
+12:05:35,560 (main) DEBUG [DataNucleus.Enhancer] - Adding method "[B __dnFieldFlagsInit()"
+12:05:35,560 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int __dnGetInheritedFieldCount()"
+12:05:35,560 (main) DEBUG [DataNucleus.Enhancer] - Adding method "int dnGetManagedFieldCount()"
+12:05:35,560 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class __dnPersistableSuperclassInit()"
+12:05:35,560 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Class ___dn$loadClass(class java.lang.String className)"
+12:05:35,560 (main) DEBUG [DataNucleus.Enhancer] - Adding method "java.lang.Object dnSuperClone()"
+12:05:35,561 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/Users/wolfgang/NetbeansProjects/Protozoo/model/mysql/target/classes/org/protozoo/model/mysql/Parameter.class" with enhanced definition
+12:05:35,561 (main) DEBUG [DataNucleus.Enhancer] - Enhance of class "org.protozoo.model.mysql.Parameter" completed
+12:05:35,561 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes.

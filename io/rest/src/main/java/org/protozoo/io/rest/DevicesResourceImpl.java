@@ -14,6 +14,7 @@ import org.slf4j.LoggerFactory;
 import org.protozoo.io.rest.exception.CreateDeviceFailedException;
 import org.protozoo.io.rest.exception.DeleteDeviceFailedException;
 import org.protozoo.io.rest.exception.DeviceNotFoundException;
+import org.protozoo.io.rest.exception.UpdateDeviceFailedException;
 import org.protozoo.model.mysql.Device;
 import org.protozoo.model.mysql.Location;
 import org.protozoo.model.mysql.MySQLRepository;
@@ -29,9 +30,10 @@ public class DevicesResourceImpl implements DevicesResource {
     static MySQLRepository repo = new MySQLRepository();
       
     @Override
-    public Response getDevices(Location location) {
+    public Response getDevices() {
     
-        Collection<Device> result = (Collection<Device>) repo.getItemsByQuery(Device.class, "location.id == \"" + location.getId() + "\"");
+        Collection<Device> result = (Collection<Device>) repo.getItems(Device.class);
+        /* repo.getItemsByQuery(Device.class, "location.id == \"" + location.getId() + "\""); */
         
         GenericEntity<Collection<Device>> entity = new GenericEntity<Collection<Device>>(result) {};
         
@@ -44,17 +46,23 @@ public class DevicesResourceImpl implements DevicesResource {
     }
 
     @Override
-    public Response getDevice(String name) throws DeviceNotFoundException {
-        log.info("Get device with name: " + name);
+    public Response getDevice(String uuid) throws DeviceNotFoundException {
+
+        log.info("Get device with uuid: " + uuid);
         
-        Device device = (Device) repo.getItemByName(Device.class, name);
+        Device device = (Device) repo.getItemByName(Device.class, uuid);
         if (device == null) {
-            throw new DeviceNotFoundException("Device with name not found");
+            throw new DeviceNotFoundException("Device with uuid not found");
         }
         
         return Response.status(Response.Status.OK)
                 .entity(device)
                 .build();
+    }
+
+    @Override
+    public Response getParametersByDevice(String uuid) throws DeviceNotFoundException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -74,6 +82,11 @@ public class DevicesResourceImpl implements DevicesResource {
     }
 
     @Override
+    public Response updateDevice(Device device) throws UpdateDeviceFailedException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
     public Response deleteDevice(String name) throws DeleteDeviceFailedException {
         
         log.info("Delete device");
@@ -90,5 +103,4 @@ public class DevicesResourceImpl implements DevicesResource {
             throw new DeleteDeviceFailedException();
         }
     }
-
 }

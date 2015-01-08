@@ -9,14 +9,10 @@ package org.protozoo.io.rest.exception;
  *
  * @author wos
  */
-public class DeviceNotFoundException extends Exception {
+public class DeviceNotFoundException extends RuntimeException {
 
-    public DeviceNotFoundException() {
-        super();
-    }
-    
     public DeviceNotFoundException(String message) {
         super(message);
     }
-    
+   
 }

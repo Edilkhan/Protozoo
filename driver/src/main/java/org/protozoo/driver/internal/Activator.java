@@ -16,26 +16,35 @@
  */
 package org.protozoo.driver.internal;
 
+import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.protozoo.driver.PingerDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Activator implements BundleActivator {
 
-        private final PingerDriver pingerDriver = new PingerDriver();
-        
-        @Override
+    private final Logger logger = LoggerFactory.getLogger(Activator.class);
+
+    @Override
     public void start(BundleContext context) {
-        System.out.println("Starting the bundle");
-        
-        pingerDriver.register(context);
+
+        String version = context.getBundle().getVersion().toString();
+        // if the version string contains a qualifier, remove it!
+        if (StringUtils.countMatches(version, ".") == 3) {
+            version = StringUtils.substringBeforeLast(version, ".");
+        }
+
+        logger.info("Protozoo drivers started (v{}).", version);
+        logger.info(context.getBundle().getHeaders().toString());
+
     }
 
-        @Override
+    @Override
     public void stop(BundleContext context) {
-        System.out.println("Stopping the bundle");
 
-        pingerDriver.unregister();
+        logger.info("Protozoo drivers stopped.");
+
     }
 
 }

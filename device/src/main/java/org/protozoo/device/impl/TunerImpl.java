@@ -1,9 +1,10 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.protozoo.device;
+package org.protozoo.device.impl;
 
 import org.protozoo.core.item.CapableItem;
+import org.protozoo.device.Tuner;
 import static org.protozoo.core.type.Capability.CHANNEL_DOWN;
 import static org.protozoo.core.type.Capability.CHANNEL_UP;
 import static org.protozoo.core.type.Capability.OFF;

@@ -9,6 +9,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -17,6 +18,7 @@ import javax.ws.rs.core.Response;
 import org.protozoo.io.rest.exception.CreateLocationFailedException;
 import org.protozoo.io.rest.exception.DeleteLocationFailedException;
 import org.protozoo.io.rest.exception.LocationNotFoundException;
+import org.protozoo.io.rest.exception.UpdateLocationFailedException;
 import org.protozoo.model.mysql.Location;
 
 /**
@@ -44,6 +46,9 @@ public interface LocationsResource {
 
     @POST
     public Response createLocation(Location location) throws CreateLocationFailedException;
+    
+    @PUT
+    public Response updateLocation(Location location) throws UpdateLocationFailedException;
     
     @DELETE
     public Response deleteLocation(@PathParam("name") String name) throws DeleteLocationFailedException;

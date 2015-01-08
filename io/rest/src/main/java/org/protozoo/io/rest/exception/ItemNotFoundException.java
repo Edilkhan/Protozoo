@@ -9,14 +9,6 @@ package org.protozoo.io.rest.exception;
  *
  * @author wos
  */
-public class ItemNotFoundException extends Exception {
-    
-    public ItemNotFoundException() {
-        super();
-    }
-    
-    public ItemNotFoundException(String message) {
-        super(message);
-    }
-    
+public class ItemNotFoundException extends RuntimeException {
+       
 }

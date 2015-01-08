@@ -24,7 +24,10 @@ import static org.protozoo.core.type.State.NO_DRIVER;
  */
 public class PingerImpl extends CapableItem implements Pinger {
 
-    ServiceRegistration sReg = null;
+    private static final String CATEGORY = "pinger";
+    private static final String PID = Pinger.class.getName();
+    
+    private ServiceRegistration sReg = null;
 
     public PingerImpl() {
         addCapability(ON, OFF, PING);
@@ -38,9 +41,9 @@ public class PingerImpl extends CapableItem implements Pinger {
     @Override
     public void register(BundleContext bc) {
         Hashtable deviceProps = new Hashtable();
-        deviceProps.put(DEVICE_CATEGORY, "pinger");
+        deviceProps.put(DEVICE_CATEGORY, CATEGORY);
         deviceProps.put(DEVICE_SERIAL, UUID.randomUUID());
-        deviceProps.put(SERVICE_PID, "my.device.pinger");
+        deviceProps.put(SERVICE_PID, PID);
 
         sReg = bc.registerService(new String[]{Device.class.getName(), Pinger.class.getName()}, this, deviceProps);
     }
@@ -50,10 +53,5 @@ public class PingerImpl extends CapableItem implements Pinger {
         if (sReg != null) {
             sReg.unregister();
         }
-    }
-
-    // Prints the specified message to the system output
-    private void dump(String msg) {
-        System.out.println("[PINGER DEVICE] " + msg);
     }
 }

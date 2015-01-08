@@ -14,15 +14,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class LocationNotFoundException extends Exception {
-    
-    String message;
 
     public LocationNotFoundException(String message) {
-        this.message = message;
-    }
-    
-    @Override
-    public String getMessage() {
-        return message;
+        super(message);
     }
 }

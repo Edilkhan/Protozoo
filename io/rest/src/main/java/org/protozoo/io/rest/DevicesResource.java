@@ -9,6 +9,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -17,30 +18,38 @@ import javax.ws.rs.core.Response;
 import org.protozoo.io.rest.exception.CreateDeviceFailedException;
 import org.protozoo.io.rest.exception.DeleteDeviceFailedException;
 import org.protozoo.io.rest.exception.DeviceNotFoundException;
+import org.protozoo.io.rest.exception.UpdateDeviceFailedException;
 import org.protozoo.model.mysql.Device;
-import org.protozoo.model.mysql.Location;
 
 /**
  *
  * @author wolfgang
  */
-//@Path("devices")
+@Path("devices")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public interface DevicesResource {
     
     @GET
-    public Response getDevices(Location location);
+    public Response getDevices();
     
     @GET
-    @Path("{name}")
-    public Response getDevice(@PathParam("name") String name) throws DeviceNotFoundException;
+    @Path("{uuid}")
+    public Response getDevice(@PathParam("uuid") String uuid) throws DeviceNotFoundException;
+ 
+    @GET
+    @Path("{uuid}/parameters")
+    public Response getParametersByDevice(@PathParam("uuid") String uuid) throws DeviceNotFoundException;
     
     @POST
     public Response createDevice(Device device) throws CreateDeviceFailedException;
+
+    @PUT
+    public Response updateDevice(Device device) throws UpdateDeviceFailedException;
     
     @DELETE
-    public Response deleteDevice(@PathParam("name") String name) throws DeleteDeviceFailedException;
+    @Path("uuid")
+    public Response deleteDevice(@PathParam("uuid") String uuid) throws DeleteDeviceFailedException;
     
 }
 

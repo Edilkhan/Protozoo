@@ -12,19 +12,23 @@ public class Activator implements BundleActivator {
         
     @Override
     public void start(BundleContext context) throws Exception {
+
         String version = context.getBundle().getVersion().toString();
         // if the version string contains a qualifier, remove it!
         if (StringUtils.countMatches(version, ".") == 3) {
             version = StringUtils.substringBeforeLast(version, ".");
         }
 
-        logger.info("Protozoa shell commands started (v{}).", version);
+        logger.info("Protozoo shell commands started (v{}).", version);
         logger.info(context.getBundle().getHeaders().toString());
+        
     }
 
     @Override
     public void stop(BundleContext context) throws Exception {
-        logger.info("Protozoa shell commands stopped.");
+
+        logger.info("Protozoo shell commands stopped.");
+
     }
 
 }

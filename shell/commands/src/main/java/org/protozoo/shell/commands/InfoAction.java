@@ -14,7 +14,7 @@ import org.fusesource.jansi.Ansi;
  *
  * @author wolfgang
  */
-@Command(scope = "protozoa", name = "info", description = "Prints general information.")
+@Command(scope = "protozoo", name = "info", description = "Prints general information.")
 @Service
 public class InfoAction implements Action {
 

@@ -16,27 +16,51 @@
  */
 package org.protozoo.device.internal;
 
+import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.protozoo.device.Pinger;
 import org.protozoo.device.impl.PingerImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Activator implements BundleActivator {
 
-    private final PingerImpl pingerDevice = new PingerImpl();
+    private final Logger logger = LoggerFactory.getLogger(Activator.class);
+
+    private Pinger p;
 
     @Override
     public void start(BundleContext context) {
-        System.out.println("Starting the bundle");
 
-        pingerDevice.register(context);
+        String version = context.getBundle().getVersion().toString();
+        // if the version string contains a qualifier, remove it!
+        if (StringUtils.countMatches(version, ".") == 3) {
+            version = StringUtils.substringBeforeLast(version, ".");
+        }
+
+        registerDevices(context);
+        
+        logger.info("Protozoo event runtime started (v{}).", version);
 
     }
 
     @Override
     public void stop(BundleContext context) {
-        System.out.println("Stopping the bundle");
 
-        pingerDevice.unregister();
+        unregisterDevices();
+        
+        logger.info("Protozoo event runtime stopped.");
+
     }
 
+    private void registerDevices(BundleContext context) {
+        p = new PingerImpl();
+        p.register(context);        
+    }
+
+    private void unregisterDevices() {
+        p.unregister();
+    }
+    
 }

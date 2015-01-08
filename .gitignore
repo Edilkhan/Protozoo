@@ -21,3 +21,7 @@
 /system/timer/target/
 /device/target/
 /driver/target/
+/features/framework/target/
+/features/kar/target/
+/features/shell/target/
+/features/core/target/

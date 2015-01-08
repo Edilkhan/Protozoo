@@ -10,13 +10,5 @@ package org.protozoo.io.rest.exception;
  * @author wolfgang
  */
 public class DeleteLocationFailedException extends Exception {
-
-    public DeleteLocationFailedException() {
-        super();
-    }
-    
-    public DeleteLocationFailedException(String message) {
-        super(message);
-    }
-    
+   
 }
