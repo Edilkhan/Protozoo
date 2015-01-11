@@ -9,6 +9,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.device.Constants;
+import org.osgi.service.device.Device;
 import org.osgi.util.tracker.ServiceTracker;
 import org.protozoo.device.IDevice;
 
@@ -16,11 +17,11 @@ import org.protozoo.device.IDevice;
  *
  * @author wos
  */
-public class DriverTracker extends ServiceTracker implements Constants {
+public class DeviceTracker extends ServiceTracker implements Constants {
 
     ServiceRegistration registration;
 
-    DriverTracker(BundleContext c, ServiceReference r) {
+    DeviceTracker(BundleContext c, ServiceReference r) {
         super(c, r, null);
         open();
     }
@@ -28,13 +29,12 @@ public class DriverTracker extends ServiceTracker implements Constants {
     @Override
     public Object addingService(ServiceReference ref) {
         IDevice dev = (IDevice) context.getService(ref);
-        registration = context.registerService(javax.comm.SerialPort.class.getName(), this, null);
+        registration = context.registerService(Device.class.getName(), this, null);
         return dev;
     }
 
     @Override
-    public void removedService(ServiceReference ref,
-            Object service) {
+    public void removedService(ServiceReference ref, Object service) {
         registration.unregister();
         context.ungetService(ref);
     }

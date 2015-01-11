@@ -24,11 +24,31 @@ import org.protozoo.driver.PingerDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+//@Services(
+//        requires = @RequireService(ConfigurationAdmin.class),
+//        provides = @ProvideService(PingerService.class)
+//)
+//@Managed("org.protozoo.driver")
 public class Activator implements BundleActivator {
 
     private final Logger logger = LoggerFactory.getLogger(Activator.class);
 
     private Driver driver;
+
+    /*
+    @Override
+    protected void doStart() throws Exception {
+        ConfigurationAdmin configurationAdmin = getTrackedService(ConfigurationAdmin.class);
+        if (configurationAdmin == null) {
+            return;
+        }
+
+        int frequency = getInt("frequency", 1);
+
+        PingerServiceImpl pingerService = new PingerServiceImpl(configurationAdmin);
+        register(PingerService.class, pingerService);
+    }    
+    */
     
     @Override
     public void start(BundleContext context) {

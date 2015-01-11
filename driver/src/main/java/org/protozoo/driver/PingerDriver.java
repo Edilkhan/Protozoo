@@ -39,7 +39,7 @@ public class PingerDriver extends AbstractDriver {
     
     @Override
     public void handleEvent(Event event) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Driver handled event: " + event.toString());
     }
 
     private String getFilter() {
