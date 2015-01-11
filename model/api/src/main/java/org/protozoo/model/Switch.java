@@ -3,7 +3,7 @@
  */
 package org.protozoo.model;
 
-import org.protozoo.core.item.Item;
+import org.protozoo.system.core.item.Item;
 
 /**
  * Main interface for all switches

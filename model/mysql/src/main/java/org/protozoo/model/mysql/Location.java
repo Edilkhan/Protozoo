@@ -13,11 +13,11 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Unique;
 import javax.xml.bind.annotation.XmlRootElement;
-import org.protozoo.core.item.AbstractItem;
-import org.protozoo.core.type.State;
-import static org.protozoo.core.type.State.ACTIVE;
-import org.protozoo.core.type.Type;
-import static org.protozoo.core.type.Type.PHYSICAL;
+import org.protozoo.system.core.item.AbstractItem;
+import org.protozoo.system.core.type.State;
+import static org.protozoo.system.core.type.State.ACTIVE;
+import org.protozoo.system.core.type.Type;
+import static org.protozoo.system.core.type.Type.PHYSICAL;
 
 /**
  *

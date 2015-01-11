@@ -6,8 +6,8 @@
 
 package org.protozoo.services.model;
 
-import org.protozoo.core.type.State;
-import org.protozoo.core.type.Type;
+import org.protozoo.system.core.type.State;
+import org.protozoo.system.core.type.Type;
 import org.protozoo.model.api.ILocation;
 
 /**

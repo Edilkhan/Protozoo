@@ -6,7 +6,7 @@
 package org.protozoo.model.api;
 
 import java.util.Collection;
-import org.protozoo.core.item.Item;
+import org.protozoo.system.core.item.Item;
 
 /**
  *

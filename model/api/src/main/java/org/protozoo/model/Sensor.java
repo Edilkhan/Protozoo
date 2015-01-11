@@ -4,7 +4,7 @@
 package org.protozoo.model;
 
 import org.protozoo.model.api.IMeasurement;
-import org.protozoo.core.item.Item;
+import org.protozoo.system.core.item.Item;
 
 /**
  *

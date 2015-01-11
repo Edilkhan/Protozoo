@@ -39,7 +39,6 @@
         <!--module>standard</module>
         <module>spring</module>
         <module>enterprise</module-->
-    <module>kar</module>
     <module>shell</module>
     <module>core</module>
   </modules>

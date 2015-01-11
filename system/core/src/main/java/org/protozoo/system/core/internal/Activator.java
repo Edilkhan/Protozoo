@@ -1,4 +1,4 @@
-package org.protozoo.core.internal;
+package org.protozoo.system.core.internal;
 
 import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;

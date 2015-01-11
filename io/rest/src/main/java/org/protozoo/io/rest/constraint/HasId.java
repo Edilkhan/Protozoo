@@ -12,7 +12,7 @@ import javax.validation.Constraint;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import javax.validation.Payload;
-import org.protozoo.core.item.Item;
+import org.protozoo.system.core.item.Item;
 
 /**
  * Checks whether a given {@link org.glassfish.jersey.examples.beanvalidation.webapp.domain.ContactCard} entity has ID.

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package org.protozoo.core.type;
+package org.protozoo.system.core.type;
 
 /**
  *

@@ -1,11 +1,10 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.protozoo.core.item;
+package org.protozoo.system.core.item;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Observable;
 import java.util.UUID;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
@@ -21,7 +20,7 @@ import javax.jdo.annotations.Column;
  */
 @PersistenceCapable
 @Inheritance(strategy = InheritanceStrategy.COMPLETE_TABLE)
-public abstract class AbstractItem extends Observable implements Item {
+public abstract class AbstractItem implements Item {
 
     @PrimaryKey
     protected String id;

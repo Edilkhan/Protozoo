@@ -6,9 +6,9 @@ package org.protozoo.model;
 
 import java.util.HashSet;
 import java.util.Set;
-import org.protozoo.core.item.AbstractItem;
-import org.protozoo.core.type.State;
-import org.protozoo.core.type.Type;
+import org.protozoo.system.core.item.AbstractItem;
+import org.protozoo.system.core.type.State;
+import org.protozoo.system.core.type.Type;
 import org.protozoo.model.api.IDevice;
 import org.protozoo.model.api.IMeasurement;
 import org.protozoo.model.api.IParameter;

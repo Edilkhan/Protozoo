@@ -14,8 +14,8 @@ import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.protozoo.core.item.Item;
-import org.protozoo.core.type.State;
+import org.protozoo.system.core.item.Item;
+import org.protozoo.system.core.type.State;
 
 /**
  *

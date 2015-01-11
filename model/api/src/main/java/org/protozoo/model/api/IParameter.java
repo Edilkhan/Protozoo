@@ -7,9 +7,9 @@ import java.util.Set;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
-import org.protozoo.core.item.Item;
-import org.protozoo.core.type.Stateful;
-import org.protozoo.core.type.Typeful;
+import org.protozoo.system.core.item.Item;
+import org.protozoo.system.core.type.Stateful;
+import org.protozoo.system.core.type.Typeful;
 
 /**
  *

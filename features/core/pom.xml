@@ -28,7 +28,7 @@
 
     <groupId>org.protozoo.features</groupId>
     <artifactId>protocore</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>feature</packaging>
 
     <name>Protozoo :: Features :: Core</name>

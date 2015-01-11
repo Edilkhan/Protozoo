@@ -9,6 +9,6 @@ import org.osgi.service.device.Device;
  *
  * @author wolfgang
  */
-public interface Tuner extends Device {
+public interface Tuner extends IDevice {
     
 }

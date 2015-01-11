@@ -74,6 +74,7 @@
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Activator>org.protozoo.driver.internal.Activator</Bundle-Activator>
                         <Import-Package>*</Import-Package>
+                        <Karaf-Commands>org.protozoo.driver.command.*</Karaf-Commands>
                     </instructions>
                 </configuration>
             </plugin>

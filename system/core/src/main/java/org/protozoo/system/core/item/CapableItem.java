@@ -1,16 +1,16 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.protozoo.core.item;
+package org.protozoo.system.core.item;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import org.protozoo.core.type.Capability;
-import org.protozoo.core.type.Capable;
-import org.protozoo.core.type.State;
-import static org.protozoo.core.type.State.INACTIVE;
-import org.protozoo.core.type.Stateful;
+import org.protozoo.system.core.type.Capability;
+import org.protozoo.system.core.type.Capable;
+import org.protozoo.system.core.type.State;
+import static org.protozoo.system.core.type.State.INACTIVE;
+import org.protozoo.system.core.type.Stateful;
 
 /**
  *
@@ -30,13 +30,11 @@ public abstract class CapableItem extends AbstractItem implements Capable, State
 
     @Override
     public void setState(State state) {
-        dump("State is set to " + state);
         this.state = state;
     }
 
     @Override
     public State getState() {
-        dump("State = " + state);
         return state;
     }
 
@@ -71,8 +69,8 @@ public abstract class CapableItem extends AbstractItem implements Capable, State
         return capabilities.contains(c);
     }
 
-    // Prints the specified message to the system output
-    private void dump(String msg) {
-        System.out.println("[DEVICE] " + msg);
+    @Override
+    public Collection<Capability> getCapabilities() {
+        return capabilities;
     }
 }

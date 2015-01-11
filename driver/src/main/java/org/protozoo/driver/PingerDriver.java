@@ -4,10 +4,9 @@
 package org.protozoo.driver;
 
 import java.util.HashMap;
+import java.util.UUID;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
-import org.osgi.service.event.EventProperties;
-import org.protozoo.driver.impl.AbstractDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,7 +18,7 @@ public class PingerDriver extends AbstractDriver {
 
     private final Logger logger = LoggerFactory.getLogger(PingerDriver.class);
     
-    static final String ID = "protozoo.driver.pinger";
+    static final String ID = UUID.randomUUID().toString();
     static final String CATEGORY = "pinger";
 
     static final String[] topics = new String[]{

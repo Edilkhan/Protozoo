@@ -5,7 +5,7 @@ package org.protozoo.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import org.protozoo.core.item.AbstractItem;
+import org.protozoo.system.core.item.AbstractItem;
 import org.protozoo.model.api.IMeasurement;
 import org.protozoo.model.api.IParameter;
 

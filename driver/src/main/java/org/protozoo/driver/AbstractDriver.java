@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.protozoo.driver.impl;
+package org.protozoo.driver;
 
 import java.util.Hashtable;
 import org.osgi.framework.BundleContext;
@@ -11,9 +11,9 @@ import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import static org.osgi.service.device.Constants.DEVICE_CATEGORY;
 import static org.osgi.service.device.Constants.DRIVER_ID;
-import org.osgi.service.device.Device;
 import static org.osgi.service.device.Device.MATCH_NONE;
-import org.protozoo.driver.Driver;
+import org.protozoo.device.IDevice;
+import org.protozoo.system.core.type.State;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +33,7 @@ public abstract class AbstractDriver implements Driver {
 
     public AbstractDriver(String id, String category) {
         setId(id);
-        setCategory(id);
+        setCategory(category);
     }
     
     @Override
@@ -45,7 +45,7 @@ public abstract class AbstractDriver implements Driver {
         props.put(DRIVER_ID, id);
 
         if (bc != null) {
-            sReg = bc.registerService(Driver.class.getName(), this, props);
+            sReg = bc.registerService(org.osgi.service.device.Driver.class.getName(), this, props);
         } else {
             logger.error("Register driver service failed, bundle context is null");
         }
@@ -61,6 +61,8 @@ public abstract class AbstractDriver implements Driver {
     @Override
     public int match(ServiceReference reference) throws Exception {
         if (reference != null) {
+            logger.info("Matching driver with " + reference.toString());
+
             String deviceCategory = (String) reference.getProperty(DEVICE_CATEGORY);
             if (deviceCategory.equals(category)) {
                 return 1;
@@ -72,9 +74,9 @@ public abstract class AbstractDriver implements Driver {
     @Override
     public String attach(ServiceReference reference) throws Exception {
         if (reference != null) {
-            Device device = (Device) bc.getService(reference);
+            IDevice device = (IDevice) bc.getService(reference);
 
-            // device.setState(State.ACTIVE);
+            device.setState(State.ACTIVE);
         }
 
         return null;

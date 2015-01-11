@@ -5,7 +5,7 @@ import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.xml.bind.annotation.XmlRootElement;
-import org.protozoo.core.item.AbstractItem;
+import org.protozoo.system.core.item.AbstractItem;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

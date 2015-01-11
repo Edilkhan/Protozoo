@@ -1,7 +1,7 @@
 /*
  * Copyright (C) 2014, Wizardofos.nl
  */
-package org.protozoo.core.item;
+package org.protozoo.system.core.item;
 
 import java.util.Date;
 

@@ -13,7 +13,7 @@ import javax.jdo.PersistenceManagerFactory;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
 import org.osgi.service.component.annotations.Component;
-import org.protozoo.core.item.Item;
+import org.protozoo.system.core.item.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.protozoo.model.api.IRepository;

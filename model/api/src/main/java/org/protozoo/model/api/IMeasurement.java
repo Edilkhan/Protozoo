@@ -7,7 +7,7 @@ import java.util.Calendar;
 import javax.jdo.annotations.Inheritance;
 import javax.jdo.annotations.InheritanceStrategy;
 import javax.jdo.annotations.PersistenceCapable;
-import org.protozoo.core.item.Item;
+import org.protozoo.system.core.item.Item;
 
 /**
  *

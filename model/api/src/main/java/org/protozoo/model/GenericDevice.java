@@ -5,11 +5,11 @@ package org.protozoo.model;
 
 import java.util.HashSet;
 import java.util.Set;
-import org.protozoo.core.item.AbstractItem;
-import org.protozoo.core.type.State;
-import static org.protozoo.core.type.State.ACTIVE;
-import org.protozoo.core.type.Type;
-import static org.protozoo.core.type.Type.PHYSICAL;
+import org.protozoo.system.core.item.AbstractItem;
+import org.protozoo.system.core.type.State;
+import static org.protozoo.system.core.type.State.ACTIVE;
+import org.protozoo.system.core.type.Type;
+import static org.protozoo.system.core.type.Type.PHYSICAL;
 import org.protozoo.model.api.IDevice;
 import org.protozoo.model.api.ILocation;
 import org.protozoo.model.api.IParameter;
