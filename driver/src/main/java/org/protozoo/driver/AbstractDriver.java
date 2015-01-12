@@ -7,6 +7,8 @@ package org.protozoo.driver;
 
 import java.util.Hashtable;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceEvent;
+import org.osgi.framework.ServiceListener;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import static org.osgi.service.device.Constants.DEVICE_CATEGORY;
@@ -21,7 +23,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author wolfgang
  */
-public abstract class AbstractDriver implements Driver {
+public abstract class AbstractDriver implements Driver, ServiceListener {
 
     private final Logger logger = LoggerFactory.getLogger(Driver.class);
 
@@ -35,7 +37,7 @@ public abstract class AbstractDriver implements Driver {
         setId(id);
         setCategory(category);
     }
-    
+
     @Override
     public void register(BundleContext bc) {
 
@@ -77,6 +79,10 @@ public abstract class AbstractDriver implements Driver {
             IDevice device = (IDevice) bc.getService(reference);
 
             device.setState(State.ACTIVE);
+            device.setObserver(bc.getServiceReference(this.getClass()));
+
+            bc.addServiceListener(this);
+            
         }
 
         return null;
@@ -98,6 +104,34 @@ public abstract class AbstractDriver implements Driver {
         this.category = category;
     }
 
+    @Override
+    public void serviceChanged(ServiceEvent event) {
+        if (event != null) {
+            String eventname = "UNKNOWN";
 
+            switch (event.getType()) {
+                case 1:
+                    eventname = "REGISTERED";
+                    break;
+                case 2:
+                    eventname = "MODIFIED";
+                    break;
+                case 3:
+                    eventname = "MODIFIED_ENDMATCH";
+                    break;
+                case 4:
+                    eventname = "UNREGISTERING";
+                    break;
+            }
 
+            System.out.println("Event received: " + eventname);
+
+            ServiceReference ref = event.getServiceReference();
+            if (ref != null) {
+                IDevice dev = (IDevice) bc.getService(ref);
+
+                System.out.println("Device: " + dev.getCategory() + ", " + dev.getPid());
+            }
+        }
+    }
 }

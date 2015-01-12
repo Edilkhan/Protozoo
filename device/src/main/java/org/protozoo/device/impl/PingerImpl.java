@@ -22,4 +22,5 @@ public class PingerImpl extends AbstractDevice implements Pinger {
         super(CATEGORY, PID);
         addCapability(ON, OFF, PING);
     }
+
 }

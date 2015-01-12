@@ -7,8 +7,13 @@ package org.protozoo.device;
 
 import java.util.Hashtable;
 import java.util.UUID;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.osgi.framework.BundleContext;
 import static org.osgi.framework.Constants.SERVICE_PID;
+import org.osgi.framework.InvalidSyntaxException;
+import org.osgi.framework.ServiceEvent;
+import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import static org.osgi.service.device.Constants.DEVICE_CATEGORY;
 import static org.osgi.service.device.Constants.DEVICE_SERIAL;
@@ -24,8 +29,10 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
 
     private String category;
     private String pid;
+    private BundleContext bc;
     
     private ServiceRegistration register = null;
+    private ServiceReference listener = null;
 
     public AbstractDevice(String category, String pid) {
         setCategory(category);
@@ -34,6 +41,8 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
     
     @Override
     public void register(BundleContext bc) {
+        this.bc = bc;
+        
         Hashtable deviceProps = new Hashtable();
         deviceProps.put(DEVICE_CATEGORY, getCategory());
         deviceProps.put(DEVICE_SERIAL, UUID.randomUUID());
@@ -72,6 +81,28 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
     @Override
     public final void setPid(String pid) {
         this.pid = pid;
+    }
+
+    @Override
+    public void setObserver(ServiceReference reference) {
+        try {
+            listener = reference;
+            Object service = bc.getService(reference);
+            
+            System.out.println("Keys: " + reference.getPropertyKeys());
+            
+            bc.addServiceListener(this, "(" + service.getClass().getName() + ")");
+        } catch (InvalidSyntaxException ex) {
+            Logger.getLogger(AbstractDevice.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void serviceChanged(ServiceEvent event) {
+        if (event.getType() == ServiceEvent.UNREGISTERING) {
+            bc.removeServiceListener(this);
+            listener = null;
+        }
     }
 
 }

@@ -52,7 +52,12 @@ public class PingerFactory implements ManagedServiceFactory {
         Console console = (Console) consoles.get(pid);
         if (console != null) {
             consoles.remove(pid);
-            console.close();
+//            console.close();
         }
+    }
+
+    @Override
+    public String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
