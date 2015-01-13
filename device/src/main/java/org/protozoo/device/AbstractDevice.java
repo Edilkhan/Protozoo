@@ -92,6 +92,7 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
             System.out.println("Keys: " + reference.getPropertyKeys());
             
             bc.addServiceListener(this, "(" + service.getClass().getName() + ")");
+            
         } catch (InvalidSyntaxException ex) {
             Logger.getLogger(AbstractDevice.class.getName()).log(Level.SEVERE, null, ex);
         }

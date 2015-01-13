@@ -48,6 +48,7 @@ public abstract class AbstractDriver implements Driver, ServiceListener {
 
         if (bc != null) {
             sReg = bc.registerService(org.osgi.service.device.Driver.class.getName(), this, props);
+            System.out.println("Driver registered as a service: " + sReg);
         } else {
             logger.error("Register driver service failed, bundle context is null");
         }
@@ -78,11 +79,16 @@ public abstract class AbstractDriver implements Driver, ServiceListener {
         if (reference != null) {
             IDevice device = (IDevice) bc.getService(reference);
 
-            device.setState(State.ACTIVE);
-            device.setObserver(bc.getServiceReference(this.getClass()));
-
-            bc.addServiceListener(this);
-            
+            if (device != null) {
+                System.out.println("Activating device: " + device.toString());
+                device.setState(State.ACTIVE);
+                System.out.println("Trying to set observer: " + sReg.getReference().toString());
+                device.setObserver(sReg.getReference());
+            } else {
+                System.out.println("Failed activating device = null");
+            }
+                        
+            //bc.addServiceListener(this);
         }
 
         return null;
