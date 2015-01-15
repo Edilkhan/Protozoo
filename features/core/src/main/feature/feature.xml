@@ -25,9 +25,12 @@
         <bundle start="true" start-level="15">wrap:mvn:javax.transaction/transaction-api/1.1</bundle>
         <bundle start="true" start-level="15">mvn:org.datanucleus/datanucleus-api-jdo/4.0.3</bundle>
         <bundle start="true" start-level="15">mvn:org.datanucleus/datanucleus-core/4.0.3</bundle>
-        <bundle start="true" start-level="15">mvn:org.protozoo.system/core</bundle>
-        <bundle start="true" start-level="15">mvn:org.protozoo/device</bundle>
-        <bundle start="true" start-level="15">mvn:org.protozoo/driver</bundle>
+        <bundle start="true" start-level="15">wrap:mvn:org.quartz-scheduler/quartz/2.2.1</bundle>
+        <bundle start="true" start-level="15">wrap:mvn:org.quartz-scheduler/quartz-jobs/2.2.1</bundle>
+        <bundle start="true" start-level="15">wrap:mvn:c3p0/c3p0/0.9.1.1</bundle>
+        <bundle start="true" start-level="50">mvn:org.protozoo.system/core</bundle>
+        <bundle start="true" start-level="60">mvn:org.protozoo/device</bundle>
+        <bundle start="true" start-level="60">mvn:org.protozoo/driver</bundle>
     </feature>
 
 </features>

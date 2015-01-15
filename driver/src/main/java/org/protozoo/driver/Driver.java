@@ -16,5 +16,6 @@ public interface Driver extends org.osgi.service.device.Driver, EventHandler {
 
     public void register(BundleContext bc);
     public void unregister();
+    public String getFilter();
     
 }

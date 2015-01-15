@@ -108,7 +108,7 @@
                         <Bundle-Activator>org.protozoo.driver.internal.Activator</Bundle-Activator>
                         <Export-Package>org.protozoo.driver,org.protozoo.driver.command</Export-Package>
                         <Import-Package>*</Import-Package>
-                        <Private-Package>org.protozoo.driver.internal,org.protozoo.driver.impl,org.apache.karaf.util.tracker</Private-Package>
+                        <Private-Package>org.protozoo.driver.internal,org.protozoo.driver.impl</Private-Package>
                         <Provide-Capability>
                             ${capabilities}
                         </Provide-Capability>

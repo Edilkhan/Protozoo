@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.osgi.framework.BundleContext;
 import static org.osgi.framework.Constants.SERVICE_PID;
+import org.osgi.framework.Filter;
 import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceEvent;
 import org.osgi.framework.ServiceReference;
@@ -84,14 +85,13 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
     }
 
     @Override
-    public void setObserver(ServiceReference reference) {
+    public void setObserver(String serviceName, String filter) {
         try {
-            listener = reference;
-            Object service = bc.getService(reference);
             
-            System.out.println("Keys: " + reference.getPropertyKeys());
+            System.out.println("Observing service: " + serviceName);
+            System.out.println("with filter: " + filter);
             
-            bc.addServiceListener(this, "(" + service.getClass().getName() + ")");
+            bc.addServiceListener(this, filter);
             
         } catch (InvalidSyntaxException ex) {
             Logger.getLogger(AbstractDevice.class.getName()).log(Level.SEVERE, null, ex);
@@ -100,9 +100,12 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
 
     @Override
     public void serviceChanged(ServiceEvent event) {
+        System.out.println("ServiceEvent received: " + event);
+
         if (event.getType() == ServiceEvent.UNREGISTERING) {
             bc.removeServiceListener(this);
             listener = null;
+            System.out.println("Removed listener");
         }
     }
 

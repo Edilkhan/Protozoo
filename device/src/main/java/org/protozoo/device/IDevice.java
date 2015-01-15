@@ -7,7 +7,6 @@ package org.protozoo.device;
 
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceListener;
-import org.osgi.framework.ServiceReference;
 import org.osgi.service.device.Device;
 import org.protozoo.system.core.type.Capable;
 import org.protozoo.system.core.type.Stateful;
@@ -27,6 +26,6 @@ public interface IDevice extends Device, ServiceListener, Capable, Stateful {
     public void setPid(String pid);
     public String getPid();
 
-    public void setObserver(ServiceReference reference);
+    public void setObserver(String serviceName, String filter);
     
 }

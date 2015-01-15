@@ -82,8 +82,9 @@ public abstract class AbstractDriver implements Driver, ServiceListener {
             if (device != null) {
                 System.out.println("Activating device: " + device.toString());
                 device.setState(State.ACTIVE);
+
                 System.out.println("Trying to set observer: " + sReg.getReference().toString());
-                device.setObserver(sReg.getReference());
+                device.setObserver(org.osgi.service.device.Driver.class.getName(), getFilter());
             } else {
                 System.out.println("Failed activating device = null");
             }

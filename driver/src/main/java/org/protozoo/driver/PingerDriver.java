@@ -20,7 +20,7 @@ public class PingerDriver extends AbstractDriver {
     
     static final String ID = UUID.randomUUID().toString();
     static final String CATEGORY = "pinger";
-
+    
     static final String[] topics = new String[]{
         "org/protozoo/event/COMMAND",
         "org/protozoo/event/ERROR",
@@ -32,9 +32,7 @@ public class PingerDriver extends AbstractDriver {
         
         HashMap<String, Object> map = new HashMap<>();
         map.put(EventConstants.EVENT_TOPIC, topics);
-        map.put(EventConstants.EVENT_FILTER, getFilter());
-        
-        
+        map.put(EventConstants.EVENT_FILTER, getFilter());  
     }
     
     @Override
@@ -42,12 +40,12 @@ public class PingerDriver extends AbstractDriver {
         System.out.println("Driver handled event: " + event.toString());
     }
 
-    private String getFilter() {
-        return "(&" 
-                + "(bundle.symbolicName=org.protozoo.driver.*)"
-                + ",(DRIVER_ID=" + getId() + ")"
-                + ")";
-
+    @Override
+    public String getFilter() {
+        return "(&"
+        + "(objectclass=" + org.osgi.service.device.Driver.class.getName() + ")"
+        + "(DEVICE_CATEGORY=" + CATEGORY + ")"
+        + ")";
     }
 
 }
