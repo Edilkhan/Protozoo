@@ -5,6 +5,7 @@
  */
 package org.protozoo.device;
 
+import java.util.Observable;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceListener;
 import org.osgi.service.device.Device;

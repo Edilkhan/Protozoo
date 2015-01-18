@@ -47,7 +47,7 @@ public class PingerImpl extends AbstractDevice implements Pinger {
     public void register(BundleContext bc) {
 
         super.register(bc);
-
+        
         try {
             sched = sf.getScheduler();
 
