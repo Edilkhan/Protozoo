@@ -19,7 +19,7 @@ package org.protozoo.driver.internal;
 import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.protozoo.driver.Driver;
+import org.protozoo.driver.IDriver;
 import org.protozoo.driver.PingerDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,7 @@ public class Activator implements BundleActivator {
 
     private final Logger logger = LoggerFactory.getLogger(Activator.class);
 
-    private Driver driver;
+    private IDriver driver;
 
     /*
     @Override
@@ -63,7 +63,6 @@ public class Activator implements BundleActivator {
         driver.register(context);
         
         logger.info("Protozoo drivers started (v{}).", version);
-        logger.info(context.getBundle().getHeaders().toString());
 
     }
 

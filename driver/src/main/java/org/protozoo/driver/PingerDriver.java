@@ -5,6 +5,8 @@ package org.protozoo.driver;
 
 import java.util.HashMap;
 import java.util.UUID;
+import org.osgi.framework.ServiceEvent;
+import org.osgi.framework.ServiceReference;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
 import org.slf4j.Logger;
@@ -34,7 +36,17 @@ public class PingerDriver extends AbstractDriver {
         map.put(EventConstants.EVENT_TOPIC, topics);
         map.put(EventConstants.EVENT_FILTER, getFilter());  
     }
-    
+
+    @Override
+    public String attach(ServiceReference reference) throws Exception {
+
+        logger.info("Create pinger tracker: " + reference.toString());
+        new PingerTracker(getContext(), reference);
+
+        return null;
+    }
+
+
     @Override
     public void handleEvent(Event event) {
         System.out.println("Driver handled event: " + event.toString());

@@ -3,7 +3,6 @@
  */
 package org.protozoo.device.impl;
 
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.osgi.framework.BundleContext;
@@ -12,19 +11,10 @@ import org.protozoo.device.Pinger;
 import static org.protozoo.system.core.type.Capability.OFF;
 import static org.protozoo.system.core.type.Capability.ON;
 import static org.protozoo.system.core.type.Capability.PING;
-import static org.quartz.CronScheduleBuilder.cronSchedule;
-import org.quartz.CronTrigger;
-import static org.quartz.DateBuilder.evenMinuteDate;
 import org.quartz.Job;
-import static org.quartz.JobBuilder.newJob;
-import org.quartz.JobDetail;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
-import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
-import org.quartz.SchedulerFactory;
-import static org.quartz.TriggerBuilder.newTrigger;
-import org.quartz.impl.StdSchedulerFactory;
 
 /**
  *
@@ -35,8 +25,8 @@ public class PingerImpl extends AbstractDevice implements Pinger {
     private static final String CATEGORY = "pinger";
     private static final String PID = Pinger.class.getName();
 
-    SchedulerFactory sf = new StdSchedulerFactory();
-    Scheduler sched;
+//    SchedulerFactory sf = new StdSchedulerFactory();
+//    Scheduler sched;
 
     public PingerImpl() {
         super(CATEGORY, PID);
@@ -48,7 +38,7 @@ public class PingerImpl extends AbstractDevice implements Pinger {
 
         super.register(bc);
         
-        try {
+        /*try {
             sched = sf.getScheduler();
 
             // define the job and tie it to our HelloJob class
@@ -72,30 +62,28 @@ public class PingerImpl extends AbstractDevice implements Pinger {
 
         } catch (SchedulerException ex) {
             Logger.getLogger(PingerImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }
 
     @Override
     public void unregister() {
-        try {
+/*        try {
             if (sched != null) {
                 sched.shutdown();
             }
         } catch (SchedulerException ex) {
             Logger.getLogger(PingerImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+*/
         super.unregister();
     }
-
-    public static class PingerJob implements Job {
-
-        public PingerJob() {
-        }
-
+    
+    public class PingerJob implements Job {
+        
         @Override
         public void execute(JobExecutionContext context) throws JobExecutionException {
             System.out.println("==> PING");
         }
     }
+
 }

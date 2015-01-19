@@ -16,7 +16,7 @@ import org.apache.karaf.shell.support.MultiException;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
-import org.osgi.service.device.Device;
+import org.protozoo.device.IDevice;
 
 /**
  *
@@ -44,7 +44,7 @@ public abstract class DMCommand implements Action {
     public Object execute() throws Exception {
         List<Bundle> bundles =  bundleService.selectBundles(context, ids, defaultAllBundles);
         
-        ServiceReference refs[] = bundleContext.getAllServiceReferences(Device.class.getName(), null);
+        ServiceReference refs[] = bundleContext.getAllServiceReferences(IDevice.class.getName(), null);
         return doExecute(refs);
     }
 

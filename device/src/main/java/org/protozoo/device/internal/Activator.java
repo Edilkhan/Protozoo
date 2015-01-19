@@ -39,9 +39,11 @@ public class Activator implements BundleActivator {
             version = StringUtils.substringBeforeLast(version, ".");
         }
 
-        registerDevices(context);
+        //registerDevices(context);
+        PingerFactory pf = new PingerFactory();
+        pf.register(context);
         
-        logger.info("Protozoo event runtime started (v{}).", version);
+        logger.info("Protozoo device runtime started (v{}).", version);
 
     }
 
@@ -50,7 +52,7 @@ public class Activator implements BundleActivator {
 
         unregisterDevices();
         
-        logger.info("Protozoo event runtime stopped.");
+        logger.info("Protozoo device runtime stopped.");
 
     }
 

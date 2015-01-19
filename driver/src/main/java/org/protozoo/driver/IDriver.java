@@ -12,10 +12,13 @@ import org.osgi.service.event.EventHandler;
  *
  * @author wolfgang
  */
-public interface Driver extends org.osgi.service.device.Driver, EventHandler {
+public interface IDriver extends org.osgi.service.device.Driver, EventHandler {
 
     public void register(BundleContext bc);
     public void unregister();
+    
+    public BundleContext getContext();
+
     public String getFilter();
     
 }

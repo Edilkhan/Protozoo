@@ -13,8 +13,6 @@ import org.apache.karaf.shell.support.table.ShellTable;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.protozoo.device.AbstractDevice;
-import org.protozoo.device.IDevice;
-import org.protozoo.system.core.item.CapableItem;
 
 /**
  *

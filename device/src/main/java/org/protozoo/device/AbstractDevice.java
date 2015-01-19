@@ -7,17 +7,12 @@ package org.protozoo.device;
 
 import java.util.Hashtable;
 import java.util.UUID;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.osgi.framework.BundleContext;
 import static org.osgi.framework.Constants.SERVICE_PID;
-import org.osgi.framework.InvalidSyntaxException;
-import org.osgi.framework.ServiceEvent;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import static org.osgi.service.device.Constants.DEVICE_CATEGORY;
 import static org.osgi.service.device.Constants.DEVICE_SERIAL;
-import org.osgi.service.device.Device;
 import org.protozoo.system.core.item.CapableItem;
 import static org.protozoo.system.core.type.State.NO_DRIVER;
 
@@ -48,11 +43,12 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
         deviceProps.put(DEVICE_SERIAL, UUID.randomUUID());
         deviceProps.put(SERVICE_PID, getPid());
 
-        register = bc.registerService(new String[]{Device.class.getName(), this.getClass().getName()}, this, deviceProps);
+        register = bc.registerService(new String[]{ IDevice.class.getName(), this.getClass().getName() }, this, deviceProps);
     }
 
     @Override
     public void unregister() {
+        
         if (register != null) {
             register.unregister();
         }
@@ -82,30 +78,5 @@ public abstract class AbstractDevice extends CapableItem implements IDevice {
     public final void setPid(String pid) {
         this.pid = pid;
     }
-
-    @Override
-    public void setObserver(String serviceName, String filter) {
-        try {
-            
-            System.out.println("Observing service: " + serviceName);
-            System.out.println("with filter: " + filter);
-            
-            bc.addServiceListener(this, filter);
-            
-        } catch (InvalidSyntaxException ex) {
-            Logger.getLogger(AbstractDevice.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    @Override
-    public void serviceChanged(ServiceEvent event) {
-        System.out.println("ServiceEvent received: " + event);
-
-        if (event.getType() == ServiceEvent.UNREGISTERING) {
-            bc.removeServiceListener(this);
-            listener = null;
-            System.out.println("Removed listener");
-        }
-    }
-
+    
 }
