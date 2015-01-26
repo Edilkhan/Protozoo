@@ -7,11 +7,8 @@ package org.protozoo.device.internal;
 
 import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Hashtable;
+import java.util.Map;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.Constants;
-import org.osgi.framework.ServiceReference;
-import org.osgi.service.cm.ConfigurationAdmin;
 import org.osgi.service.cm.ConfigurationException;
 import org.osgi.service.cm.ManagedServiceFactory;
 import org.protozoo.device.Pinger;
@@ -23,13 +20,17 @@ import org.protozoo.device.impl.PingerImpl;
  */
 public class PingerFactory implements ManagedServiceFactory {
 
+    static final String FACTORY_NAME = "pinger.factory";
+    
     BundleContext context;
     HashMap<String, Pinger> pingers = new HashMap<>();
     Dictionary<String, ?> configuration;
+    Map existingServices = new HashMap();
 
     public void register(BundleContext context) {
         this.context = context;
 
+        /*
         ServiceReference refconfig = context.getServiceReference(ConfigurationAdmin.class.getName());
         ConfigurationAdmin configurationAdmin = (ConfigurationAdmin) context.getService(refconfig);
         
@@ -40,11 +41,7 @@ public class PingerFactory implements ManagedServiceFactory {
         Hashtable local = new Hashtable();
         local.put(Constants.SERVICE_PID, Pinger.class.getName());
         context.registerService(ManagedServiceFactory.class.getName(), this, local);
-    }
-
-    @Override
-    public String getName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        */
     }
 
     @Override
@@ -72,6 +69,35 @@ public class PingerFactory implements ManagedServiceFactory {
         }
     }
 
+    public void updated(String pid, Dictionary dictionary) throws ConfigurationException 
+    {
+        // invoked when a new configuration dictionary is assigned
+        // to service 'pid'. 
+        if (existingServices.containsKey(pid))  //the service already exists
+        {
+            MyService service = (MyService) existingServices.get(pid);
+            service.configure(dictionary);
+        }
+        else //configuration dictionary for a new service
+        {
+            MyService service = createNewServiceInstance();
+            service.configure(dictionary);
+            existingServices.put(pid, service);
+        }
+    }
+
+    public void deleted(String pid) 
+    {
+        // invoked when the service 'pid' is deleted
+        existingServices.remove(pid);
+    }
+
+    @Override
+    public String getName() 
+    {
+        return FACTORY_NAME;
+    }
+    
     protected float getFloat(String key, float def) {
         if (configuration != null) {
             Object val = configuration.get(key);
