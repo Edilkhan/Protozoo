@@ -3,18 +3,12 @@
  */
 package org.protozoo.device.impl;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.osgi.framework.BundleContext;
 import org.protozoo.device.AbstractDevice;
 import org.protozoo.device.Pinger;
 import static org.protozoo.system.core.type.Capability.OFF;
 import static org.protozoo.system.core.type.Capability.ON;
 import static org.protozoo.system.core.type.Capability.PING;
-import org.quartz.Job;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.SchedulerException;
 
 /**
  *
@@ -25,9 +19,8 @@ public class PingerImpl extends AbstractDevice implements Pinger {
     private static final String CATEGORY = "pinger";
     private static final String PID = Pinger.class.getName();
 
-//    SchedulerFactory sf = new StdSchedulerFactory();
-//    Scheduler sched;
-
+    private float frequency = 1.0f;
+    
     public PingerImpl() {
         super(CATEGORY, PID);
         addCapability(ON, OFF, PING);
@@ -38,52 +31,22 @@ public class PingerImpl extends AbstractDevice implements Pinger {
 
         super.register(bc);
         
-        /*try {
-            sched = sf.getScheduler();
-
-            // define the job and tie it to our HelloJob class
-            JobDetail job = newJob(PingerJob.class)
-                    .withIdentity("job1", "group1")
-                    .build();
-
-            // compute a time that is on the next round minute
-            Date runTime = evenMinuteDate(new Date());
-
-            // Trigger the job to run on the next round minute
-            CronTrigger trigger = newTrigger()
-                    .withIdentity("trigger1", "group1")
-                    .withSchedule(cronSchedule("0/20 * * * * ?"))
-                    .build();
-
-            // Tell quartz to schedule the job using our trigger
-            sched.scheduleJob(job, trigger);
-
-            sched.start();
-
-        } catch (SchedulerException ex) {
-            Logger.getLogger(PingerImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
     }
 
     @Override
     public void unregister() {
-/*        try {
-            if (sched != null) {
-                sched.shutdown();
-            }
-        } catch (SchedulerException ex) {
-            Logger.getLogger(PingerImpl.class.getName()).log(Level.SEVERE, null, ex);
-        }
-*/
+
         super.unregister();
-    }
-    
-    public class PingerJob implements Job {
-        
-        @Override
-        public void execute(JobExecutionContext context) throws JobExecutionException {
-            System.out.println("==> PING");
-        }
+
     }
 
+    @Override
+    public void setFrequency(float frequency) {
+        this.frequency = frequency;
+    }
+
+    @Override
+    public float getFrequency() {
+        return this.frequency;
+    }
 }

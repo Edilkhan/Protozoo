@@ -38,7 +38,7 @@ public class PingerFactory implements ManagedServiceFactory {
         }
         
         Hashtable local = new Hashtable();
-        local.put(Constants.SERVICE_PID, "org.protozoo.device.pinger");
+        local.put(Constants.SERVICE_PID, Pinger.class.getName());
         context.registerService(ManagedServiceFactory.class.getName(), this, local);
     }
 

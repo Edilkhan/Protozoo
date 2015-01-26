@@ -16,9 +16,14 @@
  */
 package org.protozoo.device.internal;
 
+import java.io.IOException;
+import java.util.Hashtable;
+import java.util.logging.Level;
 import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.service.cm.Configuration;
+import org.osgi.service.cm.ConfigurationAdmin;
 import org.protozoo.device.Pinger;
 import org.protozoo.device.impl.PingerImpl;
 import org.slf4j.Logger;
@@ -29,10 +34,12 @@ public class Activator implements BundleActivator {
     private final Logger logger = LoggerFactory.getLogger(Activator.class);
 
     private Pinger p;
+    
+    ConfigurationAdmin ca;
 
     @Override
     public void start(BundleContext context) {
-
+        
         String version = context.getBundle().getVersion().toString();
         // if the version string contains a qualifier, remove it!
         if (StringUtils.countMatches(version, ".") == 3) {
@@ -42,6 +49,21 @@ public class Activator implements BundleActivator {
         //registerDevices(context);
         PingerFactory pf = new PingerFactory();
         pf.register(context);
+
+        ca = context.getService(context.getServiceReference(ConfigurationAdmin.class));
+        if (ca != null) {
+            try {
+                Configuration c = ca.createFactoryConfiguration(Pinger.class.getName());
+                Hashtable props = new Hashtable();
+                props.put("Frequency", 2.0f);
+                c.update(props);
+                System.out.println("Properties: " + c.getProperties());
+            } catch (IOException ex) {
+                java.util.logging.Logger.getLogger(Activator.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } else {
+            System.out.println("CA = null");
+        }
         
         logger.info("Protozoo device runtime started (v{}).", version);
 
