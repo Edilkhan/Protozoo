@@ -3,9 +3,8 @@
  */
 package org.protozoo.device.impl;
 
-import org.osgi.framework.BundleContext;
+import java.util.Dictionary;
 import org.protozoo.device.AbstractDevice;
-import org.protozoo.system.core.item.CapableItem;
 import org.protozoo.device.Tuner;
 import static org.protozoo.system.core.type.Capability.CHANNEL_DOWN;
 import static org.protozoo.system.core.type.Capability.CHANNEL_UP;
@@ -29,5 +28,10 @@ public class TunerImpl extends AbstractDevice implements Tuner {
     @Override
     public void noDriverFound() {
         setState(NO_DRIVER);
+    }
+
+    @Override
+    public void configure(Dictionary<String, ?> props) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

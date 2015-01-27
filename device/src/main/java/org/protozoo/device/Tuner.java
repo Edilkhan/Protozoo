@@ -3,8 +3,6 @@
  */
 package org.protozoo.device;
 
-import org.osgi.service.device.Device;
-
 /**
  *
  * @author wolfgang

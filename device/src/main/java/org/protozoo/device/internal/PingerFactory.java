@@ -23,7 +23,7 @@ public class PingerFactory implements ManagedServiceFactory {
     static final String FACTORY_NAME = "pinger.factory";
     
     BundleContext context;
-    HashMap<String, Pinger> pingers = new HashMap<>();
+    //HashMap<String, Pinger> pingers = new HashMap<>();
     Dictionary<String, ?> configuration;
     Map existingServices = new HashMap();
 
@@ -47,49 +47,34 @@ public class PingerFactory implements ManagedServiceFactory {
     @Override
     public void updated(String pid, Dictionary<String, ?> properties) throws ConfigurationException {
         
-        configuration = properties;
+        System.out.println("PingerFactory: updated");
         
-        Pinger pinger = (Pinger) pingers.get(pid);
-        if (pinger == null) {
-            pinger = new PingerImpl();
-            pinger.register(context);
-            pingers.put(pid, pinger);
-        }
+        // invoked when a new configuration dictionary is assigned to service 'pid'. 
+        if (existingServices.containsKey(pid)) {  //the service already exists
 
-        float frequency = getFloat("frequency", 1.0f);
-        pinger.setFrequency(frequency);
+            Pinger service = (Pinger) existingServices.get(pid);
+            service.configure(properties);
+        } else { //configuration dictionary for a new service
+
+            Pinger service = createNewPingerInstance();
+            service.configure(properties);
+            existingServices.put(pid, service);
+        }
     }
     
     @Override
     public void deleted(String pid) {
-        Pinger pinger = (Pinger) pingers.get(pid);
-        if (pinger != null) {
-            pingers.remove(pid);
-            pinger.unregister();
-        }
-    }
 
-    public void updated(String pid, Dictionary dictionary) throws ConfigurationException 
-    {
-        // invoked when a new configuration dictionary is assigned
-        // to service 'pid'. 
-        if (existingServices.containsKey(pid))  //the service already exists
-        {
-            MyService service = (MyService) existingServices.get(pid);
-            service.configure(dictionary);
-        }
-        else //configuration dictionary for a new service
-        {
-            MyService service = createNewServiceInstance();
-            service.configure(dictionary);
-            existingServices.put(pid, service);
-        }
-    }
+        System.out.println("PingerFactory: deleted " + pid);
 
-    public void deleted(String pid) 
-    {
         // invoked when the service 'pid' is deleted
         existingServices.remove(pid);
+
+//        Pinger pinger = (Pinger) pingers.get(pid);
+//        if (pinger != null) {
+//            pingers.remove(pid);
+//            pinger.unregister();
+//        }
     }
 
     @Override
@@ -111,4 +96,13 @@ public class PingerFactory implements ManagedServiceFactory {
         return def;
     }
 
+    private Pinger createNewPingerInstance() {
+
+        System.out.println("PingerFactory: create new Pinger");
+        
+        Pinger p = new PingerImpl();
+        p.register(context);
+        
+        return p;
+    }
 }

@@ -16,13 +16,9 @@
  */
 package org.protozoo.device.internal;
 
-import java.io.IOException;
-import java.util.Hashtable;
-import java.util.logging.Level;
 import org.apache.commons.lang.StringUtils;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.osgi.service.cm.Configuration;
 import org.osgi.service.cm.ConfigurationAdmin;
 import org.protozoo.device.Pinger;
 import org.protozoo.device.impl.PingerImpl;
@@ -46,10 +42,10 @@ public class Activator implements BundleActivator {
             version = StringUtils.substringBeforeLast(version, ".");
         }
 
-        //registerDevices(context);
         PingerFactory pf = new PingerFactory();
         pf.register(context);
 
+/*
         ca = context.getService(context.getServiceReference(ConfigurationAdmin.class));
         if (ca != null) {
             try {
@@ -62,9 +58,9 @@ public class Activator implements BundleActivator {
                 java.util.logging.Logger.getLogger(Activator.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
-            System.out.println("CA = null");
+            System.out.println("ConfigAdmin = null");
         }
-        
+*/        
         logger.info("Protozoo device runtime started (v{}).", version);
 
     }

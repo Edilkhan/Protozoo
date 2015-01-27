@@ -5,6 +5,7 @@
  */
 package org.protozoo.device;
 
+import java.util.Dictionary;
 import org.osgi.framework.BundleContext;
 import org.osgi.service.device.Device;
 import org.protozoo.system.core.type.Capable;
@@ -24,5 +25,7 @@ public interface IDevice extends Device, Capable, Stateful {
     
     public void setPid(String pid);
     public String getPid();
+    
+    public void configure(Dictionary<String, ?> props);
 
 }

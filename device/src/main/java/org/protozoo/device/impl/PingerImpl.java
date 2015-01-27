@@ -3,6 +3,8 @@
  */
 package org.protozoo.device.impl;
 
+import java.util.Dictionary;
+import java.util.Enumeration;
 import org.osgi.framework.BundleContext;
 import org.protozoo.device.AbstractDevice;
 import org.protozoo.device.Pinger;
@@ -48,5 +50,19 @@ public class PingerImpl extends AbstractDevice implements Pinger {
     @Override
     public float getFrequency() {
         return this.frequency;
+    }
+
+    @Override
+    public void configure(Dictionary props) {
+        
+        if (props != null) {
+            Enumeration<String> keys = props.keys();
+            while (keys.hasMoreElements()) {
+                String key = keys.nextElement();
+                if (key.equals("frequency")) {
+                    setFrequency((float)props.get(key));
+                }
+            }
+        }
     }
 }
